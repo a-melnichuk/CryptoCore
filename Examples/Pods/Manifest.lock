@@ -1,0 +1,16 @@
+PODS:
+  - ScatterKit (0.0.5)
+
+DEPENDENCIES:
+  - ScatterKit
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - ScatterKit
+
+SPEC CHECKSUMS:
+  ScatterKit: 8472b2f9f210f5c73362c176548f26eb56599e20
+
+PODFILE CHECKSUM: 56e64de230458bcce2b6c3b091a7b3070a040283
+
+COCOAPODS: 1.6.1
