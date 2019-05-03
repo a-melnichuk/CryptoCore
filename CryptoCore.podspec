@@ -1,5 +1,5 @@
 Pod::Spec.new do |s|
-  s.name         = 'Paytomat\/CryptoCore'
+  s.name         = 'CryptoCore'
   s.module_name = 'CryptoCore'
   s.version      = '0.0.1'
   s.swift_version = '5.0'
@@ -16,7 +16,7 @@ Bundle of common crypto components needed by other Paytomat Wallet cryptocurrenc
   s.ios.deployment_target = '9.0'
   s.requires_arc = true
   s.source       = {
-    :git => "https://github.com/paytomat/ScatterKit.git",
+    :git => "https://github.com/a-melnichuk/CryptoCore.git",
     :branch => "master",
     :tag => s.version.to_s
   }

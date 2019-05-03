@@ -15,11 +15,13 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         print("__TEST1")
-        CryptoCore.testPrint()
+        CryptoCore.Crypto.testPrint()
         print("__TEST2")
         ptc_test_print()
-        print("__INT1 \(CryptoCore.testInt())")
-        print("__INT2 \(ptc_test_int())")
+        if let keccak = CryptoCore.Crypto.keccak256(Data([0, 2, 4])) {
+            print("__KECCAK \(keccak.count) \(keccak as NSData)")
+        }
+        
         
     }
 
