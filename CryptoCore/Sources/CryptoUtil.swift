@@ -15,14 +15,16 @@ public struct CryptoUtil {
             return Data()
         }
         let count = hex.count
-        let byteCount = hex.count / 2
-        var p = UnsafeMutablePointer<UInt8>.allocate(capacity: byteCount)
-        p.initialize(to: 0)
-        defer { p.deallocate() }
-        let success = hex.withCString { hexPtr in
-            ptc_from_hex(hexPtr, count, p)
+        var data = Data(count: hex.count / 2)
+        let success: Bool = data.withUnsafeMutableBytes { dataBuf in
+            if let dataPtr = dataBuf.bindMemory(to: UInt8.self).baseAddress {
+                return hex.withCString { hexPtr in
+                    ptc_from_hex(hexPtr, count, dataPtr)
+                }
+            }
+            return false
         }
-        return success ? Data(bytes: p, count: byteCount) : nil
+        return success ? data : nil
     }
     
     public static func hex(fromData data: Data) -> String {
