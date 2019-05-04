@@ -16,6 +16,7 @@
 #include <ctype.h>
 #include <math.h>
 #include <time.h>
+#include <sys/time.h>
 
 uint16_t ptc_swap_uint16(uint16_t val);
 int16_t ptc_swap_int16(int16_t val);

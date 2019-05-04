@@ -5,7 +5,8 @@ Pod::Spec.new do |s|
   s.swift_version = '5.0'
   s.summary = 'Common crypto components for Paytomat Wallet'
   s.description = <<-DESC
-Bundle of common crypto components needed by other Paytomat Wallet cryptocurrencies"
+  Bundle of common Paytomat crypto components: hash functions, elliptic curve operations
+  and utilities
                    DESC
 
   s.homepage = 'https://paytomat.com/'

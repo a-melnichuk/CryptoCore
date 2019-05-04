@@ -19,24 +19,41 @@ public struct Crypto {
     }
 
     public static func keccak256(_ data: Data) -> Data? {
-        guard !data.isEmpty else {
-            return Data()
-        }
-        var p = UnsafeMutablePointer<UInt8>.allocate(capacity: 32)
-        p.initialize(to: 0)
-        defer { p.deallocate() }
+        var out = Data(count: 32)
         let count = data.count
-        let result: ptc_result = data.withUnsafeBytes {
-            if let dataPtr = $0.bindMemory(to: UInt8.self).baseAddress {
-                return ptc_keccak256(dataPtr, count, p)
+        let result: ptc_result = out.withUnsafeMutableBytes { outBuf in
+            data.withUnsafeBytes { dataBuf in
+                if let dataPtr = dataBuf.bindMemory(to: UInt8.self).baseAddress,
+                    let outPtr = outBuf.bindMemory(to: UInt8.self).baseAddress {
+                    return ptc_keccak256(dataPtr, count, outPtr)
+                }
+                return PTC_RESULT_ERROR_GENERAL
             }
-            return PTC_RESULT_ERROR_GENERAL
         }
-        guard result == PTC_RESULT_SUCCESS else {
-            return nil
-        }
-        return Data(bytes: p, count: 32)
+        return result == PTC_RESULT_SUCCESS ? out : nil
     }
     
+    public static func blake2b(_ data: Data, outBytes: Int) -> Data? {
+        guard outBytes >= 0 else {
+            fatalError("\(#function) outBytes cannot be negative")
+        }
+        var out = Data(count: outBytes)
+        let dataCount = data.count
+        let result: ptc_result = out.withUnsafeMutableBytes { outBuf in
+            data.withUnsafeBytes { dataBuf in
+                if let dataPtr = dataBuf.bindMemory(to: UInt8.self).baseAddress,
+                    let outPtr = outBuf.bindMemory(to: UInt8.self).baseAddress {
+                    return ptc_blake2b(dataPtr, dataCount, outPtr, outBytes)
+                }
+                return PTC_RESULT_ERROR_GENERAL
+            }
+        }
+        return result == PTC_RESULT_SUCCESS ? out : nil
+    }
+    
+    @inline(__always)
+    public static func blake2b256(_ data: Data) -> Data? {
+        return blake2b(data, outBytes: 32)
+    }
     
 }

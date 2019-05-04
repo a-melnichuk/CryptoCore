@@ -46,19 +46,23 @@ uint64_t ptc_swap_uint64(uint64_t val)
 
 int64_t ptc_current_time_in_millis(void)
 {
-    long            ms; // Milliseconds
-    time_t          s;  // Seconds
-    struct timespec spec;
-    
-    clock_gettime(CLOCK_REALTIME, &spec);
-    
-    s  = spec.tv_sec;
-    ms = round(spec.tv_nsec / 1.0e6); // Convert nanoseconds to milliseconds
-    if (ms > 999) {
-        s++;
-        ms = 0;
+    if (__builtin_available(iOS 10.0, *)) {
+        long            ms; // Milliseconds
+        time_t          s;  // Seconds
+        struct timespec spec;
+        clock_gettime(CLOCK_REALTIME, &spec);
+        s  = spec.tv_sec;
+        ms = round(spec.tv_nsec / 1.0e6); // Convert nanoseconds to milliseconds
+        if (ms > 999) {
+            s++;
+            ms = 0;
+        }
+        return s * 1000 + ms;
+    } else {
+        struct timeval tv;
+        gettimeofday(&tv, NULL);
+        return (((int64_t) tv.tv_sec) * 1000) + (tv.tv_usec / 1000);
     }
-    return s * 1000 + ms;
 }
 
 bool ptc_is_little_endian()

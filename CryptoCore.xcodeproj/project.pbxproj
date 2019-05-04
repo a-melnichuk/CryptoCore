@@ -16,6 +16,12 @@
 		6671AD17227999AF009001F8 /* ptc_test.c in Sources */ = {isa = PBXBuildFile; fileRef = 6671AD15227999AF009001F8 /* ptc_test.c */; };
 		6671AD1922799A68009001F8 /* Crypto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6671AD1822799A67009001F8 /* Crypto.swift */; };
 		6671AD1C2279E280009001F8 /* ptc.h in Headers */ = {isa = PBXBuildFile; fileRef = 6671AD1B2279E280009001F8 /* ptc.h */; };
+		66745CE5227DBD68008ACCBA /* blake2b.h in Headers */ = {isa = PBXBuildFile; fileRef = 66745CDC227DBD67008ACCBA /* blake2b.h */; };
+		66745CE7227DBD68008ACCBA /* blake2b_cpu_endian.c in Sources */ = {isa = PBXBuildFile; fileRef = 66745CDE227DBD67008ACCBA /* blake2b_cpu_endian.c */; };
+		66745CE9227DBD68008ACCBA /* blake2b_error.h in Headers */ = {isa = PBXBuildFile; fileRef = 66745CE0227DBD67008ACCBA /* blake2b_error.h */; };
+		66745CEB227DBD68008ACCBA /* blake2b.c in Sources */ = {isa = PBXBuildFile; fileRef = 66745CE2227DBD68008ACCBA /* blake2b.c */; };
+		66745CEC227DBD68008ACCBA /* blake2b_cpu_endian.h in Headers */ = {isa = PBXBuildFile; fileRef = 66745CE3227DBD68008ACCBA /* blake2b_cpu_endian.h */; };
+		66745CED227DBD68008ACCBA /* blake2b_crypto.h in Headers */ = {isa = PBXBuildFile; fileRef = 66745CE4227DBD68008ACCBA /* blake2b_crypto.h */; };
 		66C225BE227B418700E4C7F9 /* sha3.h in Headers */ = {isa = PBXBuildFile; fileRef = 66C225BC227B418700E4C7F9 /* sha3.h */; settings = {ATTRIBUTES = (Private, ); }; };
 		66C225BF227B418700E4C7F9 /* keccak-tiny.h in Headers */ = {isa = PBXBuildFile; fileRef = 66C225BD227B418700E4C7F9 /* keccak-tiny.h */; settings = {ATTRIBUTES = (Private, ); }; };
 		66C225C2227B419600E4C7F9 /* sha3.c in Sources */ = {isa = PBXBuildFile; fileRef = 66C225C0227B419600E4C7F9 /* sha3.c */; };
@@ -51,6 +57,12 @@
 		6671AD1822799A67009001F8 /* Crypto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Crypto.swift; sourceTree = "<group>"; };
 		6671AD1A22799BB1009001F8 /* module.modulemap */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.module-map"; path = module.modulemap; sourceTree = "<group>"; };
 		6671AD1B2279E280009001F8 /* ptc.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ptc.h; sourceTree = "<group>"; };
+		66745CDC227DBD67008ACCBA /* blake2b.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = blake2b.h; sourceTree = "<group>"; };
+		66745CDE227DBD67008ACCBA /* blake2b_cpu_endian.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = blake2b_cpu_endian.c; sourceTree = "<group>"; };
+		66745CE0227DBD67008ACCBA /* blake2b_error.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = blake2b_error.h; sourceTree = "<group>"; };
+		66745CE2227DBD68008ACCBA /* blake2b.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = blake2b.c; sourceTree = "<group>"; };
+		66745CE3227DBD68008ACCBA /* blake2b_cpu_endian.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = blake2b_cpu_endian.h; sourceTree = "<group>"; };
+		66745CE4227DBD68008ACCBA /* blake2b_crypto.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = blake2b_crypto.h; sourceTree = "<group>"; };
 		66BAE596227C6D6800A61E22 /* LICENSE.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = LICENSE.md; sourceTree = "<group>"; };
 		66BAE597227C86D300A61E22 /* CryptoCore.podspec */ = {isa = PBXFileReference; lastKnownFileType = text; path = CryptoCore.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		66C225BC227B418700E4C7F9 /* sha3.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = sha3.h; sourceTree = "<group>"; };
@@ -144,6 +156,19 @@
 			path = paytomat_crypto_core;
 			sourceTree = "<group>";
 		};
+		66745CDB227DBBB7008ACCBA /* blake2b */ = {
+			isa = PBXGroup;
+			children = (
+				66745CE2227DBD68008ACCBA /* blake2b.c */,
+				66745CDC227DBD67008ACCBA /* blake2b.h */,
+				66745CDE227DBD67008ACCBA /* blake2b_cpu_endian.c */,
+				66745CE3227DBD68008ACCBA /* blake2b_cpu_endian.h */,
+				66745CE4227DBD68008ACCBA /* blake2b_crypto.h */,
+				66745CE0227DBD67008ACCBA /* blake2b_error.h */,
+			);
+			path = blake2b;
+			sourceTree = "<group>";
+		};
 		66C225A9227B3DC300E4C7F9 /* include */ = {
 			isa = PBXGroup;
 			children = (
@@ -169,6 +194,7 @@
 		66C225B8227B3FFE00E4C7F9 /* libs */ = {
 			isa = PBXGroup;
 			children = (
+				66745CDB227DBBB7008ACCBA /* blake2b */,
 				66C225B9227B404400E4C7F9 /* keccak-tiny */,
 			);
 			path = libs;
@@ -194,12 +220,16 @@
 			files = (
 				66C225C7227B42F700E4C7F9 /* ptc_crypto.h in Headers */,
 				66C225BF227B418700E4C7F9 /* keccak-tiny.h in Headers */,
+				66745CE9227DBD68008ACCBA /* blake2b_error.h in Headers */,
+				66745CE5227DBD68008ACCBA /* blake2b.h in Headers */,
 				66C225BE227B418700E4C7F9 /* sha3.h in Headers */,
 				66C225C5227B42E900E4C7F9 /* ptc_util.h in Headers */,
+				66745CEC227DBD68008ACCBA /* blake2b_cpu_endian.h in Headers */,
 				6671AD092279992B009001F8 /* CryptoCore.h in Headers */,
 				6671AD1C2279E280009001F8 /* ptc.h in Headers */,
 				6671AD16227999AF009001F8 /* ptc_test.h in Headers */,
 				66C225CE227B511D00E4C7F9 /* ptc_result.h in Headers */,
+				66745CED227DBD68008ACCBA /* blake2b_crypto.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -302,12 +332,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				66C225C9227B430900E4C7F9 /* ptc_util.c in Sources */,
+				66745CE7227DBD68008ACCBA /* blake2b_cpu_endian.c in Sources */,
 				6671AD17227999AF009001F8 /* ptc_test.c in Sources */,
 				66C225C3227B419600E4C7F9 /* keccak-tiny.c in Sources */,
 				66C225C2227B419600E4C7F9 /* sha3.c in Sources */,
 				6642D25B227B7B53009F2D3E /* ptc_result+Extension.swift in Sources */,
 				66C225CB227B431500E4C7F9 /* ptc_crypto.c in Sources */,
 				6671AD1922799A68009001F8 /* Crypto.swift in Sources */,
+				66745CEB227DBD68008ACCBA /* blake2b.c in Sources */,
 				6642D25D227B7E31009F2D3E /* CryptoUtil.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
