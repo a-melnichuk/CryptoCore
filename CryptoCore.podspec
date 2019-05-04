@@ -40,8 +40,8 @@ Pod::Spec.new do |s|
         '$(PODS_ROOT)/CryptoCore/Sources/libs'
     ]
   }
-  s.preserve_paths = 'CryptoCore/Sources/libs/openssl/libcrypto.a', 'CryptoCore/Sources/paytomat_crypto_core/module.modulemap'
-  s.vendored_libraries = 'CryptoCore/Sources/libs/**/*.a'
+  s.preserve_paths = 'CryptoCore/Sources/paytomat_crypto_core/module.modulemap'
+  s.vendored_libraries = 'CryptoCore/Sources/libs/openssl/libcrypto.a'
   s.exclude_files = 'Examples/*'
   s.frameworks = 'Foundation'
 end
