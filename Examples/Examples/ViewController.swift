@@ -22,6 +22,10 @@ class ViewController: UIViewController {
             print("__KECCAK \(keccak.count) \(CryptoUtil.hex(fromData: keccak))")
         }
         
+        if let sha = CryptoCore.Crypto.sha256(Data([0, 2, 4])) {
+            print("__SHA \(sha.count) \(CryptoUtil.hex(fromData: sha))")
+        }
+        
         
     }
 

@@ -25,8 +25,25 @@ class CryptoCoreTests: XCTestCase {
         XCTAssertEqual(keccak.count, 32)
         XCTAssertEqual(CryptoUtil.hex(fromData: keccak), "c82180a0c14bbdb9ced8e83cd9d07d75778a5e5806e0a073d85f87229de6b82d")
     }
-   
-    func testExample() {
-        XCTAssertEqual(Crypto.testInt(), 4)
+    
+    func testBlake2b() {
+        let data = CryptoUtil.data(fromHex:"6f2072656e64657220747261636b20736561726368206b696420766963746f7279207368656c6c206162757365206d65726765207175616c69747920726f79616c20636c69702075676c79206c797269637320726f756768206e6174696f6e2068756765207374727567676c6520686172642065786572636973652062616c6c2070726f766964652064757479206e6f77")!
+        guard let blake2b = Crypto.blake2b256(data) else {
+            XCTFail("Unable to hash with blake")
+            return
+        }
+        XCTAssertEqual(blake2b.count, 32)
+        XCTAssertEqual(CryptoUtil.hex(fromData: blake2b), "c14c10e0b1be5bdea8a1ad0acb3192533b27fce565ce75e51761cc04ab2226a0")
     }
+   
+    func testSha() {
+        let data = CryptoUtil.data(fromHex:"6f2072656e64657220747261636b20736561726368206b696420766963746f7279207368656c6c206162757365206d65726765207175616c69747920726f79616c20636c69702075676c79206c797269637320726f756768206e6174696f6e2068756765207374727567676c6520686172642065786572636973652062616c6c2070726f766964652064757479206e6f77")!
+        guard let sha = Crypto.sha256(data) else {
+            XCTFail("Unable to hash with blake")
+            return
+        }
+        XCTAssertEqual(sha.count, 32)
+        XCTAssertEqual(CryptoUtil.hex(fromData: sha), "fb2ab780dba99bb4c6ef46f8fde1315a80c42025765c74578dec95c48cdd5821")
+    }
+    
 }
