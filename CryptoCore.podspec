@@ -28,10 +28,12 @@ Bundle of common crypto components needed by other Paytomat Wallet cryptocurrenc
   ]
   s.public_header_files = 'CryptoCore/*.h'
   s.pod_target_xcconfig = {
-    'SYSTEM_HEADER_SEARCH_PATHS' => '$(PODS_TARGET_SRCROOT)/CryptoCore/Sources/libs',
+    'SYSTEM_HEADER_SEARCH_PATHS' => '$(PODS_TARGET_SRCROOT)/CryptoCore/Sources/libs $(PODS_ROOT)/CryptoCore/Sources/libs',
     'SWIFT_INCLUDE_PATHS' => [
         '$(PODS_TARGET_SRCROOT)/CryptoCore/Sources/paytomat_crypto_core/**',
-        '$(PODS_TARGET_SRCROOT)/CryptoCore/Sources/libs'
+        '$(PODS_ROOT)/CryptoCore/Sources/paytomat_crypto_core/**',
+        '$(PODS_TARGET_SRCROOT)/CryptoCore/Sources/libs',
+        '$(PODS_ROOT)/CryptoCore/Sources/libs'
     ]
   }
   s.exclude_files = 'Examples/*'

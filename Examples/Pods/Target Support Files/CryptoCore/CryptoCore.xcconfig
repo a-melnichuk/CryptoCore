@@ -8,5 +8,5 @@ PODS_ROOT = ${SRCROOT}
 PODS_TARGET_SRCROOT = ${PODS_ROOT}/../..
 PRODUCT_BUNDLE_IDENTIFIER = org.cocoapods.${PRODUCT_NAME:rfc1034identifier}
 SKIP_INSTALL = YES
-SWIFT_INCLUDE_PATHS = $(PODS_TARGET_SRCROOT)/CryptoCore/Sources/paytomat_crypto_core/** $(PODS_TARGET_SRCROOT)/CryptoCore/Sources/libs
-SYSTEM_HEADER_SEARCH_PATHS = $(PODS_TARGET_SRCROOT)/CryptoCore/Sources/libs
+SWIFT_INCLUDE_PATHS = $(PODS_TARGET_SRCROOT)/CryptoCore/Sources/paytomat_crypto_core/** $(PODS_ROOT)/CryptoCore/Sources/paytomat_crypto_core/** $(PODS_TARGET_SRCROOT)/CryptoCore/Sources/libs $(PODS_ROOT)/CryptoCore/Sources/libs
+SYSTEM_HEADER_SEARCH_PATHS = $(PODS_TARGET_SRCROOT)/CryptoCore/Sources/libs $(PODS_ROOT)/CryptoCore/Sources/libs
