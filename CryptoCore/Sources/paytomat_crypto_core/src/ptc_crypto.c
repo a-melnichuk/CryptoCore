@@ -44,3 +44,36 @@ ptc_result ptc_blake2b256(const void* in_data, size_t in_length, uint8_t* out_by
     return ptc_blake2b(in_data, in_length, out_bytes, 32);
 }
 
+// SHA
+
+ptc_result ptc_sha256(const void* in_data, size_t in_length, uint8_t* out_bytes)
+{
+    if (in_data == NULL || out_bytes == NULL)
+        return PTC_RESULT_ERROR_NULL_ARGUMENT;
+    
+    int result;
+    SHA256_CTX c;
+    
+    if ((result = SHA256_Init(&c)) != 1)
+        return PTC_RESULT_ERROR_GENERAL;
+    if ((result = SHA256_Update(&c, in_data, in_length)) != 1)
+        return PTC_RESULT_ERROR_GENERAL;
+    if ((result = SHA256_Final(out_bytes, &c)) != 1)
+        return PTC_RESULT_ERROR_GENERAL;
+    return PTC_RESULT_SUCCESS;
+}
+
+ptc_result ptc_sha512(const void* in_data, size_t in_length, uint8_t* out_bytes)
+{
+    if (in_data == NULL || out_bytes == NULL)
+        return PTC_RESULT_ERROR_NULL_ARGUMENT;
+    int result;
+    SHA512_CTX c;
+    if ((result = SHA512_Init(&c)) != 1)
+        return PTC_RESULT_ERROR_GENERAL;
+    if ((result = SHA512_Update(&c, in_data, in_length)) != 1)
+        return PTC_RESULT_ERROR_GENERAL;
+    if ((result = SHA512_Final(out_bytes, &c)) != 1)
+        return PTC_RESULT_ERROR_GENERAL;
+    return PTC_RESULT_SUCCESS;
+}

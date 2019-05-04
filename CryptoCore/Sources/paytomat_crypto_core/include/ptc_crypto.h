@@ -12,6 +12,7 @@
 #include <stdint.h>
 #include <keccak-tiny/keccak-tiny.h>
 #include <blake2b/blake2b.h>
+#include <openssl/sha.h>
 
 #include "ptc_result.h"
 
@@ -24,5 +25,10 @@ ptc_result ptc_keccak512(const void* in_data, size_t in_length, uint8_t* out_byt
 
 ptc_result ptc_blake2b(const void* in_data, size_t in_length, uint8_t* out_bytes, size_t out_length);
 ptc_result ptc_blake2b256(const void* in_data, size_t in_length, uint8_t* out_bytes);
+
+// SHA
+
+ptc_result ptc_sha256(const void* in_data, size_t in_length, uint8_t* out_bytes);
+ptc_result ptc_sha512(const void* in_data, size_t in_length, uint8_t* out_bytes);
 
 #endif

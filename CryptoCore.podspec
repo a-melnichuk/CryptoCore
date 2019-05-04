@@ -25,10 +25,13 @@ Pod::Spec.new do |s|
     'CryptoCore/*.h',
     'CryptoCore/Sources/*.swift',
     'CryptoCore/Sources/paytomat_crypto_core/{include,src}/*.{h,c}',
-    'CryptoCore/Sources/libs/keccak-tiny/*.{h,c}'
+    'CryptoCore/Sources/libs/keccak-tiny/*.{h,c}',
+    'CryptoCore/Sources/libs/blake2b/*.{h,c}',
+    'CryptoCore/Sources/libs/openssl/*.{h}'
   ]
   s.public_header_files = 'CryptoCore/*.h'
   s.pod_target_xcconfig = {
+    'LIBRARY_SEARCH_PATHS' => '$(PODS_TARGET_SRCROOT)/CryptoCore/Sources/libs/openssl $(PODS_ROOT)/CryptoCore/Sources/libs/openssl',
     'SYSTEM_HEADER_SEARCH_PATHS' => '$(PODS_TARGET_SRCROOT)/CryptoCore/Sources/libs $(PODS_ROOT)/CryptoCore/Sources/libs',
     'SWIFT_INCLUDE_PATHS' => [
         '$(PODS_TARGET_SRCROOT)/CryptoCore/Sources/paytomat_crypto_core/**',
@@ -37,6 +40,7 @@ Pod::Spec.new do |s|
         '$(PODS_ROOT)/CryptoCore/Sources/libs'
     ]
   }
+  s.vendored_libraries = 'CryptoCore/Sources/libs/openssl/libcrypto.a'
   s.preserve_paths = 'CryptoCore/Sources/paytomat_crypto_core/module.modulemap'
   s.exclude_files = 'Examples/*'
   s.frameworks = 'Foundation'

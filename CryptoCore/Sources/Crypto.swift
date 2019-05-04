@@ -18,6 +18,8 @@ public struct Crypto {
         return Int(ptc_test_int())
     }
 
+    // MARK: Keccak
+    
     public static func keccak256(_ data: Data) -> Data? {
         var out = Data(count: 32)
         let count = data.count
@@ -32,6 +34,8 @@ public struct Crypto {
         }
         return result == PTC_RESULT_SUCCESS ? out : nil
     }
+    
+    // MARK: Blake2b
     
     public static func blake2b(_ data: Data, outBytes: Int) -> Data? {
         guard outBytes >= 0 else {
@@ -54,6 +58,38 @@ public struct Crypto {
     @inline(__always)
     public static func blake2b256(_ data: Data) -> Data? {
         return blake2b(data, outBytes: 32)
+    }
+    
+    // MARK: SHA
+    
+    public static func sha256(_ data: Data) -> Data? {
+        var out = Data(count: 32)
+        let count = data.count
+        let result: ptc_result = out.withUnsafeMutableBytes { outBuf in
+            data.withUnsafeBytes { dataBuf in
+                if let dataPtr = dataBuf.bindMemory(to: UInt8.self).baseAddress,
+                    let outPtr = outBuf.bindMemory(to: UInt8.self).baseAddress {
+                    return ptc_sha256(dataPtr, count, outPtr)
+                }
+                return PTC_RESULT_ERROR_GENERAL
+            }
+        }
+        return result == PTC_RESULT_SUCCESS ? out : nil
+    }
+    
+    public static func sha512(_ data: Data) -> Data? {
+        var out = Data(count: 64)
+        let count = data.count
+        let result: ptc_result = out.withUnsafeMutableBytes { outBuf in
+            data.withUnsafeBytes { dataBuf in
+                if let dataPtr = dataBuf.bindMemory(to: UInt8.self).baseAddress,
+                    let outPtr = outBuf.bindMemory(to: UInt8.self).baseAddress {
+                    return ptc_sha512(dataPtr, count, outPtr)
+                }
+                return PTC_RESULT_ERROR_GENERAL
+            }
+        }
+        return result == PTC_RESULT_SUCCESS ? out : nil
     }
     
 }
