@@ -36,6 +36,7 @@ Bundle of common crypto components needed by other Paytomat Wallet cryptocurrenc
         '$(PODS_ROOT)/CryptoCore/Sources/libs'
     ]
   }
+  s.preserve_paths = 'CryptoCore/Sources/paytomat_crypto_core/module.modulemap'
   s.exclude_files = 'Examples/*'
   s.frameworks = 'Foundation'
 end

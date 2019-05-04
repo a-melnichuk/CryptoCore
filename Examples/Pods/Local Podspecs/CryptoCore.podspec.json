@@ -38,6 +38,7 @@
       "$(PODS_ROOT)/CryptoCore/Sources/libs"
     ]
   },
+  "preserve_paths": "CryptoCore/Sources/paytomat_crypto_core/module.modulemap",
   "exclude_files": "Examples/*",
   "frameworks": "Foundation"
 }
