@@ -3,7 +3,7 @@ use_frameworks!
 
 target 'Examples' do
 
-   pod 'ScatterKit'
+  pod 'CryptoCore', :path => '../'
 
   target 'ExamplesTests' do
     inherit! :search_paths

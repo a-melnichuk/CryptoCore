@@ -7,120 +7,113 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0B22576A0888B4FB1477D39BFF93820E /* Pods-Examples-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 69AC0E08FD8F1BA117975FF2BB4AD093 /* Pods-Examples-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		0C8F2C15D297A3B21046644BA9B619D3 /* ScatterKitResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F3146353A6E105329A72EF7D2E19C98 /* ScatterKitResult.swift */; };
-		1409D6731C42ACD8A28045730134DD0B /* ScatterKitTransaction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C41140D63B556E0E3AFFCAA0F63B7B4 /* ScatterKitTransaction.swift */; };
-		1C65478AA02E4820E75AF436F25940D3 /* Pods-Examples-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = B9185230849E3E47EDE74FE35C40712E /* Pods-Examples-dummy.m */; };
-		2854BE8EDF320E3FEE55302E4889502A /* ScatterKitError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87A675140D3190901ED3B58ACD09A5C9 /* ScatterKitError.swift */; };
-		2A1C7DF721D2F7CE3EFF3AFF545E8518 /* ScatterKit.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 02A1F02019B303FFA81A538AC2DFA9AA /* ScatterKit.bundle */; };
-		4F7E11ADE1093FED1AD027ACB34090B9 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EB539FE9001200E730C55AC01B72A395 /* Foundation.framework */; };
+		0FDF93CFA0EBE39AE4C955767C1F4971 /* CryptoUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14945D5BCA2A1B935F7EC97EE8D53D0B /* CryptoUtil.swift */; };
+		1FC5E974E6A76EB401F90F5BF9B5894D /* ptc_util.c in Sources */ = {isa = PBXBuildFile; fileRef = 6B85D932F0EA7CFF318BC0CB0BE4A905 /* ptc_util.c */; };
+		27AC51A3A13690C90A8A081D167333ED /* ptc.h in Headers */ = {isa = PBXBuildFile; fileRef = 05A99216D1815F294CAFC64F41AAD1E0 /* ptc.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		2AA056C4988FBE4988E37E666EDFCA34 /* ptc_test.h in Headers */ = {isa = PBXBuildFile; fileRef = A03D4DD23EF37F71C18B38721689E70D /* ptc_test.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		2C9DCA1762E6DD3C4F533406E8A36C3A /* Crypto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C4995C3EC055480C1A56B751EC70D2D /* Crypto.swift */; };
+		332DFD8974E2C95A55A971C4F9D4C792 /* CryptoCore.h in Headers */ = {isa = PBXBuildFile; fileRef = D745D62BB23232CF5017546AE4D1C716 /* CryptoCore.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		5874A20C2A4B47D15EFB646F7D0C6B77 /* Pods-ExamplesTests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 053CF5B182C8E438E123DF1BC2847BED /* Pods-ExamplesTests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		5BE61BFD73F39D25472788CE816D369E /* Decodable+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05D9E08C625558BCFDE390751DEBCAB7 /* Decodable+Extension.swift */; };
-		600E88A560B7DE6530865274A4EE8B01 /* ScatterKitDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88DD392B5C26252607BCF7CC4D06F4AB /* ScatterKitDelegate.swift */; };
-		87257768E3F0ECFFCE7143B2D93EA42A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EB539FE9001200E730C55AC01B72A395 /* Foundation.framework */; };
-		8B529F180ED49B3B0050FFAD2D1EA98A /* ScatterKitRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68DB08DE482C173EAAB23DB2F0DA4ED7 /* ScatterKitRequest.swift */; };
-		8F17F4138C1E1D8D7707E5F14EBA55CA /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 802C2F2E78E6EAB7AE35C347DB438819 /* UIKit.framework */; };
+		7CE1DBFB4BF2E5420EFFDA90DBDEDFEE /* Pods-Examples-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 69AC0E08FD8F1BA117975FF2BB4AD093 /* Pods-Examples-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		87257768E3F0ECFFCE7143B2D93EA42A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB4607EFCA7C5F75397649E792E2AFCB /* Foundation.framework */; };
+		89BD3537713C45EEB99049D93177D090 /* keccak-tiny.h in Headers */ = {isa = PBXBuildFile; fileRef = CEEE7A7E7A58272900C19B7B161E20B7 /* keccak-tiny.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		95449920651AB7732DCE1BCB6036EBD3 /* CryptoCore-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = BBA9DD37E509606F93797F47F80401AE /* CryptoCore-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		9A1E3AEE88B2FE4E299B58A4F9BAED7D /* sha3.h in Headers */ = {isa = PBXBuildFile; fileRef = 4738471FE77BF1D0CF12B91800ABA124 /* sha3.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		9B62C70DCD3126A13411CF6BBF55194B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB4607EFCA7C5F75397649E792E2AFCB /* Foundation.framework */; };
 		9F0D8B361FC26E3F219999E9840466DC /* Pods-ExamplesTests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A88B9ACCB7B5F953386DF353708A119 /* Pods-ExamplesTests-dummy.m */; };
-		A263E815BF6987AF25BBE232F7F274D1 /* scatterkit_script.js in Resources */ = {isa = PBXBuildFile; fileRef = 08CFD80D843C3577550CEF09AD1DDCFD /* scatterkit_script.js */; };
-		A2810E9FE3A92AB39F8200B37E6A4352 /* ScatterKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6860906CF95A3F092D8DB84B080C5D8E /* ScatterKit.swift */; };
-		B4BE6ED4389AF750FC0F85BB280A84FF /* ScatterKit-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 2D4E2E4E027CD90FC23F044589D76C50 /* ScatterKit-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		CBE052C6A51149A9DBFDE098DB37E634 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EB539FE9001200E730C55AC01B72A395 /* Foundation.framework */; };
-		D64537D8E8F2CEF061F647061B8B59E2 /* ScatterKitResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A6900DBA834E7B1EDB0BFCCCAD64980 /* ScatterKitResponse.swift */; };
-		DF01BAF4ED19B62CB4692ED394E4131F /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2AA4639F93492BE928E8329E7AD64C61 /* WebKit.framework */; };
-		E3ACAB02E870381CD647928107636B4A /* ScatterKit-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 92175E18DB4BD229E8FD928DBF129713 /* ScatterKit-dummy.m */; };
+		A5C816D20B2C600755342FE38AC01A9F /* sha3.c in Sources */ = {isa = PBXBuildFile; fileRef = 49E62619BD44018334A67A48D842AC34 /* sha3.c */; };
+		AB5B5C06F6DEB9DFF342088924C52788 /* ptc_result.h in Headers */ = {isa = PBXBuildFile; fileRef = EF5CA62FFA312242ABD69324BF6F5816 /* ptc_result.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		AFC0C10F6DD3B1EB003AFDD6EDF8960F /* CryptoCore-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 405BBDB5DDC6E5253FBE4006B8519081 /* CryptoCore-dummy.m */; };
+		C1A7487F2070CF09164EBD8532EACC2F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB4607EFCA7C5F75397649E792E2AFCB /* Foundation.framework */; };
+		C616BF061593265194FAC7CD73E1BED0 /* ptc_result+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A27183E865C933FDAE504ACC788E083 /* ptc_result+Extension.swift */; };
+		CBBF824567FF28E2237AF6CCE4CD7CAB /* keccak-tiny.c in Sources */ = {isa = PBXBuildFile; fileRef = 45CFDB201E0D7F655568F7898EBA04E1 /* keccak-tiny.c */; };
+		D081040695FDBF57957587A4B11F5D16 /* Pods-Examples-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = B9185230849E3E47EDE74FE35C40712E /* Pods-Examples-dummy.m */; };
+		D1B2BB2FBD2EDACA94B0F481139CBB07 /* ptc_crypto.h in Headers */ = {isa = PBXBuildFile; fileRef = 3DD58514483519CB4995BABC12BCDFE6 /* ptc_crypto.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		F294767CDD27363765C062DD1831383B /* ptc_util.h in Headers */ = {isa = PBXBuildFile; fileRef = 5CB295B53B1FEBD33E265DDD34419878 /* ptc_util.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		F2BD93AF5001AAAE4F5BE38B30EDB016 /* ptc_test.c in Sources */ = {isa = PBXBuildFile; fileRef = 440516DC74B4FD1E77E4AEFC4FD69AA6 /* ptc_test.c */; };
+		FBF9A926B6D8BD7401C7C32E2E323199 /* ptc_crypto.c in Sources */ = {isa = PBXBuildFile; fileRef = 750AD1ECCAF282EE43BA4AD4A1B97F66 /* ptc_crypto.c */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		630A22CED581DCF0B344ABE1F65CA162 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C0FB2F7A8E9444A8FC7AE0DEF978960C;
+			remoteInfo = CryptoCore;
+		};
 		8BFA0F00E04B4D7E1AC937A55A854D25 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 0B5713951D8BC7535C0ABF70DCC5F215;
+			remoteGlobalIDString = 12BB19F45A2B7C8C62B9A71DD9374EC9;
 			remoteInfo = "Pods-Examples";
-		};
-		91CA4A623F7E0A7E2749791EA2FCA7C3 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 3CAF82DE1B398AAA7C41C687B72E101B;
-			remoteInfo = ScatterKit;
-		};
-		DE2D6C721E184ED84576A2FB34C9F77A /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = A3E051EC8F68EF6E24764C2ECC96E02A;
-			remoteInfo = "ScatterKit-ScatterKit";
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		02A1F02019B303FFA81A538AC2DFA9AA /* ScatterKit.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = ScatterKit.bundle; path = "ScatterKit-ScatterKit.bundle"; sourceTree = BUILT_PRODUCTS_DIR; };
 		053CF5B182C8E438E123DF1BC2847BED /* Pods-ExamplesTests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-ExamplesTests-umbrella.h"; sourceTree = "<group>"; };
-		05D9E08C625558BCFDE390751DEBCAB7 /* Decodable+Extension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Decodable+Extension.swift"; path = "ScatterKit/ScatterKit/Source/Decodable+Extension.swift"; sourceTree = "<group>"; };
-		08CFD80D843C3577550CEF09AD1DDCFD /* scatterkit_script.js */ = {isa = PBXFileReference; includeInIndex = 1; name = scatterkit_script.js; path = ScatterKit/ScatterKit/Source/scatterkit_script.js; sourceTree = "<group>"; };
+		05A99216D1815F294CAFC64F41AAD1E0 /* ptc.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = ptc.h; sourceTree = "<group>"; };
 		0A88B9ACCB7B5F953386DF353708A119 /* Pods-ExamplesTests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-ExamplesTests-dummy.m"; sourceTree = "<group>"; };
+		0C4995C3EC055480C1A56B751EC70D2D /* Crypto.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Crypto.swift; sourceTree = "<group>"; };
+		11C85075108CF4E23A633A64A53686EF /* CryptoCore.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; path = CryptoCore.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		14945D5BCA2A1B935F7EC97EE8D53D0B /* CryptoUtil.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = CryptoUtil.swift; sourceTree = "<group>"; };
 		1AA81F5F46842735E42EC9826E899F2F /* Pods-ExamplesTests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-ExamplesTests-Info.plist"; sourceTree = "<group>"; };
+		1F6E71C229910702AD74C64DD866F529 /* CryptoCore-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "CryptoCore-prefix.pch"; sourceTree = "<group>"; };
 		22D1CAC94363061DEDA5A0E6ECABBCB4 /* Pods-ExamplesTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-ExamplesTests.release.xcconfig"; sourceTree = "<group>"; };
-		2A6900DBA834E7B1EDB0BFCCCAD64980 /* ScatterKitResponse.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ScatterKitResponse.swift; path = ScatterKit/ScatterKit/Source/ScatterKitResponse.swift; sourceTree = "<group>"; };
-		2AA4639F93492BE928E8329E7AD64C61 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/System/Library/Frameworks/WebKit.framework; sourceTree = DEVELOPER_DIR; };
-		2D4E2E4E027CD90FC23F044589D76C50 /* ScatterKit-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "ScatterKit-umbrella.h"; sourceTree = "<group>"; };
-		2F3146353A6E105329A72EF7D2E19C98 /* ScatterKitResult.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ScatterKitResult.swift; path = ScatterKit/ScatterKit/Source/ScatterKitResult.swift; sourceTree = "<group>"; };
+		2B86C79031692D07F1EEF046F98B768F /* CryptoCore.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = CryptoCore.modulemap; sourceTree = "<group>"; };
 		32BC9C0656B0912061A584250DEDD89C /* Pods-ExamplesTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-ExamplesTests.debug.xcconfig"; sourceTree = "<group>"; };
-		391E76CBCC3F8A7AAB989D2778641700 /* ScatterKit.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = ScatterKit.xcconfig; sourceTree = "<group>"; };
 		3A19FEFC6FD87E8AD32CCF0D13B6023C /* Pods-Examples.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Examples.release.xcconfig"; sourceTree = "<group>"; };
-		3EB2CDD08A4DAAE02095CB642DB294A7 /* ScatterKit-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "ScatterKit-Info.plist"; sourceTree = "<group>"; };
+		3DD58514483519CB4995BABC12BCDFE6 /* ptc_crypto.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = ptc_crypto.h; sourceTree = "<group>"; };
+		405BBDB5DDC6E5253FBE4006B8519081 /* CryptoCore-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "CryptoCore-dummy.m"; sourceTree = "<group>"; };
 		434BEF26DD5CCEA2E1342304E3FEF2E6 /* Pods-Examples-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Examples-Info.plist"; sourceTree = "<group>"; };
-		4C41140D63B556E0E3AFFCAA0F63B7B4 /* ScatterKitTransaction.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ScatterKitTransaction.swift; path = ScatterKit/ScatterKit/Source/ScatterKitTransaction.swift; sourceTree = "<group>"; };
-		4C630236ABA503EEF7FC0173D3EC7001 /* ResourceBundle-ScatterKit-ScatterKit-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "ResourceBundle-ScatterKit-ScatterKit-Info.plist"; sourceTree = "<group>"; };
+		440516DC74B4FD1E77E4AEFC4FD69AA6 /* ptc_test.c */ = {isa = PBXFileReference; includeInIndex = 1; path = ptc_test.c; sourceTree = "<group>"; };
+		45CFDB201E0D7F655568F7898EBA04E1 /* keccak-tiny.c */ = {isa = PBXFileReference; includeInIndex = 1; path = "keccak-tiny.c"; sourceTree = "<group>"; };
+		4738471FE77BF1D0CF12B91800ABA124 /* sha3.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = sha3.h; sourceTree = "<group>"; };
+		49E62619BD44018334A67A48D842AC34 /* sha3.c */ = {isa = PBXFileReference; includeInIndex = 1; path = sha3.c; sourceTree = "<group>"; };
 		52EB9595F8234295FBC2B8D08C030745 /* Pods-Examples-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Examples-frameworks.sh"; sourceTree = "<group>"; };
-		623714718C827CEE1D6D77A9DBF8CAC9 /* Pods_Examples.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_Examples.framework; path = "Pods-Examples.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
-		6860906CF95A3F092D8DB84B080C5D8E /* ScatterKit.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ScatterKit.swift; path = ScatterKit/ScatterKit/Source/ScatterKit.swift; sourceTree = "<group>"; };
-		68DB08DE482C173EAAB23DB2F0DA4ED7 /* ScatterKitRequest.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ScatterKitRequest.swift; path = ScatterKit/ScatterKit/Source/ScatterKitRequest.swift; sourceTree = "<group>"; };
+		5CB295B53B1FEBD33E265DDD34419878 /* ptc_util.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = ptc_util.h; sourceTree = "<group>"; };
 		69AC0E08FD8F1BA117975FF2BB4AD093 /* Pods-Examples-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Examples-umbrella.h"; sourceTree = "<group>"; };
-		799FB577F10A08EE654000B1A1653C25 /* ScatterKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = ScatterKit.framework; path = ScatterKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		802C2F2E78E6EAB7AE35C347DB438819 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
-		8300F7FBFED38FA684BE1F5598DCD817 /* ScatterKit.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = ScatterKit.modulemap; sourceTree = "<group>"; };
+		6B85D932F0EA7CFF318BC0CB0BE4A905 /* ptc_util.c */ = {isa = PBXFileReference; includeInIndex = 1; path = ptc_util.c; sourceTree = "<group>"; };
+		750AD1ECCAF282EE43BA4AD4A1B97F66 /* ptc_crypto.c */ = {isa = PBXFileReference; includeInIndex = 1; path = ptc_crypto.c; sourceTree = "<group>"; };
+		7A27183E865C933FDAE504ACC788E083 /* ptc_result+Extension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "ptc_result+Extension.swift"; sourceTree = "<group>"; };
+		7BCF1C867799855BF1B1DFFF9BAA3057 /* CryptoCore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = CryptoCore.framework; path = CryptoCore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		86051E454D92429AF38637710A5C9515 /* Pods-Examples.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Examples.debug.xcconfig"; sourceTree = "<group>"; };
-		87A675140D3190901ED3B58ACD09A5C9 /* ScatterKitError.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ScatterKitError.swift; path = ScatterKit/ScatterKit/Source/ScatterKitError.swift; sourceTree = "<group>"; };
-		88DD392B5C26252607BCF7CC4D06F4AB /* ScatterKitDelegate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ScatterKitDelegate.swift; path = ScatterKit/ScatterKit/Source/ScatterKitDelegate.swift; sourceTree = "<group>"; };
-		92175E18DB4BD229E8FD928DBF129713 /* ScatterKit-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "ScatterKit-dummy.m"; sourceTree = "<group>"; };
+		926EE1CF598442C18DAB4DE4D3012B14 /* Pods_ExamplesTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_ExamplesTests.framework; path = "Pods-ExamplesTests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		93158677B3CC18721D5D44A3C42AFDDD /* Pods-Examples.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-Examples.modulemap"; sourceTree = "<group>"; };
 		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		A03D4DD23EF37F71C18B38721689E70D /* ptc_test.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = ptc_test.h; sourceTree = "<group>"; };
 		A0AFBA2C78CB386EB30DAB4D1CDD2313 /* Pods-ExamplesTests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-ExamplesTests-acknowledgements.markdown"; sourceTree = "<group>"; };
-		A404D368799AED162677B9925FBB51E2 /* Pods_ExamplesTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_ExamplesTests.framework; path = "Pods-ExamplesTests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
-		A51BA3A1B49D5A27F4889807577CB794 /* ScatterKit-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "ScatterKit-prefix.pch"; sourceTree = "<group>"; };
 		A820A8A777A0F127CD9F220D3884F5A3 /* Pods-Examples-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Examples-acknowledgements.markdown"; sourceTree = "<group>"; };
 		AC22F1BCF576E485475067D740988B14 /* Pods-ExamplesTests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-ExamplesTests-acknowledgements.plist"; sourceTree = "<group>"; };
+		AC9C7461764160F9AD74B0E216D23087 /* CryptoCore.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = CryptoCore.xcconfig; sourceTree = "<group>"; };
 		B9185230849E3E47EDE74FE35C40712E /* Pods-Examples-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Examples-dummy.m"; sourceTree = "<group>"; };
+		BBA9DD37E509606F93797F47F80401AE /* CryptoCore-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "CryptoCore-umbrella.h"; sourceTree = "<group>"; };
+		CB4607EFCA7C5F75397649E792E2AFCB /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		CEEE7A7E7A58272900C19B7B161E20B7 /* keccak-tiny.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "keccak-tiny.h"; sourceTree = "<group>"; };
+		D5EC87591F0306DDBF4F48A57F41DB6A /* CryptoCore-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "CryptoCore-Info.plist"; sourceTree = "<group>"; };
+		D745D62BB23232CF5017546AE4D1C716 /* CryptoCore.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CryptoCore.h; path = CryptoCore/CryptoCore.h; sourceTree = "<group>"; };
 		DD5DAE2A2718979779F40194F1BE0559 /* Pods-Examples-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Examples-acknowledgements.plist"; sourceTree = "<group>"; };
-		EB539FE9001200E730C55AC01B72A395 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		E225E1425AA873B25D707C5B7AB15DDA /* LICENSE.md */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE.md; sourceTree = "<group>"; };
+		EF5CA62FFA312242ABD69324BF6F5816 /* ptc_result.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = ptc_result.h; sourceTree = "<group>"; };
+		F4DACF53F790E1102D62DCCCC280D6AD /* Pods_Examples.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_Examples.framework; path = "Pods-Examples.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA994E06E2852B279132C07AB1C3E2A2 /* Pods-ExamplesTests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-ExamplesTests.modulemap"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		71723F159B7ECAF74A58F95BBAD27E24 /* Frameworks */ = {
+		239268D922178FD177768769D47B0281 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9B62C70DCD3126A13411CF6BBF55194B /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		8D646911242F23F97B5CC97D7813BB60 /* Frameworks */ = {
+		D9FB476CE8A233088EDD853C6A1C4572 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4F7E11ADE1093FED1AD027ACB34090B9 /* Foundation.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		DBF1AD71E6851F3A3FA691DB20685339 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				CBE052C6A51149A9DBFDE098DB37E634 /* Foundation.framework in Frameworks */,
-				8F17F4138C1E1D8D7707E5F14EBA55CA /* UIKit.framework in Frameworks */,
-				DF01BAF4ED19B62CB4692ED394E4131F /* WebKit.framework in Frameworks */,
+				C1A7487F2070CF09164EBD8532EACC2F /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -135,56 +128,82 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		03C5C200A0787E300053CFA8F53CA094 /* Frameworks */ = {
+		0E5D13D61F82A5811D143AB390AD9989 /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				04CD90878119676431683045EDC84102 /* iOS */,
+				2B86C79031692D07F1EEF046F98B768F /* CryptoCore.modulemap */,
+				AC9C7461764160F9AD74B0E216D23087 /* CryptoCore.xcconfig */,
+				405BBDB5DDC6E5253FBE4006B8519081 /* CryptoCore-dummy.m */,
+				D5EC87591F0306DDBF4F48A57F41DB6A /* CryptoCore-Info.plist */,
+				1F6E71C229910702AD74C64DD866F529 /* CryptoCore-prefix.pch */,
+				BBA9DD37E509606F93797F47F80401AE /* CryptoCore-umbrella.h */,
 			);
-			name = Frameworks;
+			name = "Support Files";
+			path = "Examples/Pods/Target Support Files/CryptoCore";
 			sourceTree = "<group>";
 		};
-		04CD90878119676431683045EDC84102 /* iOS */ = {
+		426B791C189DAE6D163B0EF26DD4EC06 /* libs */ = {
 			isa = PBXGroup;
 			children = (
-				EB539FE9001200E730C55AC01B72A395 /* Foundation.framework */,
-				802C2F2E78E6EAB7AE35C347DB438819 /* UIKit.framework */,
-				2AA4639F93492BE928E8329E7AD64C61 /* WebKit.framework */,
+				6E12F459D6C60D70D9E0451067538590 /* keccak-tiny */,
 			);
-			name = iOS;
+			name = libs;
+			path = libs;
 			sourceTree = "<group>";
 		};
-		1E2129E7ECBB5FF875317B151C2FA0D5 /* Resources */ = {
+		60DBDF502F5DCECD54E0357EDE1CA39F /* src */ = {
 			isa = PBXGroup;
 			children = (
-				08CFD80D843C3577550CEF09AD1DDCFD /* scatterkit_script.js */,
+				750AD1ECCAF282EE43BA4AD4A1B97F66 /* ptc_crypto.c */,
+				440516DC74B4FD1E77E4AEFC4FD69AA6 /* ptc_test.c */,
+				6B85D932F0EA7CFF318BC0CB0BE4A905 /* ptc_util.c */,
 			);
-			name = Resources;
+			name = src;
+			path = src;
 			sourceTree = "<group>";
 		};
-		68A613A619DA68519EF1DA9906EF259A /* ScatterKit */ = {
+		655B142ADC70A6FC9230A8F9E14B9000 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				05D9E08C625558BCFDE390751DEBCAB7 /* Decodable+Extension.swift */,
-				6860906CF95A3F092D8DB84B080C5D8E /* ScatterKit.swift */,
-				88DD392B5C26252607BCF7CC4D06F4AB /* ScatterKitDelegate.swift */,
-				87A675140D3190901ED3B58ACD09A5C9 /* ScatterKitError.swift */,
-				68DB08DE482C173EAAB23DB2F0DA4ED7 /* ScatterKitRequest.swift */,
-				2A6900DBA834E7B1EDB0BFCCCAD64980 /* ScatterKitResponse.swift */,
-				2F3146353A6E105329A72EF7D2E19C98 /* ScatterKitResult.swift */,
-				4C41140D63B556E0E3AFFCAA0F63B7B4 /* ScatterKitTransaction.swift */,
-				1E2129E7ECBB5FF875317B151C2FA0D5 /* Resources */,
-				AFE7BF020DBA6DF85FE1DD4EFD83320F /* Support Files */,
+				7BCF1C867799855BF1B1DFFF9BAA3057 /* CryptoCore.framework */,
+				F4DACF53F790E1102D62DCCCC280D6AD /* Pods_Examples.framework */,
+				926EE1CF598442C18DAB4DE4D3012B14 /* Pods_ExamplesTests.framework */,
 			);
-			name = ScatterKit;
-			path = ScatterKit;
+			name = Products;
 			sourceTree = "<group>";
 		};
-		7DC942E7FE55DC0146704DB47B01AC62 /* Pods */ = {
+		6E12F459D6C60D70D9E0451067538590 /* keccak-tiny */ = {
 			isa = PBXGroup;
 			children = (
-				68A613A619DA68519EF1DA9906EF259A /* ScatterKit */,
+				45CFDB201E0D7F655568F7898EBA04E1 /* keccak-tiny.c */,
+				CEEE7A7E7A58272900C19B7B161E20B7 /* keccak-tiny.h */,
+				49E62619BD44018334A67A48D842AC34 /* sha3.c */,
+				4738471FE77BF1D0CF12B91800ABA124 /* sha3.h */,
 			);
-			name = Pods;
+			name = "keccak-tiny";
+			path = "keccak-tiny";
+			sourceTree = "<group>";
+		};
+		70B64A2CC363A62A02FDFE0D6809A3E4 /* include */ = {
+			isa = PBXGroup;
+			children = (
+				05A99216D1815F294CAFC64F41AAD1E0 /* ptc.h */,
+				3DD58514483519CB4995BABC12BCDFE6 /* ptc_crypto.h */,
+				EF5CA62FFA312242ABD69324BF6F5816 /* ptc_result.h */,
+				A03D4DD23EF37F71C18B38721689E70D /* ptc_test.h */,
+				5CB295B53B1FEBD33E265DDD34419878 /* ptc_util.h */,
+			);
+			name = include;
+			path = include;
+			sourceTree = "<group>";
+		};
+		81C738D216B8DF6A80A8073705B4963D /* Pod */ = {
+			isa = PBXGroup;
+			children = (
+				11C85075108CF4E23A633A64A53686EF /* CryptoCore.podspec */,
+				E225E1425AA873B25D707C5B7AB15DDA /* LICENSE.md */,
+			);
+			name = Pod;
 			sourceTree = "<group>";
 		};
 		98C466CCD383BFAF061A6A6943C6545A /* Pods-ExamplesTests */ = {
@@ -201,6 +220,36 @@
 			);
 			name = "Pods-ExamplesTests";
 			path = "Target Support Files/Pods-ExamplesTests";
+			sourceTree = "<group>";
+		};
+		9B055D0CFEA43187E72B03DED11F5662 /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				CB4607EFCA7C5F75397649E792E2AFCB /* Foundation.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		A2F8A1547D8FA767E28B876AE5877E63 /* CryptoCore */ = {
+			isa = PBXGroup;
+			children = (
+				D745D62BB23232CF5017546AE4D1C716 /* CryptoCore.h */,
+				81C738D216B8DF6A80A8073705B4963D /* Pod */,
+				C31105120DAEB594D748DE9F30914842 /* Sources */,
+				0E5D13D61F82A5811D143AB390AD9989 /* Support Files */,
+			);
+			name = CryptoCore;
+			path = ../..;
+			sourceTree = "<group>";
+		};
+		A606BB116839A1788F2AB487A913568B /* paytomat_crypto_core */ = {
+			isa = PBXGroup;
+			children = (
+				70B64A2CC363A62A02FDFE0D6809A3E4 /* include */,
+				60DBDF502F5DCECD54E0357EDE1CA39F /* src */,
+			);
+			name = paytomat_crypto_core;
+			path = paytomat_crypto_core;
 			sourceTree = "<group>";
 		};
 		AE15ABCA1D9D37B3F8CB32530E8BCBA8 /* Pods-Examples */ = {
@@ -220,19 +269,17 @@
 			path = "Target Support Files/Pods-Examples";
 			sourceTree = "<group>";
 		};
-		AFE7BF020DBA6DF85FE1DD4EFD83320F /* Support Files */ = {
+		C31105120DAEB594D748DE9F30914842 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
-				4C630236ABA503EEF7FC0173D3EC7001 /* ResourceBundle-ScatterKit-ScatterKit-Info.plist */,
-				8300F7FBFED38FA684BE1F5598DCD817 /* ScatterKit.modulemap */,
-				391E76CBCC3F8A7AAB989D2778641700 /* ScatterKit.xcconfig */,
-				92175E18DB4BD229E8FD928DBF129713 /* ScatterKit-dummy.m */,
-				3EB2CDD08A4DAAE02095CB642DB294A7 /* ScatterKit-Info.plist */,
-				A51BA3A1B49D5A27F4889807577CB794 /* ScatterKit-prefix.pch */,
-				2D4E2E4E027CD90FC23F044589D76C50 /* ScatterKit-umbrella.h */,
+				0C4995C3EC055480C1A56B751EC70D2D /* Crypto.swift */,
+				14945D5BCA2A1B935F7EC97EE8D53D0B /* CryptoUtil.swift */,
+				7A27183E865C933FDAE504ACC788E083 /* ptc_result+Extension.swift */,
+				426B791C189DAE6D163B0EF26DD4EC06 /* libs */,
+				A606BB116839A1788F2AB487A913568B /* paytomat_crypto_core */,
 			);
-			name = "Support Files";
-			path = "../Target Support Files/ScatterKit";
+			name = Sources;
+			path = CryptoCore/Sources;
 			sourceTree = "<group>";
 		};
 		C4292A6D2A6B841256DCB7C96B0338A4 /* Targets Support Files */ = {
@@ -244,44 +291,57 @@
 			name = "Targets Support Files";
 			sourceTree = "<group>";
 		};
+		C4B25B67AC6F7A67926E922F53855162 /* Development Pods */ = {
+			isa = PBXGroup;
+			children = (
+				A2F8A1547D8FA767E28B876AE5877E63 /* CryptoCore */,
+			);
+			name = "Development Pods";
+			sourceTree = "<group>";
+		};
 		CF1408CF629C7361332E53B88F7BD30C = {
 			isa = PBXGroup;
 			children = (
 				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
-				03C5C200A0787E300053CFA8F53CA094 /* Frameworks */,
-				7DC942E7FE55DC0146704DB47B01AC62 /* Pods */,
-				F437F7099742D755B1310E4CE6146642 /* Products */,
+				C4B25B67AC6F7A67926E922F53855162 /* Development Pods */,
+				D210D550F4EA176C3123ED886F8F87F5 /* Frameworks */,
+				655B142ADC70A6FC9230A8F9E14B9000 /* Products */,
 				C4292A6D2A6B841256DCB7C96B0338A4 /* Targets Support Files */,
 			);
 			sourceTree = "<group>";
 		};
-		F437F7099742D755B1310E4CE6146642 /* Products */ = {
+		D210D550F4EA176C3123ED886F8F87F5 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				623714718C827CEE1D6D77A9DBF8CAC9 /* Pods_Examples.framework */,
-				A404D368799AED162677B9925FBB51E2 /* Pods_ExamplesTests.framework */,
-				02A1F02019B303FFA81A538AC2DFA9AA /* ScatterKit.bundle */,
-				799FB577F10A08EE654000B1A1653C25 /* ScatterKit.framework */,
+				9B055D0CFEA43187E72B03DED11F5662 /* iOS */,
 			);
-			name = Products;
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		009839AB5A6726CB51CC207237EFE029 /* Headers */ = {
+		5169857A5CCBD24C9DE58944E52BCD7F /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B4BE6ED4389AF750FC0F85BB280A84FF /* ScatterKit-umbrella.h in Headers */,
+				95449920651AB7732DCE1BCB6036EBD3 /* CryptoCore-umbrella.h in Headers */,
+				332DFD8974E2C95A55A971C4F9D4C792 /* CryptoCore.h in Headers */,
+				89BD3537713C45EEB99049D93177D090 /* keccak-tiny.h in Headers */,
+				27AC51A3A13690C90A8A081D167333ED /* ptc.h in Headers */,
+				D1B2BB2FBD2EDACA94B0F481139CBB07 /* ptc_crypto.h in Headers */,
+				AB5B5C06F6DEB9DFF342088924C52788 /* ptc_result.h in Headers */,
+				2AA056C4988FBE4988E37E666EDFCA34 /* ptc_test.h in Headers */,
+				F294767CDD27363765C062DD1831383B /* ptc_util.h in Headers */,
+				9A1E3AEE88B2FE4E299B58A4F9BAED7D /* sha3.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		860230550DD452202B46E31771269FAF /* Headers */ = {
+		87C7E3457842EB764EA152A8DBCFF3F1 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0B22576A0888B4FB1477D39BFF93820E /* Pods-Examples-umbrella.h in Headers */,
+				7CE1DBFB4BF2E5420EFFDA90DBDEDFEE /* Pods-Examples-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -296,60 +356,42 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		0B5713951D8BC7535C0ABF70DCC5F215 /* Pods-Examples */ = {
+		12BB19F45A2B7C8C62B9A71DD9374EC9 /* Pods-Examples */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 72D13A354EBB12102A4CC2161B1411CC /* Build configuration list for PBXNativeTarget "Pods-Examples" */;
+			buildConfigurationList = 84E507B29EE5A4DBD1676A9BCF6B6BE5 /* Build configuration list for PBXNativeTarget "Pods-Examples" */;
 			buildPhases = (
-				860230550DD452202B46E31771269FAF /* Headers */,
-				13DF67BFFBC02D36A56B065D8012E7D3 /* Sources */,
-				8D646911242F23F97B5CC97D7813BB60 /* Frameworks */,
-				D9FBB67B185550FA3ABDF3A40546A8C7 /* Resources */,
+				87C7E3457842EB764EA152A8DBCFF3F1 /* Headers */,
+				E4249584B4CF96B3015DCEC3C88AE1C8 /* Sources */,
+				D9FB476CE8A233088EDD853C6A1C4572 /* Frameworks */,
+				BBD178CD527D6AECA8D9E2848E15B6B0 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				DA0FF52E21BC1BA51F3F4E6968FB6BB4 /* PBXTargetDependency */,
+				D7F01D825B3A0DE7C041226ACB24CBDA /* PBXTargetDependency */,
 			);
 			name = "Pods-Examples";
 			productName = "Pods-Examples";
-			productReference = 623714718C827CEE1D6D77A9DBF8CAC9 /* Pods_Examples.framework */;
+			productReference = F4DACF53F790E1102D62DCCCC280D6AD /* Pods_Examples.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		3CAF82DE1B398AAA7C41C687B72E101B /* ScatterKit */ = {
+		C0FB2F7A8E9444A8FC7AE0DEF978960C /* CryptoCore */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 2FCE95A0FCEA7C25343C31D9EF307055 /* Build configuration list for PBXNativeTarget "ScatterKit" */;
+			buildConfigurationList = E97C2CC9403612A02DE45CFDC038DCEF /* Build configuration list for PBXNativeTarget "CryptoCore" */;
 			buildPhases = (
-				009839AB5A6726CB51CC207237EFE029 /* Headers */,
-				50DA8B773A5208578EBCC77302F7CED5 /* Sources */,
-				DBF1AD71E6851F3A3FA691DB20685339 /* Frameworks */,
-				CFA19BF4DA85D387E1EA399B47ED3D0F /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				BCA38CFD6C124FEA59F2789813864AD8 /* PBXTargetDependency */,
-			);
-			name = ScatterKit;
-			productName = ScatterKit;
-			productReference = 799FB577F10A08EE654000B1A1653C25 /* ScatterKit.framework */;
-			productType = "com.apple.product-type.framework";
-		};
-		A3E051EC8F68EF6E24764C2ECC96E02A /* ScatterKit-ScatterKit */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = ECA8333756CCCE037E05751EE040DB49 /* Build configuration list for PBXNativeTarget "ScatterKit-ScatterKit" */;
-			buildPhases = (
-				2B65A610891E08EC5547BF7E6AB17735 /* Sources */,
-				71723F159B7ECAF74A58F95BBAD27E24 /* Frameworks */,
-				95166424C549488AD6613A5DF787080D /* Resources */,
+				5169857A5CCBD24C9DE58944E52BCD7F /* Headers */,
+				4E241141D0FF515AEA139B6E13378AE0 /* Sources */,
+				239268D922178FD177768769D47B0281 /* Frameworks */,
+				0020BADE98EB04FCB825E0C935B79C7A /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = "ScatterKit-ScatterKit";
-			productName = "ScatterKit-ScatterKit";
-			productReference = 02A1F02019B303FFA81A538AC2DFA9AA /* ScatterKit.bundle */;
-			productType = "com.apple.product-type.bundle";
+			name = CryptoCore;
+			productName = CryptoCore;
+			productReference = 7BCF1C867799855BF1B1DFFF9BAA3057 /* CryptoCore.framework */;
+			productType = "com.apple.product-type.framework";
 		};
 		CD6CC7F7ACB2EB7FE46D2D3D71215065 /* Pods-ExamplesTests */ = {
 			isa = PBXNativeTarget;
@@ -367,7 +409,7 @@
 			);
 			name = "Pods-ExamplesTests";
 			productName = "Pods-ExamplesTests";
-			productReference = A404D368799AED162677B9925FBB51E2 /* Pods_ExamplesTests.framework */;
+			productReference = 926EE1CF598442C18DAB4DE4D3012B14 /* Pods_ExamplesTests.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
@@ -387,24 +429,22 @@
 				en,
 			);
 			mainGroup = CF1408CF629C7361332E53B88F7BD30C;
-			productRefGroup = F437F7099742D755B1310E4CE6146642 /* Products */;
+			productRefGroup = 655B142ADC70A6FC9230A8F9E14B9000 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				0B5713951D8BC7535C0ABF70DCC5F215 /* Pods-Examples */,
+				C0FB2F7A8E9444A8FC7AE0DEF978960C /* CryptoCore */,
+				12BB19F45A2B7C8C62B9A71DD9374EC9 /* Pods-Examples */,
 				CD6CC7F7ACB2EB7FE46D2D3D71215065 /* Pods-ExamplesTests */,
-				3CAF82DE1B398AAA7C41C687B72E101B /* ScatterKit */,
-				A3E051EC8F68EF6E24764C2ECC96E02A /* ScatterKit-ScatterKit */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		95166424C549488AD6613A5DF787080D /* Resources */ = {
+		0020BADE98EB04FCB825E0C935B79C7A /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A263E815BF6987AF25BBE232F7F274D1 /* scatterkit_script.js in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -415,15 +455,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		CFA19BF4DA85D387E1EA399B47ED3D0F /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				2A1C7DF721D2F7CE3EFF3AFF545E8518 /* ScatterKit.bundle in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		D9FBB67B185550FA3ABDF3A40546A8C7 /* Resources */ = {
+		BBD178CD527D6AECA8D9E2848E15B6B0 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -441,34 +473,27 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		13DF67BFFBC02D36A56B065D8012E7D3 /* Sources */ = {
+		4E241141D0FF515AEA139B6E13378AE0 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1C65478AA02E4820E75AF436F25940D3 /* Pods-Examples-dummy.m in Sources */,
+				2C9DCA1762E6DD3C4F533406E8A36C3A /* Crypto.swift in Sources */,
+				AFC0C10F6DD3B1EB003AFDD6EDF8960F /* CryptoCore-dummy.m in Sources */,
+				0FDF93CFA0EBE39AE4C955767C1F4971 /* CryptoUtil.swift in Sources */,
+				CBBF824567FF28E2237AF6CCE4CD7CAB /* keccak-tiny.c in Sources */,
+				FBF9A926B6D8BD7401C7C32E2E323199 /* ptc_crypto.c in Sources */,
+				C616BF061593265194FAC7CD73E1BED0 /* ptc_result+Extension.swift in Sources */,
+				F2BD93AF5001AAAE4F5BE38B30EDB016 /* ptc_test.c in Sources */,
+				1FC5E974E6A76EB401F90F5BF9B5894D /* ptc_util.c in Sources */,
+				A5C816D20B2C600755342FE38AC01A9F /* sha3.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		2B65A610891E08EC5547BF7E6AB17735 /* Sources */ = {
+		E4249584B4CF96B3015DCEC3C88AE1C8 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		50DA8B773A5208578EBCC77302F7CED5 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				5BE61BFD73F39D25472788CE816D369E /* Decodable+Extension.swift in Sources */,
-				E3ACAB02E870381CD647928107636B4A /* ScatterKit-dummy.m in Sources */,
-				A2810E9FE3A92AB39F8200B37E6A4352 /* ScatterKit.swift in Sources */,
-				600E88A560B7DE6530865274A4EE8B01 /* ScatterKitDelegate.swift in Sources */,
-				2854BE8EDF320E3FEE55302E4889502A /* ScatterKitError.swift in Sources */,
-				8B529F180ED49B3B0050FFAD2D1EA98A /* ScatterKitRequest.swift in Sources */,
-				D64537D8E8F2CEF061F647061B8B59E2 /* ScatterKitResponse.swift in Sources */,
-				0C8F2C15D297A3B21046644BA9B619D3 /* ScatterKitResult.swift in Sources */,
-				1409D6731C42ACD8A28045730134DD0B /* ScatterKitTransaction.swift in Sources */,
+				D081040695FDBF57957587A4B11F5D16 /* Pods-Examples-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -478,56 +503,18 @@
 		B8B9C5CA3D89B35D4A2E87C7B60C2A4F /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = "Pods-Examples";
-			target = 0B5713951D8BC7535C0ABF70DCC5F215 /* Pods-Examples */;
+			target = 12BB19F45A2B7C8C62B9A71DD9374EC9 /* Pods-Examples */;
 			targetProxy = 8BFA0F00E04B4D7E1AC937A55A854D25 /* PBXContainerItemProxy */;
 		};
-		BCA38CFD6C124FEA59F2789813864AD8 /* PBXTargetDependency */ = {
+		D7F01D825B3A0DE7C041226ACB24CBDA /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			name = "ScatterKit-ScatterKit";
-			target = A3E051EC8F68EF6E24764C2ECC96E02A /* ScatterKit-ScatterKit */;
-			targetProxy = DE2D6C721E184ED84576A2FB34C9F77A /* PBXContainerItemProxy */;
-		};
-		DA0FF52E21BC1BA51F3F4E6968FB6BB4 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = ScatterKit;
-			target = 3CAF82DE1B398AAA7C41C687B72E101B /* ScatterKit */;
-			targetProxy = 91CA4A623F7E0A7E2749791EA2FCA7C3 /* PBXContainerItemProxy */;
+			name = CryptoCore;
+			target = C0FB2F7A8E9444A8FC7AE0DEF978960C /* CryptoCore */;
+			targetProxy = 630A22CED581DCF0B344ABE1F65CA162 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		004817B613D861541D4A18314456E5F3 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 391E76CBCC3F8A7AAB989D2778641700 /* ScatterKit.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/ScatterKit";
-				INFOPLIST_FILE = "Target Support Files/ScatterKit/ResourceBundle-ScatterKit-ScatterKit-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				PRODUCT_NAME = ScatterKit;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				WRAPPER_EXTENSION = bundle;
-			};
-			name = Release;
-		};
-		0487BC50EBAF561E76D74C196888187C /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 391E76CBCC3F8A7AAB989D2778641700 /* ScatterKit.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/ScatterKit";
-				INFOPLIST_FILE = "Target Support Files/ScatterKit/ResourceBundle-ScatterKit-ScatterKit-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				PRODUCT_NAME = ScatterKit;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				WRAPPER_EXTENSION = bundle;
-			};
-			name = Debug;
-		};
 		07488D4657FB0A78086563621D425F8A /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -592,9 +579,9 @@
 			};
 			name = Debug;
 		};
-		2C7BC3841B3C186A9F0C397B9E1B454A /* Debug */ = {
+		140719A35F14A2D400CC0A51B0CBD914 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 391E76CBCC3F8A7AAB989D2778641700 /* ScatterKit.xcconfig */;
+			baseConfigurationReference = AC9C7461764160F9AD74B0E216D23087 /* CryptoCore.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -605,8 +592,8 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/ScatterKit/ScatterKit-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/ScatterKit/ScatterKit-Info.plist";
+				GCC_PREFIX_HEADER = "Target Support Files/CryptoCore/CryptoCore-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/CryptoCore/CryptoCore-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -614,48 +601,13 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				MODULEMAP_FILE = "Target Support Files/ScatterKit/ScatterKit.modulemap";
-				PRODUCT_MODULE_NAME = ScatterKit;
-				PRODUCT_NAME = ScatterKit;
+				MODULEMAP_FILE = "Target Support Files/CryptoCore/CryptoCore.modulemap";
+				PRODUCT_MODULE_NAME = CryptoCore;
+				PRODUCT_NAME = CryptoCore;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		43E9AA28DF5EC9B33465EDA0C1835785 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 391E76CBCC3F8A7AAB989D2778641700 /* ScatterKit.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/ScatterKit/ScatterKit-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/ScatterKit/ScatterKit-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MODULEMAP_FILE = "Target Support Files/ScatterKit/ScatterKit.modulemap";
-				PRODUCT_MODULE_NAME = ScatterKit;
-				PRODUCT_NAME = ScatterKit;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -663,9 +615,9 @@
 			};
 			name = Release;
 		};
-		765D5E03EB7784EA7ECB69DFAEADEBB2 /* Release */ = {
+		394B5EDFD92D4A882EDA8598D0CC88FB /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 3A19FEFC6FD87E8AD32CCF0D13B6023C /* Pods-Examples.release.xcconfig */;
+			baseConfigurationReference = 86051E454D92429AF38637710A5C9515 /* Pods-Examples.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				CODE_SIGN_IDENTITY = "";
@@ -695,11 +647,45 @@
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
-			name = Release;
+			name = Debug;
+		};
+		49A82E2AF48E4961D37590784409EC1F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = AC9C7461764160F9AD74B0E216D23087 /* CryptoCore.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/CryptoCore/CryptoCore-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/CryptoCore/CryptoCore-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/CryptoCore/CryptoCore.modulemap";
+				PRODUCT_MODULE_NAME = CryptoCore;
+				PRODUCT_NAME = CryptoCore;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
 		};
 		A093EAC68159502238AF44FBF9D6C3F1 /* Release */ = {
 			isa = XCBuildConfiguration;
@@ -799,9 +785,9 @@
 			};
 			name = Release;
 		};
-		AC6AE7F3E480659F284CECB478FF5A91 /* Debug */ = {
+		D171F7D4769A3289E15F4BE2BFDF5648 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 86051E454D92429AF38637710A5C9515 /* Pods-Examples.debug.xcconfig */;
+			baseConfigurationReference = 3A19FEFC6FD87E8AD32CCF0D13B6023C /* Pods-Examples.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				CODE_SIGN_IDENTITY = "";
@@ -831,10 +817,11 @@
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
-			name = Debug;
+			name = Release;
 		};
 		FABA33B88748A28D32D82D654C291A82 /* Debug */ = {
 			isa = XCBuildConfiguration;
@@ -876,15 +863,6 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		2FCE95A0FCEA7C25343C31D9EF307055 /* Build configuration list for PBXNativeTarget "ScatterKit" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				2C7BC3841B3C186A9F0C397B9E1B454A /* Debug */,
-				43E9AA28DF5EC9B33465EDA0C1835785 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
 		4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -894,11 +872,11 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		72D13A354EBB12102A4CC2161B1411CC /* Build configuration list for PBXNativeTarget "Pods-Examples" */ = {
+		84E507B29EE5A4DBD1676A9BCF6B6BE5 /* Build configuration list for PBXNativeTarget "Pods-Examples" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				AC6AE7F3E480659F284CECB478FF5A91 /* Debug */,
-				765D5E03EB7784EA7ECB69DFAEADEBB2 /* Release */,
+				394B5EDFD92D4A882EDA8598D0CC88FB /* Debug */,
+				D171F7D4769A3289E15F4BE2BFDF5648 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -912,11 +890,11 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		ECA8333756CCCE037E05751EE040DB49 /* Build configuration list for PBXNativeTarget "ScatterKit-ScatterKit" */ = {
+		E97C2CC9403612A02DE45CFDC038DCEF /* Build configuration list for PBXNativeTarget "CryptoCore" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				0487BC50EBAF561E76D74C196888187C /* Debug */,
-				004817B613D861541D4A18314456E5F3 /* Release */,
+				49A82E2AF48E4961D37590784409EC1F /* Debug */,
+				140719A35F14A2D400CC0A51B0CBD914 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

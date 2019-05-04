@@ -1,16 +1,16 @@
 PODS:
-  - ScatterKit (0.0.5)
+  - CryptoCore (0.0.1)
 
 DEPENDENCIES:
-  - ScatterKit
+  - CryptoCore (from `../`)
 
-SPEC REPOS:
-  https://github.com/cocoapods/specs.git:
-    - ScatterKit
+EXTERNAL SOURCES:
+  CryptoCore:
+    :path: "../"
 
 SPEC CHECKSUMS:
-  ScatterKit: 8472b2f9f210f5c73362c176548f26eb56599e20
+  CryptoCore: 0f2fddfec67a12cbf400328b298710bdc90e1f72
 
-PODFILE CHECKSUM: 56e64de230458bcce2b6c3b091a7b3070a040283
+PODFILE CHECKSUM: 0fcef8e13ea7d3ff34be2935cdc5206f29b8f67b
 
 COCOAPODS: 1.6.1

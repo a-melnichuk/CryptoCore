@@ -19,7 +19,7 @@ class ViewController: UIViewController {
         print("__TEST2")
         ptc_test_print()
         if let keccak = CryptoCore.Crypto.keccak256(Data([0, 2, 4])) {
-            print("__KECCAK \(keccak.count) \(keccak as NSData)")
+            print("__KECCAK \(keccak.count) \(CryptoUtil.hex(fromData: keccak))")
         }
         
         

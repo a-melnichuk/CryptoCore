@@ -10,7 +10,8 @@
 #endif
 #endif
 
+#import "CryptoCore.h"
 
-FOUNDATION_EXPORT double ScatterKitVersionNumber;
-FOUNDATION_EXPORT const unsigned char ScatterKitVersionString[];
+FOUNDATION_EXPORT double CryptoCoreVersionNumber;
+FOUNDATION_EXPORT const unsigned char CryptoCoreVersionString[];
 

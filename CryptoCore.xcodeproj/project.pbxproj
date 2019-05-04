@@ -52,7 +52,7 @@
 		6671AD1A22799BB1009001F8 /* module.modulemap */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.module-map"; path = module.modulemap; sourceTree = "<group>"; };
 		6671AD1B2279E280009001F8 /* ptc.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ptc.h; sourceTree = "<group>"; };
 		66BAE596227C6D6800A61E22 /* LICENSE.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = LICENSE.md; sourceTree = "<group>"; };
-		66BAE597227C86D300A61E22 /* CryptoCore.podspec */ = {isa = PBXFileReference; lastKnownFileType = text; path = CryptoCore.podspec; sourceTree = "<group>"; };
+		66BAE597227C86D300A61E22 /* CryptoCore.podspec */ = {isa = PBXFileReference; lastKnownFileType = text; path = CryptoCore.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		66C225BC227B418700E4C7F9 /* sha3.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = sha3.h; sourceTree = "<group>"; };
 		66C225BD227B418700E4C7F9 /* keccak-tiny.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "keccak-tiny.h"; sourceTree = "<group>"; };
 		66C225C0227B419600E4C7F9 /* sha3.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = sha3.c; sourceTree = "<group>"; };

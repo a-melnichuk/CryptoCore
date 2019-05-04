@@ -1,0 +1,41 @@
+{
+  "name": "CryptoCore",
+  "module_name": "CryptoCore",
+  "version": "0.0.1",
+  "swift_version": "5.0",
+  "summary": "Common crypto components for Paytomat Wallet",
+  "description": "Bundle of common crypto components needed by other Paytomat Wallet cryptocurrencies\"",
+  "homepage": "https://paytomat.com/",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE.md"
+  },
+  "authors": {
+    "Alex Melnichuk": "a.melnichuk@noisyminer.com"
+  },
+  "platforms": {
+    "ios": "9.0"
+  },
+  "requires_arc": true,
+  "source": {
+    "git": "https://github.com/a-melnichuk/CryptoCore.git",
+    "branch": "master",
+    "tag": "0.0.1"
+  },
+  "source_files": [
+    "CryptoCore/*.h",
+    "CryptoCore/Sources/*.swift",
+    "CryptoCore/Sources/paytomat_crypto_core/{include,src}/*.{h,c}",
+    "CryptoCore/Sources/libs/keccak-tiny/*.{h,c}"
+  ],
+  "public_header_files": "CryptoCore/*.h",
+  "pod_target_xcconfig": {
+    "SYSTEM_HEADER_SEARCH_PATHS": "$(PODS_TARGET_SRCROOT)/CryptoCore/Sources/libs",
+    "SWIFT_INCLUDE_PATHS": [
+      "$(PODS_TARGET_SRCROOT)/CryptoCore/Sources/paytomat_crypto_core/**",
+      "$(PODS_TARGET_SRCROOT)/CryptoCore/Sources/libs"
+    ]
+  },
+  "exclude_files": "Examples/*",
+  "frameworks": "Foundation"
+}
