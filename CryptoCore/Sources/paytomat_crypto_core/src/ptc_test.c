@@ -10,7 +10,7 @@
 
 void ptc_test_print()
 {
-    printf("test_print\n");
+    printf("test_print!\n");
 }
 
 int ptc_test_int()

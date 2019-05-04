@@ -41,7 +41,6 @@ Pod::Spec.new do |s|
     ]
   }
   s.preserve_paths = 'CryptoCore/Sources/paytomat_crypto_core/module.modulemap'
-  s.vendored_libraries = './**/*.a'
   s.exclude_files = 'Examples/*'
   s.frameworks = 'Foundation'
 end
