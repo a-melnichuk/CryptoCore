@@ -1,0 +1,76 @@
+//
+//  ptc_base58.h
+//  CryptoCore
+//
+//  Created by Alex Melnichuk on 5/5/19.
+//  Copyright © 2019 Alex Melnichuk. All rights reserved.
+//
+
+#ifndef PTC_BASE58_H
+#define PTC_BASE58_H
+
+#include <string.h>
+#include <stdlib.h>
+#include <stdint.h>
+#include <openssl/sha.h>
+#include <libbase58/base58.h>
+
+#include "ptc_result.h"
+
+// TODO: Impelement updated base58 functions
+
+// Base58 decode
+
+typedef struct ptc_base58_context {
+    uint8_t* bytes;
+    size_t length;
+} ptc_base58_context;
+
+ptc_result ptc_b58_decode(ptc_base58_context* c, const void* in_base58, size_t in_length);
+void ptc_b58_decode_destroy(ptc_base58_context* c);
+
+ptc_result ptc_b58check_decode(ptc_base58_context* c,
+                               const char* in_str,
+                               const uint8_t* in_version, size_t in_version_length);
+
+// Base58 encode
+
+ptc_result ptc_b58_encode(const void* in_bytes,
+                          size_t in_length,
+                          char* out_base58,
+                          size_t* out_length);
+
+ptc_result ptc_b58check_encode(const void* in_bytes,
+                               size_t in_length,
+                               const uint8_t* in_version, size_t in_version_length,
+                               char* out_base58, size_t* out_length);
+
+ptc_result ptc_b58check(const char* in_str, const uint8_t* in_version, size_t in_version_length);
+
+// Legacy
+
+ptc_result ptc_base58_encode(const void* in_bytes,
+                             size_t in_length,
+                             uint8_t* out_base58,
+                             size_t* out_length);
+
+ptc_result ptc_base58_decode_init(const void* in_base58,
+                                  size_t in_length,
+                                  uint8_t** out_bytes,
+                                  size_t* out_length);
+
+void ptc_base58_decode_destroy(uint8_t** in_decoded_array);
+
+ptc_result ptc_base58_check(const char* in_str, uint8_t in_pubkeyhash);
+
+ptc_result ptc_base58_check_decode(const char* in_str,
+                                   uint8_t in_version,
+                                   uint8_t** out_bytes,
+                                   size_t* out_length);
+
+ptc_result ptc_base58_check_encode(const void* in_bytes,
+                                   size_t in_length,
+                                   uint8_t in_version,
+                                   char* out_base58,
+                                   size_t* out_length);
+#endif

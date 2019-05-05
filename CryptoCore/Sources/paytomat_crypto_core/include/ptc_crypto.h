@@ -13,6 +13,8 @@
 #include <keccak-tiny/keccak-tiny.h>
 #include <blake2b/blake2b.h>
 #include <openssl/sha.h>
+#include <openssl/ripemd.h>
+#include <openssl/hmac.h>
 
 #include "ptc_result.h"
 
@@ -30,5 +32,18 @@ ptc_result ptc_blake2b256(const void* in_data, size_t in_length, uint8_t* out_by
 
 ptc_result ptc_sha256(const void* in_data, size_t in_length, uint8_t* out_bytes);
 ptc_result ptc_sha512(const void* in_data, size_t in_length, uint8_t* out_bytes);
+ptc_result ptc_sha256_sha256(const void* in_data, size_t in_length, uint8_t* out_bytes);
 
+// RIPEMD
+
+ptc_result ptc_ripemd160(const void* in_data, size_t in_length, uint8_t* out_bytes);
+ptc_result ptc_sha256_ripemd160(const void* in_data, size_t in_length, uint8_t* out_bytes);
+
+// HMAC
+
+ptc_result ptc_hmacsha512(const void* in_data,
+                          size_t in_data_length,
+                          const void* in_key,
+                          size_t in_key_length,
+                          uint8_t* out_bytes);
 #endif

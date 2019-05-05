@@ -25,14 +25,6 @@ ios_openssl_build() {
     curl -O https://www.openssl.org/source/openssl-$OPENSSL_VERSION.tar.gz
     tar zxf openssl-$OPENSSL_VERSION.tar.gz
 
-#    cd openssl-$OPENSSL_VERSION
-
-#    sh "$SCRIPT_DIR/build_openssl.sh" iphoneos arm64
-#    sh "$SCRIPT_DIR/build_openssl.sh" iphoneos armv7s
-#    sh "$SCRIPT_DIR/build_openssl.sh" iphoneos armv7
-#    sh "$SCRIPT_DIR/build_openssl.sh" iphonesimulator x86_64
-#    sh "$SCRIPT_DIR/build_openssl.sh" iphonesimulator i386
-
     sh "$SCRIPT_DIR/build_openssl.sh" iphoneos arm64 openssl-$OPENSSL_VERSION &
     PIDS+=" $!"
     sh "$SCRIPT_DIR/build_openssl.sh" iphoneos armv7s openssl-$OPENSSL_VERSION &
