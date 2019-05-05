@@ -2,8 +2,3 @@ module paytomat_crypto_core [system][extern_c] {
     header "paytomat_crypto_core/include/ptc.h"
     export *
 }
-
-module openssl [system][extern_c] {
-    header "libs/openssl/crypto.h"
-    export *
-}

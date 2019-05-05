@@ -27,6 +27,8 @@ Pod::Spec.new do |s|
     'CryptoCore/Sources/paytomat_crypto_core/{include,src}/*.{h,c}',
     'CryptoCore/Sources/libs/keccak-tiny/*.{h,c}',
     'CryptoCore/Sources/libs/blake2b/*.{h,c}',
+    'CryptoCore/Sources/libs/libbase58/.{h,c}',
+    'CryptoCore/Sources/libs/curve25519/**/.{h,c}',
     'CryptoCore/Sources/libs/openssl/*.{h}'
   ]
   s.public_header_files = 'CryptoCore/*.h'
