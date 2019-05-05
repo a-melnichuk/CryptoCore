@@ -2,7 +2,7 @@
 set -ex
 
 if [ $# -ne 3 ]; then
-    echo "Usage: sh $0 [iphoneos|iphonesimulator] [arm64|armv7s|armv7|x86_64|i386]" 1>&2
+    echo "Usage: sh $0 [iphoneos|iphonesimulator] [arm64|armv7s|armv7|x86_64|i386] [folder]" 1>&2
     exit 1
 fi
 
@@ -12,13 +12,13 @@ trap "{ cd - ; rm -rf $TDIR; exit 255; }" SIGINT
 CURRENTPATH="`pwd`"
 SDK=$1
 ARCH=$2
-OPENSSL_FOLDER=$3
+FOLDER=$3
 
-cp -R $OPENSSL_FOLDER/* $TDIR
+cp -R $FOLDER/* $TDIR
 cd $TDIR
 
 
-echo "Start build in path $CURRENTPATH/$TDIR"
+echo "Start openssl build in path $CURRENTPATH/$TDIR"
 
 PLATFORM="`xcrun -sdk $SDK --show-sdk-platform-path`"
 SDK_PATH="`xcrun -sdk $SDK --show-sdk-path`"
