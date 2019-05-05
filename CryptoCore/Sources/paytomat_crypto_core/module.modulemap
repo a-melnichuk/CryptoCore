@@ -1,4 +1,9 @@
 module paytomat_crypto_core [system][extern_c] {
-    header "include/ptc.h"
+    header "paytomat_crypto_core/include/ptc.h"
     export *
+}
+
+module openssl {
+    header "libs/openssl/"
+    link "crypto"
 }
