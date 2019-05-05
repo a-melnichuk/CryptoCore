@@ -31,8 +31,10 @@ Pod::Spec.new do |s|
   ]
   s.public_header_files = 'CryptoCore/*.h'
   s.pod_target_xcconfig = {
-    'LIBRARY_SEARCH_PATHS' => '$(PODS_TARGET_SRCROOT)/CryptoCore/Sources/libs/openssl $(PODS_ROOT)/CryptoCore/Sources/libs/openssl',
-    'SYSTEM_HEADER_SEARCH_PATHS' => '$(PODS_TARGET_SRCROOT)/CryptoCore/Sources/libs $(PODS_ROOT)/CryptoCore/Sources/libs',
+    'SYSTEM_HEADER_SEARCH_PATHS' => [
+        '$(PODS_TARGET_SRCROOT)/CryptoCore/Sources/libs',
+        '$(PODS_ROOT)/CryptoCore/Sources/libs'
+    ].join(' '),
     'SWIFT_INCLUDE_PATHS' => [
         '$(PODS_TARGET_SRCROOT)/CryptoCore/Sources/paytomat_crypto_core/**',
         '$(PODS_ROOT)/CryptoCore/Sources/paytomat_crypto_core/**',
@@ -40,6 +42,18 @@ Pod::Spec.new do |s|
         '$(PODS_ROOT)/CryptoCore/Sources/libs'
     ]
   }
+  
+  s.subspec 'openssl' do |openssl|
+      openssl.vendored_libraries = 'CryptoCore/Sources/libs/openssl/libcrypto.a'
+      openssl.libraries = 'crypto'
+      openssl.xcconfig = {
+          'LIBRARY_SEARCH_PATHS' => [
+            '$(PODS_TARGET_SRCROOT)/CryptoCore/Sources/libs/openssl',
+            '$(PODS_ROOT)/CryptoCore/Sources/libs/openssl'
+          ].join(' ')
+      }
+  end
+  
   s.preserve_paths = 'CryptoCore/Sources/paytomat_crypto_core/module.modulemap'
   s.exclude_files = 'Examples/*'
   s.frameworks = 'Foundation'
