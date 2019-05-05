@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
   s.name = 'CryptoCore'
   s.module_name = 'CryptoCore'
-  s.version = '0.0.4'
+  s.version = '0.0.5'
   s.swift_version = '5.0'
   s.summary = 'Common crypto components for Paytomat Wallet'
   s.description = <<-DESC
@@ -28,7 +28,7 @@ Pod::Spec.new do |s|
     'CryptoCore/Sources/libs/keccak-tiny/*.{h,c}',
     'CryptoCore/Sources/libs/blake2b/*.{h,c}',
     'CryptoCore/Sources/libs/base58/*.{h,c}',
-    'CryptoCore/Sources/libs/curve25519/**/.{h,c}',
+    'CryptoCore/Sources/libs/curve25519/**/*.{h,c}',
     'CryptoCore/Sources/libs/openssl/*.{h}'
   ]
   s.public_header_files = 'CryptoCore/*.h'
@@ -38,7 +38,9 @@ Pod::Spec.new do |s|
       ].join(' '),
     'LIBRARY_SEARCH_PATHS' => [
         '$(PODS_TARGET_SRCROOT)/CryptoCore/Sources/libs/openssl',
-        '$(PODS_ROOT)/CryptoCore/Sources/libs/openssl'
+        '$(PODS_ROOT)/CryptoCore/Sources/libs/openssl',
+        '$(PODS_TARGET_SRCROOT)/CryptoCore/Sources/libs/secp256k1',
+        '$(PODS_ROOT)/CryptoCore/Sources/libs/secp256k1'
     ].join(' '),
     'SYSTEM_HEADER_SEARCH_PATHS' => [
         '$(PODS_TARGET_SRCROOT)/CryptoCore/Sources/libs',
@@ -51,7 +53,7 @@ Pod::Spec.new do |s|
         '$(PODS_ROOT)/CryptoCore/Sources/libs'
     ]
   }
-  s.vendored_libraries = 'CryptoCore/Sources/libs/openssl/libcrypto.a'
+  s.vendored_libraries = 'CryptoCore/Sources/libs/openssl/libcrypto.a', 'CryptoCore/Sources/libs/secp256k1/libsecp256k1.a'
   s.preserve_paths = 'CryptoCore/Sources/module.modulemap', 
   s.exclude_files = 'Examples/*'
   s.frameworks = 'Foundation'
