@@ -27,8 +27,7 @@
     "CryptoCore/Sources/*.swift",
     "CryptoCore/Sources/paytomat_crypto_core/{include,src}/*.{h,c}",
     "CryptoCore/Sources/libs/keccak-tiny/*.{h,c}",
-    "CryptoCore/Sources/libs/blake2b/*.{h,c}",
-    "CryptoCore/Sources/libs/openssl/*.{h}"
+    "CryptoCore/Sources/libs/blake2b/*.{h,c}"
   ],
   "public_header_files": "CryptoCore/*.h",
   "pod_target_xcconfig": {
@@ -40,14 +39,16 @@
       "$(PODS_ROOT)/CryptoCore/Sources/libs"
     ]
   },
-  "preserve_paths": "CryptoCore/Sources/paytomat_crypto_core/module.modulemap",
+  "preserve_paths": "CryptoCore/Sources/module.modulemap",
   "exclude_files": "Examples/*",
   "frameworks": "Foundation",
   "subspecs": [
     {
       "name": "openssl",
+      "preserve_paths": "CryptoCore/Sources/libs/openssl/*.h",
       "vendored_libraries": "CryptoCore/Sources/libs/openssl/libcrypto.a",
       "libraries": "crypto",
+      "source_files": "CryptoCore/Sources/libs/openssl/*.{h}",
       "xcconfig": {
         "LIBRARY_SEARCH_PATHS": "$(PODS_TARGET_SRCROOT)/CryptoCore/Sources/libs/openssl $(PODS_ROOT)/CryptoCore/Sources/libs/openssl"
       }

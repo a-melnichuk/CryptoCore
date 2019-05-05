@@ -3,7 +3,7 @@ module paytomat_crypto_core [system][extern_c] {
     export *
 }
 
-module openssl {
-    header "libs/openssl/"
-    link "crypto"
+module openssl [system][extern_c] {
+    header "libs/openssl/crypto.h"
+    export *
 }

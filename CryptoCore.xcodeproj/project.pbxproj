@@ -300,6 +300,7 @@
 		6671AD1222799949009001F8 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
+				6671AD1A22799BB1009001F8 /* module.modulemap */,
 				66C225B8227B3FFE00E4C7F9 /* libs */,
 				6671AD1322799967009001F8 /* paytomat_crypto_core */,
 				6671AD1822799A67009001F8 /* Crypto.swift */,
@@ -314,7 +315,6 @@
 			children = (
 				66C225A9227B3DC300E4C7F9 /* include */,
 				66C225AA227B3DC700E4C7F9 /* src */,
-				6671AD1A22799BB1009001F8 /* module.modulemap */,
 			);
 			path = paytomat_crypto_core;
 			sourceTree = "<group>";
@@ -843,7 +843,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.paytomat.CryptoCore;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
-				SWIFT_INCLUDE_PATHS = "${SRCROOT}/CryptoCore/Sources/paytomat_crypto_core/** ${SRCROOT}/CryptoCore/Sources/libs";
+				SWIFT_INCLUDE_PATHS = "${SRCROOT}/CryptoCore/Sources/** ${SRCROOT}/CryptoCore/Sources/libs";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				SYSTEM_HEADER_SEARCH_PATHS = "${SRCROOT}/CryptoCore/Sources/libs";
@@ -875,7 +875,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.paytomat.CryptoCore;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
-				SWIFT_INCLUDE_PATHS = "${SRCROOT}/CryptoCore/Sources/paytomat_crypto_core/** ${SRCROOT}/CryptoCore/Sources/libs";
+				SWIFT_INCLUDE_PATHS = "${SRCROOT}/CryptoCore/Sources/** ${SRCROOT}/CryptoCore/Sources/libs";
 				SWIFT_VERSION = 5.0;
 				SYSTEM_HEADER_SEARCH_PATHS = "${SRCROOT}/CryptoCore/Sources/libs";
 				TARGETED_DEVICE_FAMILY = "1,2";
