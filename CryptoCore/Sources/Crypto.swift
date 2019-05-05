@@ -8,7 +8,7 @@
 
 import Foundation
 import paytomat_crypto_core
-import openssl
+
 public struct Crypto {
     public static func testPrint() {
         ptc_test_print()
