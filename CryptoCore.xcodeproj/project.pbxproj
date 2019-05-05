@@ -594,13 +594,13 @@
 			path = nacl_includes;
 			sourceTree = "<group>";
 		};
-		66A2796A227F17780099BAB9 /* libbase58 */ = {
+		66A2796A227F17780099BAB9 /* base58 */ = {
 			isa = PBXGroup;
 			children = (
 				66A2796E227F19180099BAB9 /* base58.c */,
 				66A2796D227F19170099BAB9 /* base58.h */,
 			);
-			path = libbase58;
+			path = base58;
 			sourceTree = "<group>";
 		};
 		66A2796B227F178B0099BAB9 /* secp256k1 */ = {
@@ -638,7 +638,7 @@
 			isa = PBXGroup;
 			children = (
 				66A2796B227F178B0099BAB9 /* secp256k1 */,
-				66A2796A227F17780099BAB9 /* libbase58 */,
+				66A2796A227F17780099BAB9 /* base58 */,
 				66745E2B227F1503008ACCBA /* curve25519 */,
 				66745CEE227DCF88008ACCBA /* openssl */,
 				66745CDB227DBBB7008ACCBA /* blake2b */,

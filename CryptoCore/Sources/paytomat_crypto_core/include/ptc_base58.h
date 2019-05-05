@@ -13,11 +13,9 @@
 #include <stdlib.h>
 #include <stdint.h>
 #include <openssl/sha.h>
-#include <libbase58/base58.h>
+#include <base58/base58.h>
 
 #include "ptc_result.h"
-
-// TODO: Impelement updated base58 functions
 
 // Base58 decode
 
