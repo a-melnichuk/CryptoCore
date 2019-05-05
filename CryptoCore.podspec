@@ -31,8 +31,17 @@ Pod::Spec.new do |s|
   ]
   s.public_header_files = 'CryptoCore/*.h'
   s.pod_target_xcconfig = {
-    'LIBRARY_SEARCH_PATHS' => '$(PODS_TARGET_SRCROOT)/CryptoCore/Sources/libs/openssl $(PODS_ROOT)/CryptoCore/Sources/libs/openssl',
-    'SYSTEM_HEADER_SEARCH_PATHS' => '$(PODS_TARGET_SRCROOT)/CryptoCore/Sources/libs $(PODS_ROOT)/CryptoCore/Sources/libs',
+      'WARNING_CFLAGS' => [
+        '-Wno-shorten-64-to-32'
+      ].join(' '),
+    'LIBRARY_SEARCH_PATHS' => [
+        '$(PODS_TARGET_SRCROOT)/CryptoCore/Sources/libs/openssl',
+        '$(PODS_ROOT)/CryptoCore/Sources/libs/openssl'
+    ].join(' '),
+    'SYSTEM_HEADER_SEARCH_PATHS' => [
+        '$(PODS_TARGET_SRCROOT)/CryptoCore/Sources/libs',
+        '$(PODS_ROOT)/CryptoCore/Sources/libs'
+    ].join(' '),
     'SWIFT_INCLUDE_PATHS' => [
         '$(PODS_TARGET_SRCROOT)/CryptoCore/Sources/**',
         '$(PODS_ROOT)/CryptoCore/Sources/**',
