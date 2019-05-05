@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
   s.name = 'CryptoCore'
   s.module_name = 'CryptoCore'
-  s.version = '0.0.3'
+  s.version = '0.0.4'
   s.swift_version = '5.0'
   s.summary = 'Common crypto components for Paytomat Wallet'
   s.description = <<-DESC
@@ -27,7 +27,7 @@ Pod::Spec.new do |s|
     'CryptoCore/Sources/paytomat_crypto_core/{include,src}/*.{h,c}',
     'CryptoCore/Sources/libs/keccak-tiny/*.{h,c}',
     'CryptoCore/Sources/libs/blake2b/*.{h,c}',
-    'CryptoCore/Sources/libs/libbase58/.{h,c}',
+    'CryptoCore/Sources/libs/base58/*.{h,c}',
     'CryptoCore/Sources/libs/curve25519/**/.{h,c}',
     'CryptoCore/Sources/libs/openssl/*.{h}'
   ]
