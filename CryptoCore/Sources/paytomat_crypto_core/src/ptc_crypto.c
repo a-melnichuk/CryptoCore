@@ -14,7 +14,6 @@
 
 #include "ptc_crypto.h"
 
-
 // Keccak
 
 ptc_result ptc_keccak256(const void* in_data, size_t in_length, uint8_t* out_bytes)

@@ -627,10 +627,10 @@
 			children = (
 				6671AD1B2279E280009001F8 /* ptc.h */,
 				6671AD14227999AF009001F8 /* ptc_test.h */,
-				66C225C4227B42E900E4C7F9 /* ptc_util.h */,
 				66C225C6227B42F700E4C7F9 /* ptc_crypto.h */,
-				66C225CD227B511D00E4C7F9 /* ptc_result.h */,
 				66A27971227F1BD20099BAB9 /* ptc_base58.h */,
+				66C225C4227B42E900E4C7F9 /* ptc_util.h */,
+				66C225CD227B511D00E4C7F9 /* ptc_result.h */,
 			);
 			path = include;
 			sourceTree = "<group>";
@@ -639,9 +639,9 @@
 			isa = PBXGroup;
 			children = (
 				6671AD15227999AF009001F8 /* ptc_test.c */,
-				66C225C8227B430900E4C7F9 /* ptc_util.c */,
 				66C225CA227B431500E4C7F9 /* ptc_crypto.c */,
 				66A27973227F1BEC0099BAB9 /* ptc_base58.c */,
+				66C225C8227B430900E4C7F9 /* ptc_util.c */,
 			);
 			path = src;
 			sourceTree = "<group>";
