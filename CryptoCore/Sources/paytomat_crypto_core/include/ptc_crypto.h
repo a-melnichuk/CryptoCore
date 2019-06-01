@@ -9,13 +9,8 @@
 #ifndef PTC_CRYPTO_H
 #define PTC_CRYPTO_H
 
+#include <stddef.h>
 #include <stdint.h>
-#include <keccak-tiny/keccak-tiny.h>
-#include <blake2b/blake2b.h>
-#include <openssl/sha.h>
-#include <openssl/ripemd.h>
-#include <openssl/hmac.h>
-
 #include "ptc_result.h"
 
 // Keccak

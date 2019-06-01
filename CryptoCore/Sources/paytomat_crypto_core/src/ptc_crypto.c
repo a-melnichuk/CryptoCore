@@ -6,7 +6,14 @@
 //  Copyright © 2019 Alex Melnichuk. All rights reserved.
 //
 
+#include <keccak-tiny/keccak-tiny.h>
+#include <blake2b/blake2b.h>
+#include <openssl/sha.h>
+#include <openssl/ripemd.h>
+#include <openssl/hmac.h>
+
 #include "ptc_crypto.h"
+
 
 // Keccak
 

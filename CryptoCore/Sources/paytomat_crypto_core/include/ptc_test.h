@@ -9,8 +9,6 @@
 #ifndef pcc_test_h
 #define pcc_test_h
 
-#include <stdio.h>
-
 void ptc_test_print(void);
 int ptc_test_int(void);
 

@@ -9,14 +9,9 @@
 #ifndef PTC_UTIL_H
 #define PTC_UTIL_H
 
-#include <stdio.h>
 #include <stddef.h>
 #include <stdint.h>
 #include <stdbool.h>
-#include <ctype.h>
-#include <math.h>
-#include <time.h>
-#include <sys/time.h>
 
 uint16_t ptc_swap_uint16(uint16_t val);
 int16_t ptc_swap_int16(int16_t val);

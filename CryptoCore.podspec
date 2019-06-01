@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
   s.name = 'CryptoCore'
   s.module_name = 'CryptoCore'
-  s.version = '0.0.5'
+  s.version = '0.0.6'
   s.swift_version = '5.0'
   s.summary = 'Common crypto components for Paytomat Wallet'
   s.description = <<-DESC
@@ -11,7 +11,7 @@ Pod::Spec.new do |s|
 
   s.homepage = 'https://paytomat.com/'
   s.license = { :type => 'MIT', :file => 'LICENSE.md' }
-  s.author = { 'Alex Melnichuk' => 'a.melnichuk@noisyminer.com' }
+  s.author = { 'Alex Melnichuk' => 'a.melnichuk@yahoo.com' }
 
   s.platform = :ios
   s.ios.deployment_target = '9.0'
@@ -29,13 +29,22 @@ Pod::Spec.new do |s|
     'CryptoCore/Sources/libs/blake2b/*.{h,c}',
     'CryptoCore/Sources/libs/base58/*.{h,c}',
     'CryptoCore/Sources/libs/curve25519/**/*.{h,c}',
-    'CryptoCore/Sources/libs/openssl/*.{h}'
+    'CryptoCore/Sources/libs/openssl/*.{h}',
+    'CryptoCore/Sources/libs/secp256k1/*.{h}'
   ]
   s.public_header_files = 'CryptoCore/*.h'
   s.pod_target_xcconfig = {
       'WARNING_CFLAGS' => [
         '-Wno-shorten-64-to-32'
       ].join(' '),
+    'HEADER_SEARCH_PATHS' => [
+        '$(PODS_TARGET_SRCROOT)/CryptoCore/Sources',
+        '$(PODS_ROOT)/CryptoCore/Sources',
+        '$(PODS_TARGET_SRCROOT)/CryptoCore/Sources/paytomat_crypto_core',
+        '$(PODS_ROOT)/CryptoCore/Sources/paytomat_crypto_core',
+        '$(PODS_TARGET_SRCROOT)/CryptoCore/Sources/paytomat_crypto_core/include',
+        '$(PODS_ROOT)/CryptoCore/Sources/paytomat_crypto_core/include'
+    ].join(' '),
     'LIBRARY_SEARCH_PATHS' => [
         '$(PODS_TARGET_SRCROOT)/CryptoCore/Sources/libs/openssl',
         '$(PODS_ROOT)/CryptoCore/Sources/libs/openssl',
@@ -44,7 +53,7 @@ Pod::Spec.new do |s|
     ].join(' '),
     'SYSTEM_HEADER_SEARCH_PATHS' => [
         '$(PODS_TARGET_SRCROOT)/CryptoCore/Sources/libs',
-        '$(PODS_ROOT)/CryptoCore/Sources/libs'
+        '$(PODS_ROOT)/CryptoCore/Sources/libs',
     ].join(' '),
     'SWIFT_INCLUDE_PATHS' => [
         '$(PODS_TARGET_SRCROOT)/CryptoCore/Sources/**',

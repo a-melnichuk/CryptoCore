@@ -9,11 +9,8 @@
 #ifndef PTC_BASE58_H
 #define PTC_BASE58_H
 
-#include <string.h>
 #include <stdlib.h>
 #include <stdint.h>
-#include <openssl/sha.h>
-#include <base58/base58.h>
 
 #include "ptc_result.h"
 
