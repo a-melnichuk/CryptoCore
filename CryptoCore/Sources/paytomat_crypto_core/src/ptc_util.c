@@ -6,6 +6,12 @@
 //  Copyright © 2019 Alex Melnichuk. All rights reserved.
 //
 
+#include <stdio.h>
+#include <ctype.h>
+#include <math.h>
+#include <time.h>
+#include <sys/time.h>
+
 #include "ptc_util.h"
 
 uint16_t ptc_swap_uint16(uint16_t val)

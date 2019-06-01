@@ -6,6 +6,8 @@
 //  Copyright © 2019 Alex Melnichuk. All rights reserved.
 //
 
+#include <stdio.h>
+
 #include "ptc_test.h"
 
 void ptc_test_print()

@@ -36,7 +36,6 @@
 		66745DE4227DD2A8008ACCBA /* rc4.h in Headers */ = {isa = PBXBuildFile; fileRef = 66745D97227DD2A2008ACCBA /* rc4.h */; };
 		66745DE5227DD2A8008ACCBA /* seed.h in Headers */ = {isa = PBXBuildFile; fileRef = 66745D98227DD2A2008ACCBA /* seed.h */; };
 		66745DE6227DD2A8008ACCBA /* dsa.h in Headers */ = {isa = PBXBuildFile; fileRef = 66745D99227DD2A2008ACCBA /* dsa.h */; };
-		66745DE7227DD2A8008ACCBA /* __DECC_INCLUDE_PROLOGUE.H in Headers */ = {isa = PBXBuildFile; fileRef = 66745D9A227DD2A2008ACCBA /* __DECC_INCLUDE_PROLOGUE.H */; };
 		66745DE8227DD2A8008ACCBA /* aes.h in Headers */ = {isa = PBXBuildFile; fileRef = 66745D9B227DD2A2008ACCBA /* aes.h */; };
 		66745DE9227DD2A8008ACCBA /* x509.h in Headers */ = {isa = PBXBuildFile; fileRef = 66745D9C227DD2A3008ACCBA /* x509.h */; };
 		66745DEA227DD2A8008ACCBA /* ec.h in Headers */ = {isa = PBXBuildFile; fileRef = 66745D9D227DD2A3008ACCBA /* ec.h */; };
@@ -67,7 +66,6 @@
 		66745E03227DD2A8008ACCBA /* buffer.h in Headers */ = {isa = PBXBuildFile; fileRef = 66745DB6227DD2A5008ACCBA /* buffer.h */; };
 		66745E04227DD2A8008ACCBA /* err.h in Headers */ = {isa = PBXBuildFile; fileRef = 66745DB7227DD2A5008ACCBA /* err.h */; };
 		66745E05227DD2A8008ACCBA /* objects.h in Headers */ = {isa = PBXBuildFile; fileRef = 66745DB8227DD2A5008ACCBA /* objects.h */; };
-		66745E06227DD2A8008ACCBA /* __DECC_INCLUDE_EPILOGUE.H in Headers */ = {isa = PBXBuildFile; fileRef = 66745DB9227DD2A5008ACCBA /* __DECC_INCLUDE_EPILOGUE.H */; };
 		66745E07227DD2A8008ACCBA /* srtp.h in Headers */ = {isa = PBXBuildFile; fileRef = 66745DBA227DD2A5008ACCBA /* srtp.h */; };
 		66745E08227DD2A8008ACCBA /* ssl2.h in Headers */ = {isa = PBXBuildFile; fileRef = 66745DBB227DD2A5008ACCBA /* ssl2.h */; };
 		66745E09227DD2A8008ACCBA /* modes.h in Headers */ = {isa = PBXBuildFile; fileRef = 66745DBC227DD2A5008ACCBA /* modes.h */; };
@@ -208,7 +206,6 @@
 		66745D97227DD2A2008ACCBA /* rc4.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = rc4.h; sourceTree = "<group>"; };
 		66745D98227DD2A2008ACCBA /* seed.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = seed.h; sourceTree = "<group>"; };
 		66745D99227DD2A2008ACCBA /* dsa.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = dsa.h; sourceTree = "<group>"; };
-		66745D9A227DD2A2008ACCBA /* __DECC_INCLUDE_PROLOGUE.H */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = __DECC_INCLUDE_PROLOGUE.H; sourceTree = "<group>"; };
 		66745D9B227DD2A2008ACCBA /* aes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = aes.h; sourceTree = "<group>"; };
 		66745D9C227DD2A3008ACCBA /* x509.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = x509.h; sourceTree = "<group>"; };
 		66745D9D227DD2A3008ACCBA /* ec.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ec.h; sourceTree = "<group>"; };
@@ -239,7 +236,6 @@
 		66745DB6227DD2A5008ACCBA /* buffer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = buffer.h; sourceTree = "<group>"; };
 		66745DB7227DD2A5008ACCBA /* err.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = err.h; sourceTree = "<group>"; };
 		66745DB8227DD2A5008ACCBA /* objects.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = objects.h; sourceTree = "<group>"; };
-		66745DB9227DD2A5008ACCBA /* __DECC_INCLUDE_EPILOGUE.H */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = __DECC_INCLUDE_EPILOGUE.H; sourceTree = "<group>"; };
 		66745DBA227DD2A5008ACCBA /* srtp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = srtp.h; sourceTree = "<group>"; };
 		66745DBB227DD2A5008ACCBA /* ssl2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ssl2.h; sourceTree = "<group>"; };
 		66745DBC227DD2A5008ACCBA /* modes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = modes.h; sourceTree = "<group>"; };
@@ -441,8 +437,6 @@
 		66745CEE227DCF88008ACCBA /* openssl */ = {
 			isa = PBXGroup;
 			children = (
-				66745DB9227DD2A5008ACCBA /* __DECC_INCLUDE_EPILOGUE.H */,
-				66745D9A227DD2A2008ACCBA /* __DECC_INCLUDE_PROLOGUE.H */,
 				66745D9B227DD2A2008ACCBA /* aes.h */,
 				66745DD0227DD2A7008ACCBA /* asn1_mac.h */,
 				66745D9E227DD2A3008ACCBA /* asn1.h */,
@@ -747,7 +741,6 @@
 				66A2795F227F16100099BAB9 /* sc.h in Headers */,
 				66A27948227F16100099BAB9 /* pow225521.h in Headers */,
 				66745E0E227DD2A8008ACCBA /* conf_api.h in Headers */,
-				66745DE7227DD2A8008ACCBA /* __DECC_INCLUDE_PROLOGUE.H in Headers */,
 				66A2794C227F16100099BAB9 /* gen_constants.h in Headers */,
 				66745E0A227DD2A8008ACCBA /* md2.h in Headers */,
 				66745E1D227DD2A8008ACCBA /* asn1_mac.h in Headers */,
@@ -775,7 +768,6 @@
 				66745CEC227DBD68008ACCBA /* blake2b_cpu_endian.h in Headers */,
 				66745E19227DD2A8008ACCBA /* ct.h in Headers */,
 				66745DFC227DD2A8008ACCBA /* x509_vfy.h in Headers */,
-				66745E06227DD2A8008ACCBA /* __DECC_INCLUDE_EPILOGUE.H in Headers */,
 				66A2798E227FA88E0099BAB9 /* hash.h in Headers */,
 				66A2798D227FA88E0099BAB9 /* secp256k1_ecdh.h in Headers */,
 				66A2795A227F16100099BAB9 /* ge_msub.h in Headers */,
@@ -1082,6 +1074,7 @@
 		6671AD0D2279992B009001F8 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES = YES;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
@@ -1090,7 +1083,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				HEADER_SEARCH_PATHS = "";
+				HEADER_SEARCH_PATHS = "${SRCROOT}/CryptoCore/Sources/paytomat_crypto_core/include";
 				INFOPLIST_FILE = CryptoCore/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
@@ -1118,6 +1111,7 @@
 		6671AD0E2279992B009001F8 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES = YES;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
@@ -1126,7 +1120,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				HEADER_SEARCH_PATHS = "";
+				HEADER_SEARCH_PATHS = "${SRCROOT}/CryptoCore/Sources/paytomat_crypto_core/include";
 				INFOPLIST_FILE = CryptoCore/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;

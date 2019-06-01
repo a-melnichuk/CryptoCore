@@ -10,11 +10,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "CryptoCore/Sources/paytomat_crypto_core/src/ptc_base58.c"
-            timestampString = "578780009.674669"
+            timestampString = "581079552.866145"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "72"
-            endingLineNumber = "72"
+            startingLineNumber = "76"
+            endingLineNumber = "76"
             landmarkName = "ptc_b58_decode()"
             landmarkType = "9">
          </BreakpointContent>

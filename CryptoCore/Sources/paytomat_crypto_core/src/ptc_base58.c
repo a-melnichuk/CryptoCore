@@ -6,6 +6,10 @@
 //  Copyright © 2019 Alex Melnichuk. All rights reserved.
 //
 
+#include <openssl/sha.h>
+#include <base58/base58.h>
+#include <string.h>
+
 #include "ptc_base58.h"
 
 static inline ptc_result ptc_base58_result(int base58_result)
