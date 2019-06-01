@@ -11,6 +11,7 @@
 
 #include <stddef.h>
 #include <stdint.h>
+
 #include "ptc_result.h"
 
 // Keccak
