@@ -8,27 +8,18 @@
 
 import XCTest
 @testable import Examples
+@testable import CryptoCore
+@testable import WavesCore
 
 class ExamplesTests: XCTestCase {
 
-    override func setUp() {
-        // Put setup code here. This method is called before the invocation of each test method in the class.
-    }
-
-    override func tearDown() {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
-    }
-
-    func testExample() {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
-    }
-
-    func testPerformanceExample() {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
+    func testSecureHash() {
+        let data = Crypto.data(fromHex:"6f2072656e64657220747261636b20736561726368206b696420766963746f7279207368656c6c206162757365206d65726765207175616c69747920726f79616c20636c69702075676c79206c797269637320726f756768206e6174696f6e2068756765207374727567676c6520686172642065786572636973652062616c6c2070726f766964652064757479206e6f77")!
+        guard let secureHash = WavesCore.secureHash(data) else {
+            XCTFail("Unable to hash with blake")
+            return
         }
+        XCTAssertEqual(secureHash.count, 32)
+        XCTAssertEqual(Crypto.hex(fromData: secureHash), "")
     }
-
 }

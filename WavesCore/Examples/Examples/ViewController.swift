@@ -15,11 +15,10 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        print("__TEST: \(Crypto.Waves.testInt()) \(Crypto.Waves.testInt2())")
-        print("__TEST_SHA: \(Crypto.Waves.testSha())")
-        print("__TEST_SHA2: \(Crypto.Waves.testSha2())")
-        print("__TEST_SHA3: \(Crypto.Waves.testSha3())")
-
+        Crypto.Waves.secure
+        
+        print("__TEST: \(Cry) \(Crypto.Waves.testInt2())")
+       
     }
 
 
