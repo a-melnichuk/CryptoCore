@@ -11,15 +11,6 @@
 		66BD7D51228018F200BFCB28 /* WavesCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 66BD7D47228018F200BFCB28 /* WavesCore.framework */; };
 		66BD7D56228018F200BFCB28 /* WavesCoreTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66BD7D55228018F200BFCB28 /* WavesCoreTests.swift */; };
 		66C04BD622A6F0BA00031F28 /* Crypto+Waves.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66C04BBE22A6F0BA00031F28 /* Crypto+Waves.swift */; };
-		66C04BD722A6F0BA00031F28 /* ptc_waves_test.h in Headers */ = {isa = PBXBuildFile; fileRef = 66C04BC122A6F0BA00031F28 /* ptc_waves_test.h */; };
-		66C04BD822A6F0BA00031F28 /* ptc_waves_address.h in Headers */ = {isa = PBXBuildFile; fileRef = 66C04BC222A6F0BA00031F28 /* ptc_waves_address.h */; };
-		66C04BD922A6F0BA00031F28 /* ptc_waves_transaction.h in Headers */ = {isa = PBXBuildFile; fileRef = 66C04BC322A6F0BA00031F28 /* ptc_waves_transaction.h */; };
-		66C04BDA22A6F0BA00031F28 /* ptc_waves_crypto.h in Headers */ = {isa = PBXBuildFile; fileRef = 66C04BC422A6F0BA00031F28 /* ptc_waves_crypto.h */; };
-		66C04BDB22A6F0BA00031F28 /* ptc_waves.h in Headers */ = {isa = PBXBuildFile; fileRef = 66C04BC522A6F0BA00031F28 /* ptc_waves.h */; };
-		66C04BDC22A6F0BA00031F28 /* ptc_waves_transaction.c in Sources */ = {isa = PBXBuildFile; fileRef = 66C04BC722A6F0BA00031F28 /* ptc_waves_transaction.c */; };
-		66C04BDD22A6F0BA00031F28 /* ptc_waves_crypto.c in Sources */ = {isa = PBXBuildFile; fileRef = 66C04BC822A6F0BA00031F28 /* ptc_waves_crypto.c */; };
-		66C04BDE22A6F0BA00031F28 /* ptc_waves_test.c in Sources */ = {isa = PBXBuildFile; fileRef = 66C04BC922A6F0BA00031F28 /* ptc_waves_test.c */; };
-		66C04BDF22A6F0BA00031F28 /* ptc_waves_address.c in Sources */ = {isa = PBXBuildFile; fileRef = 66C04BCA22A6F0BA00031F28 /* ptc_waves_address.c */; };
 		66C04BE022A6F0BA00031F28 /* Crypto+WavesTransaction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66C04BCB22A6F0BA00031F28 /* Crypto+WavesTransaction.swift */; };
 		66C04BE122A6F0BA00031F28 /* ptc_util.h in Headers */ = {isa = PBXBuildFile; fileRef = 66C04BCE22A6F0BA00031F28 /* ptc_util.h */; };
 		66C04BE222A6F0BA00031F28 /* ptc.h in Headers */ = {isa = PBXBuildFile; fileRef = 66C04BCF22A6F0BA00031F28 /* ptc.h */; };
@@ -29,6 +20,15 @@
 		66C04BE622A6F0BA00031F28 /* ptc_test.h in Headers */ = {isa = PBXBuildFile; fileRef = 66C04BD322A6F0BA00031F28 /* ptc_test.h */; };
 		66C04BE722A6F0BA00031F28 /* WavesTransferTransaction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66C04BD522A6F0BA00031F28 /* WavesTransferTransaction.swift */; };
 		66C04BEE22A6F58400031F28 /* CryptoCore.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 66C04BED22A6F58400031F28 /* CryptoCore.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		66C04BFB22A6F83E00031F28 /* ptc_waves_test.h in Headers */ = {isa = PBXBuildFile; fileRef = 66C04BF122A6F83E00031F28 /* ptc_waves_test.h */; };
+		66C04BFC22A6F83E00031F28 /* ptc_waves_address.h in Headers */ = {isa = PBXBuildFile; fileRef = 66C04BF222A6F83E00031F28 /* ptc_waves_address.h */; };
+		66C04BFD22A6F83E00031F28 /* ptc_waves_transaction.h in Headers */ = {isa = PBXBuildFile; fileRef = 66C04BF322A6F83E00031F28 /* ptc_waves_transaction.h */; };
+		66C04BFE22A6F83E00031F28 /* ptc_waves_crypto.h in Headers */ = {isa = PBXBuildFile; fileRef = 66C04BF422A6F83E00031F28 /* ptc_waves_crypto.h */; };
+		66C04BFF22A6F83E00031F28 /* ptc_waves.h in Headers */ = {isa = PBXBuildFile; fileRef = 66C04BF522A6F83E00031F28 /* ptc_waves.h */; };
+		66C04C0022A6F83E00031F28 /* ptc_waves_transaction.c in Sources */ = {isa = PBXBuildFile; fileRef = 66C04BF722A6F83E00031F28 /* ptc_waves_transaction.c */; };
+		66C04C0122A6F83E00031F28 /* ptc_waves_crypto.c in Sources */ = {isa = PBXBuildFile; fileRef = 66C04BF822A6F83E00031F28 /* ptc_waves_crypto.c */; };
+		66C04C0222A6F83E00031F28 /* ptc_waves_test.c in Sources */ = {isa = PBXBuildFile; fileRef = 66C04BF922A6F83E00031F28 /* ptc_waves_test.c */; };
+		66C04C0322A6F83E00031F28 /* ptc_waves_address.c in Sources */ = {isa = PBXBuildFile; fileRef = 66C04BFA22A6F83E00031F28 /* ptc_waves_address.c */; };
 		95CF80144F98A1B2873C0D2F /* Pods_WavesCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 26FAE2553ABE75E8EDE8C6C8 /* Pods_WavesCore.framework */; };
 /* End PBXBuildFile section */
 
@@ -65,15 +65,6 @@
 		66BD7D57228018F200BFCB28 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		66C0490822A6DB4500031F28 /* WavesCore.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = WavesCore.podspec; path = ../WavesCore.podspec; sourceTree = "<group>"; };
 		66C04BBE22A6F0BA00031F28 /* Crypto+Waves.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Crypto+Waves.swift"; sourceTree = "<group>"; };
-		66C04BC122A6F0BA00031F28 /* ptc_waves_test.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ptc_waves_test.h; sourceTree = "<group>"; };
-		66C04BC222A6F0BA00031F28 /* ptc_waves_address.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ptc_waves_address.h; sourceTree = "<group>"; };
-		66C04BC322A6F0BA00031F28 /* ptc_waves_transaction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ptc_waves_transaction.h; sourceTree = "<group>"; };
-		66C04BC422A6F0BA00031F28 /* ptc_waves_crypto.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ptc_waves_crypto.h; sourceTree = "<group>"; };
-		66C04BC522A6F0BA00031F28 /* ptc_waves.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ptc_waves.h; sourceTree = "<group>"; };
-		66C04BC722A6F0BA00031F28 /* ptc_waves_transaction.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = ptc_waves_transaction.c; sourceTree = "<group>"; };
-		66C04BC822A6F0BA00031F28 /* ptc_waves_crypto.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = ptc_waves_crypto.c; sourceTree = "<group>"; };
-		66C04BC922A6F0BA00031F28 /* ptc_waves_test.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = ptc_waves_test.c; sourceTree = "<group>"; };
-		66C04BCA22A6F0BA00031F28 /* ptc_waves_address.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = ptc_waves_address.c; sourceTree = "<group>"; };
 		66C04BCB22A6F0BA00031F28 /* Crypto+WavesTransaction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Crypto+WavesTransaction.swift"; sourceTree = "<group>"; };
 		66C04BCE22A6F0BA00031F28 /* ptc_util.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ptc_util.h; sourceTree = "<group>"; };
 		66C04BCF22A6F0BA00031F28 /* ptc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ptc.h; sourceTree = "<group>"; };
@@ -84,6 +75,15 @@
 		66C04BD422A6F0BA00031F28 /* module.modulemap */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = "sourcecode.module-map"; path = module.modulemap; sourceTree = "<group>"; };
 		66C04BD522A6F0BA00031F28 /* WavesTransferTransaction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WavesTransferTransaction.swift; sourceTree = "<group>"; };
 		66C04BED22A6F58400031F28 /* CryptoCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = CryptoCore.framework; sourceTree = "<group>"; };
+		66C04BF122A6F83E00031F28 /* ptc_waves_test.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ptc_waves_test.h; sourceTree = "<group>"; };
+		66C04BF222A6F83E00031F28 /* ptc_waves_address.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ptc_waves_address.h; sourceTree = "<group>"; };
+		66C04BF322A6F83E00031F28 /* ptc_waves_transaction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ptc_waves_transaction.h; sourceTree = "<group>"; };
+		66C04BF422A6F83E00031F28 /* ptc_waves_crypto.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ptc_waves_crypto.h; sourceTree = "<group>"; };
+		66C04BF522A6F83E00031F28 /* ptc_waves.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ptc_waves.h; sourceTree = "<group>"; };
+		66C04BF722A6F83E00031F28 /* ptc_waves_transaction.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = ptc_waves_transaction.c; sourceTree = "<group>"; };
+		66C04BF822A6F83E00031F28 /* ptc_waves_crypto.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = ptc_waves_crypto.c; sourceTree = "<group>"; };
+		66C04BF922A6F83E00031F28 /* ptc_waves_test.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = ptc_waves_test.c; sourceTree = "<group>"; };
+		66C04BFA22A6F83E00031F28 /* ptc_waves_address.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = ptc_waves_address.c; sourceTree = "<group>"; };
 		A7CB5720A1F13665A4A4172E /* Pods-WavesCore.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WavesCore.release.xcconfig"; path = "Target Support Files/Pods-WavesCore/Pods-WavesCore.release.xcconfig"; sourceTree = "<group>"; };
 		B099FB237443D1440528EFB7 /* Pods-WavesCore.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WavesCore.debug.xcconfig"; path = "Target Support Files/Pods-WavesCore/Pods-WavesCore.debug.xcconfig"; sourceTree = "<group>"; };
 		E0BDFD9824A0635901545A39 /* Pods-WavesCoreTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WavesCoreTests.release.xcconfig"; path = "Target Support Files/Pods-WavesCoreTests/Pods-WavesCoreTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -152,8 +152,8 @@
 		66C04BBD22A6F0BA00031F28 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
+				66C04BEF22A6F83E00031F28 /* paytomat_waves_core */,
 				66C04BBE22A6F0BA00031F28 /* Crypto+Waves.swift */,
-				66C04BBF22A6F0BA00031F28 /* paytomat_waves_core */,
 				66C04BCB22A6F0BA00031F28 /* Crypto+WavesTransaction.swift */,
 				66C04BCC22A6F0BA00031F28 /* libs */,
 				66C04BD422A6F0BA00031F28 /* module.modulemap */,
@@ -161,38 +161,6 @@
 			);
 			path = Sources;
 			sourceTree = SOURCE_ROOT;
-		};
-		66C04BBF22A6F0BA00031F28 /* paytomat_waves_core */ = {
-			isa = PBXGroup;
-			children = (
-				66C04BC022A6F0BA00031F28 /* include */,
-				66C04BC622A6F0BA00031F28 /* src */,
-			);
-			path = paytomat_waves_core;
-			sourceTree = "<group>";
-		};
-		66C04BC022A6F0BA00031F28 /* include */ = {
-			isa = PBXGroup;
-			children = (
-				66C04BC122A6F0BA00031F28 /* ptc_waves_test.h */,
-				66C04BC222A6F0BA00031F28 /* ptc_waves_address.h */,
-				66C04BC322A6F0BA00031F28 /* ptc_waves_transaction.h */,
-				66C04BC422A6F0BA00031F28 /* ptc_waves_crypto.h */,
-				66C04BC522A6F0BA00031F28 /* ptc_waves.h */,
-			);
-			path = include;
-			sourceTree = "<group>";
-		};
-		66C04BC622A6F0BA00031F28 /* src */ = {
-			isa = PBXGroup;
-			children = (
-				66C04BC722A6F0BA00031F28 /* ptc_waves_transaction.c */,
-				66C04BC822A6F0BA00031F28 /* ptc_waves_crypto.c */,
-				66C04BC922A6F0BA00031F28 /* ptc_waves_test.c */,
-				66C04BCA22A6F0BA00031F28 /* ptc_waves_address.c */,
-			);
-			path = src;
-			sourceTree = "<group>";
 		};
 		66C04BCC22A6F0BA00031F28 /* libs */ = {
 			isa = PBXGroup;
@@ -213,6 +181,38 @@
 				66C04BD322A6F0BA00031F28 /* ptc_test.h */,
 			);
 			path = paytomat_crypto_core;
+			sourceTree = "<group>";
+		};
+		66C04BEF22A6F83E00031F28 /* paytomat_waves_core */ = {
+			isa = PBXGroup;
+			children = (
+				66C04BF022A6F83E00031F28 /* include */,
+				66C04BF622A6F83E00031F28 /* src */,
+			);
+			path = paytomat_waves_core;
+			sourceTree = "<group>";
+		};
+		66C04BF022A6F83E00031F28 /* include */ = {
+			isa = PBXGroup;
+			children = (
+				66C04BF122A6F83E00031F28 /* ptc_waves_test.h */,
+				66C04BF222A6F83E00031F28 /* ptc_waves_address.h */,
+				66C04BF322A6F83E00031F28 /* ptc_waves_transaction.h */,
+				66C04BF422A6F83E00031F28 /* ptc_waves_crypto.h */,
+				66C04BF522A6F83E00031F28 /* ptc_waves.h */,
+			);
+			path = include;
+			sourceTree = "<group>";
+		};
+		66C04BF622A6F83E00031F28 /* src */ = {
+			isa = PBXGroup;
+			children = (
+				66C04BF722A6F83E00031F28 /* ptc_waves_transaction.c */,
+				66C04BF822A6F83E00031F28 /* ptc_waves_crypto.c */,
+				66C04BF922A6F83E00031F28 /* ptc_waves_test.c */,
+				66C04BFA22A6F83E00031F28 /* ptc_waves_address.c */,
+			);
+			path = src;
 			sourceTree = "<group>";
 		};
 		9BEEB6D7EF33619306B73A0E /* Frameworks */ = {
@@ -242,16 +242,16 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				66C04BFE22A6F83E00031F28 /* ptc_waves_crypto.h in Headers */,
 				66C04BE322A6F0BA00031F28 /* ptc_base58.h in Headers */,
 				66C04BE522A6F0BA00031F28 /* ptc_result.h in Headers */,
+				66C04BFF22A6F83E00031F28 /* ptc_waves.h in Headers */,
+				66C04BFC22A6F83E00031F28 /* ptc_waves_address.h in Headers */,
+				66C04BFD22A6F83E00031F28 /* ptc_waves_transaction.h in Headers */,
 				66C04BE122A6F0BA00031F28 /* ptc_util.h in Headers */,
+				66C04BFB22A6F83E00031F28 /* ptc_waves_test.h in Headers */,
 				66C04BE422A6F0BA00031F28 /* ptc_crypto.h in Headers */,
 				66C04BE622A6F0BA00031F28 /* ptc_test.h in Headers */,
-				66C04BDA22A6F0BA00031F28 /* ptc_waves_crypto.h in Headers */,
-				66C04BD922A6F0BA00031F28 /* ptc_waves_transaction.h in Headers */,
-				66C04BDB22A6F0BA00031F28 /* ptc_waves.h in Headers */,
-				66C04BD822A6F0BA00031F28 /* ptc_waves_address.h in Headers */,
-				66C04BD722A6F0BA00031F28 /* ptc_waves_test.h in Headers */,
 				66C04BE222A6F0BA00031F28 /* ptc.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -405,13 +405,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				66C04C0222A6F83E00031F28 /* ptc_waves_test.c in Sources */,
+				66C04C0122A6F83E00031F28 /* ptc_waves_crypto.c in Sources */,
+				66C04C0322A6F83E00031F28 /* ptc_waves_address.c in Sources */,
 				66C04BE022A6F0BA00031F28 /* Crypto+WavesTransaction.swift in Sources */,
-				66C04BDE22A6F0BA00031F28 /* ptc_waves_test.c in Sources */,
+				66C04C0022A6F83E00031F28 /* ptc_waves_transaction.c in Sources */,
 				66C04BE722A6F0BA00031F28 /* WavesTransferTransaction.swift in Sources */,
-				66C04BDF22A6F0BA00031F28 /* ptc_waves_address.c in Sources */,
 				66C04BD622A6F0BA00031F28 /* Crypto+Waves.swift in Sources */,
-				66C04BDC22A6F0BA00031F28 /* ptc_waves_transaction.c in Sources */,
-				66C04BDD22A6F0BA00031F28 /* ptc_waves_crypto.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
