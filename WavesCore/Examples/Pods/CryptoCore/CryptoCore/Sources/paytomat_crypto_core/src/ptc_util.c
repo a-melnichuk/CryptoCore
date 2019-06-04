@@ -11,12 +11,12 @@
 #include <math.h>
 #include <time.h>
 #include <sys/time.h>
-
+#include <openssl/rand.h>
 #include "ptc_util.h"
 
 uint16_t ptc_swap_uint16(uint16_t val)
 {
-    return (val << 8) | (val >> 8 );
+    return (val << 8) | (val >> 8);
 }
 
 int16_t ptc_swap_int16(int16_t val)
@@ -177,4 +177,10 @@ void ptc_print_hex(const char* tag, const void* in_bytes, size_t in_length)
     for (int i = 0; i < in_length; ++i)
         printf("%02x", buf[i]);
     printf("\n");
+}
+
+ptc_result ptc_random_bytes(uint8_t* out_buffer, size_t in_length)
+{
+    int result = RAND_bytes(out_buffer, in_length);
+    return result == 1 ? PTC_SUCCESS : PTC_ERROR_GENERAL;
 }

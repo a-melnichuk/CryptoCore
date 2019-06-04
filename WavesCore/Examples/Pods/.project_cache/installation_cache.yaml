@@ -1,0 +1,31 @@
+BUILD_CONFIGURATIONS:
+  Debug: :debug
+  Release: :release
+CACHE_KEYS:
+  CryptoCore:
+    BUILD_SETTINGS_CHECKSUM:
+      CryptoCore: fe60faf63ae60401a7e63a90b3605abe
+    CHECKOUT_OPTIONS:
+      :commit: c85a75818ec71610eed6478aa73b6d8105fadf29
+      :git: https://github.com/a-melnichuk/CryptoCore.git
+    CHECKSUM: be40593f3d4d2030ecc95fb3567b422ee67954c7
+    SPECS:
+      - CryptoCore (0.0.8)
+  Pods-Examples:
+    BUILD_SETTINGS_CHECKSUM:
+      Debug: 451613239e39c04c673162cf549364b2
+      Release: 451613239e39c04c673162cf549364b2
+  Pods-ExamplesTests:
+    BUILD_SETTINGS_CHECKSUM:
+      Debug: 8ac7cf1278e6b0475271922a9250b3cb
+      Release: 8ac7cf1278e6b0475271922a9250b3cb
+  WavesCore:
+    BUILD_SETTINGS_CHECKSUM:
+      WavesCore: 320aed46aa4a80f81e36a1b37bada7c9
+    CHECKOUT_OPTIONS:
+      :commit: c85a75818ec71610eed6478aa73b6d8105fadf29
+      :git: https://github.com/a-melnichuk/CryptoCore.git
+    CHECKSUM: 888f320301c6b742e706cc5ec2c52c4e1bf63b48
+    SPECS:
+      - WavesCore (0.0.1)
+OBJECT_VERSION: 50

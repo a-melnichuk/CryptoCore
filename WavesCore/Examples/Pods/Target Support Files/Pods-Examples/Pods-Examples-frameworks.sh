@@ -162,11 +162,9 @@ strip_invalid_archs() {
 
 if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_framework "${BUILT_PRODUCTS_DIR}/CryptoCore/CryptoCore.framework"
-  install_framework "${BUILT_PRODUCTS_DIR}/WavesCore/WavesCore.framework"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
   install_framework "${BUILT_PRODUCTS_DIR}/CryptoCore/CryptoCore.framework"
-  install_framework "${BUILT_PRODUCTS_DIR}/WavesCore/WavesCore.framework"
 fi
 if [ "${COCOAPODS_PARALLEL_CODE_SIGN}" == "true" ]; then
   wait
