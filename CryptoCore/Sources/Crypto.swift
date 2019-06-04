@@ -10,14 +10,9 @@ import Foundation
 import paytomat_crypto_core
 
 public struct Crypto {
-    public static func testPrint() {
-        ptc_test_print()
-    }
+  
+    private init() {}
     
-    public static func testInt() -> Int {
-        return Int(ptc_test_int())
-    }
-
     // MARK: Keccak
     
     @inline(__always)

@@ -12,8 +12,6 @@
 		6671AD022279992B009001F8 /* CryptoCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6671ACF82279992B009001F8 /* CryptoCore.framework */; };
 		6671AD072279992B009001F8 /* CryptoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6671AD062279992B009001F8 /* CryptoTests.swift */; };
 		6671AD092279992B009001F8 /* CryptoCore.h in Headers */ = {isa = PBXBuildFile; fileRef = 6671ACFB2279992B009001F8 /* CryptoCore.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		6671AD16227999AF009001F8 /* ptc_test.h in Headers */ = {isa = PBXBuildFile; fileRef = 6671AD14227999AF009001F8 /* ptc_test.h */; };
-		6671AD17227999AF009001F8 /* ptc_test.c in Sources */ = {isa = PBXBuildFile; fileRef = 6671AD15227999AF009001F8 /* ptc_test.c */; };
 		6671AD1922799A68009001F8 /* Crypto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6671AD1822799A67009001F8 /* Crypto.swift */; };
 		6671AD1C2279E280009001F8 /* ptc.h in Headers */ = {isa = PBXBuildFile; fileRef = 6671AD1B2279E280009001F8 /* ptc.h */; };
 		66745CE5227DBD68008ACCBA /* blake2b.h in Headers */ = {isa = PBXBuildFile; fileRef = 66745CDC227DBD67008ACCBA /* blake2b.h */; };
@@ -252,8 +250,6 @@
 		6671AD012279992B009001F8 /* CryptoCoreTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CryptoCoreTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		6671AD062279992B009001F8 /* CryptoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryptoTests.swift; sourceTree = "<group>"; };
 		6671AD082279992B009001F8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		6671AD14227999AF009001F8 /* ptc_test.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ptc_test.h; sourceTree = "<group>"; };
-		6671AD15227999AF009001F8 /* ptc_test.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = ptc_test.c; sourceTree = "<group>"; };
 		6671AD1822799A67009001F8 /* Crypto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Crypto.swift; sourceTree = "<group>"; };
 		6671AD1A22799BB1009001F8 /* module.modulemap */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.module-map"; path = module.modulemap; sourceTree = "<group>"; };
 		6671AD1B2279E280009001F8 /* ptc.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ptc.h; sourceTree = "<group>"; };
@@ -694,7 +690,6 @@
 			isa = PBXGroup;
 			children = (
 				6671AD1B2279E280009001F8 /* ptc.h */,
-				6671AD14227999AF009001F8 /* ptc_test.h */,
 				66C225C6227B42F700E4C7F9 /* ptc_crypto.h */,
 				66A27971227F1BD20099BAB9 /* ptc_base58.h */,
 				66C225C4227B42E900E4C7F9 /* ptc_util.h */,
@@ -706,7 +701,6 @@
 		66C225AA227B3DC700E4C7F9 /* src */ = {
 			isa = PBXGroup;
 			children = (
-				6671AD15227999AF009001F8 /* ptc_test.c */,
 				66C225CA227B431500E4C7F9 /* ptc_crypto.c */,
 				66A27973227F1BEC0099BAB9 /* ptc_base58.c */,
 				66C225C8227B430900E4C7F9 /* ptc_util.c */,
@@ -1020,7 +1014,6 @@
 				6671AD1C2279E280009001F8 /* ptc.h in Headers */,
 				66DC947022A54770002B24F7 /* gen_crypto_additions.h in Headers */,
 				66DC94AD22A54771002B24F7 /* crypto_verify_32.h in Headers */,
-				6671AD16227999AF009001F8 /* ptc_test.h in Headers */,
 				66DC94AF22A54771002B24F7 /* crypto_uint64.h in Headers */,
 				66C225CE227B511D00E4C7F9 /* ptc_result.h in Headers */,
 				66745DE8227DD2A8008ACCBA /* aes.h in Headers */,
@@ -1181,7 +1174,6 @@
 				66DC94B722A54771002B24F7 /* ge_p3_to_p2.c in Sources */,
 				66DC947222A54770002B24F7 /* gen_labelset.c in Sources */,
 				66745CE7227DBD68008ACCBA /* blake2b_cpu_endian.c in Sources */,
-				6671AD17227999AF009001F8 /* ptc_test.c in Sources */,
 				66DC949022A54771002B24F7 /* ge_p2_dbl.c in Sources */,
 				66DC948722A54771002B24F7 /* xeddsa.c in Sources */,
 				66DC94A722A54771002B24F7 /* fe_sq.c in Sources */,

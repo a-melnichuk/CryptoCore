@@ -12,11 +12,5 @@ import XCTest
 
 class WavesCoreTests: XCTestCase {
 
-    func testInt() {
-        XCTAssertEqual(Crypto.Waves.testInt(), 5)
-    }
-    
-    func testSha() {
-        XCTAssertEqual(Crypto.Waves.testSha(), "fb2ab780dba99bb4c6ef46f8fde1315a80c42025765c74578dec95c48cdd5821")
-    }
+   
 }
