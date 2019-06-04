@@ -53,7 +53,8 @@ public extension Crypto.Waves {
 
 public extension Crypto.Waves.TransferTransaction {
     func sign(privateKey: inout Data) throws -> Signed {
-        
+        var data = Data()
+        data.app
     }
 }
 

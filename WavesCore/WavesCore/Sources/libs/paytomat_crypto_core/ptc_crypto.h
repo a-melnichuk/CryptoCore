@@ -42,4 +42,17 @@ ptc_result ptc_hmacsha512(const void* in_data,
                           const void* in_key,
                           size_t in_key_length,
                           uint8_t* out_bytes);
+
+// Curve25519-Donna
+
+ptc_result ptc_curve25519_donna(const void* in_privkey, const uint8_t* in_basepoint, uint8_t* out_pubkey);
+
+// xed25519
+
+ptc_result ptc_xed25519_sign(const uint8_t* curve25519_privkey,
+                             const uint8_t* msg,
+                             const size_t msg_len,
+                             const uint8_t* random,
+                             uint8_t* signature_out);
+
 #endif

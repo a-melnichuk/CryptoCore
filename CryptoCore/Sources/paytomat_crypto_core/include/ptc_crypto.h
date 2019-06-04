@@ -55,11 +55,4 @@ ptc_result ptc_xed25519_sign(const uint8_t* curve25519_privkey,
                              const uint8_t* random,
                              uint8_t* signature_out);
 
-//
-//int32_t sign_result = xed25519_sign(signature,
-//                                    in_create_info->sender_privkey,
-//                                    bytes,
-//                                    bytes_length,
-//                                    random_bytes);
-
 #endif

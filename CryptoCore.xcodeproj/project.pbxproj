@@ -112,6 +112,7 @@
 		66A2798C227FA88E0099BAB9 /* hash_impl.h in Headers */ = {isa = PBXBuildFile; fileRef = 66A27987227FA88E0099BAB9 /* hash_impl.h */; };
 		66A2798D227FA88E0099BAB9 /* secp256k1_ecdh.h in Headers */ = {isa = PBXBuildFile; fileRef = 66A27988227FA88E0099BAB9 /* secp256k1_ecdh.h */; };
 		66A2798E227FA88E0099BAB9 /* hash.h in Headers */ = {isa = PBXBuildFile; fileRef = 66A27989227FA88E0099BAB9 /* hash.h */; };
+		66C048FF22A69F0300031F28 /* Data+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66C048FE22A69F0300031F28 /* Data+Extension.swift */; };
 		66C225BE227B418700E4C7F9 /* sha3.h in Headers */ = {isa = PBXBuildFile; fileRef = 66C225BC227B418700E4C7F9 /* sha3.h */; settings = {ATTRIBUTES = (Private, ); }; };
 		66C225BF227B418700E4C7F9 /* keccak-tiny.h in Headers */ = {isa = PBXBuildFile; fileRef = 66C225BD227B418700E4C7F9 /* keccak-tiny.h */; settings = {ATTRIBUTES = (Private, ); }; };
 		66C225C2227B419600E4C7F9 /* sha3.c in Sources */ = {isa = PBXBuildFile; fileRef = 66C225C0227B419600E4C7F9 /* sha3.c */; };
@@ -355,6 +356,7 @@
 		66A27989227FA88E0099BAB9 /* hash.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = hash.h; sourceTree = "<group>"; };
 		66BAE596227C6D6800A61E22 /* LICENSE.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = LICENSE.md; sourceTree = "<group>"; };
 		66BAE597227C86D300A61E22 /* CryptoCore.podspec */ = {isa = PBXFileReference; lastKnownFileType = text; path = CryptoCore.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		66C048FE22A69F0300031F28 /* Data+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Data+Extension.swift"; sourceTree = "<group>"; };
 		66C225BC227B418700E4C7F9 /* sha3.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = sha3.h; sourceTree = "<group>"; };
 		66C225BD227B418700E4C7F9 /* keccak-tiny.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "keccak-tiny.h"; sourceTree = "<group>"; };
 		66C225C0227B419600E4C7F9 /* sha3.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = sha3.c; sourceTree = "<group>"; };
@@ -547,9 +549,10 @@
 				66C225B8227B3FFE00E4C7F9 /* libs */,
 				6671AD1322799967009001F8 /* paytomat_crypto_core */,
 				6671AD1822799A67009001F8 /* Crypto.swift */,
-				6642D25C227B7E31009F2D3E /* Crypto+Util.swift */,
 				66A2797A227F3BBA0099BAB9 /* Base58.swift */,
+				6642D25C227B7E31009F2D3E /* Crypto+Util.swift */,
 				6642D25A227B7B53009F2D3E /* ptc_result+Extension.swift */,
+				66C048FE22A69F0300031F28 /* Data+Extension.swift */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
@@ -1185,6 +1188,7 @@
 				66C225C3227B419600E4C7F9 /* keccak-tiny.c in Sources */,
 				66DC948C22A54771002B24F7 /* ge_p3_to_montx.c in Sources */,
 				66DC94B322A54771002B24F7 /* ge_p1p1_to_p3.c in Sources */,
+				66C048FF22A69F0300031F28 /* Data+Extension.swift in Sources */,
 				66C225C2227B419600E4C7F9 /* sha3.c in Sources */,
 				66DC94A322A54771002B24F7 /* fe_isnegative.c in Sources */,
 				66DC94A022A54771002B24F7 /* ge_precomp_0.c in Sources */,

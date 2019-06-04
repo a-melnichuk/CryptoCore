@@ -7,13 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		661A6B2D22A29424008753BD /* ptc_util.h in Headers */ = {isa = PBXBuildFile; fileRef = 661A6B2722A29424008753BD /* ptc_util.h */; };
-		661A6B2E22A29424008753BD /* ptc.h in Headers */ = {isa = PBXBuildFile; fileRef = 661A6B2822A29424008753BD /* ptc.h */; };
-		661A6B2F22A29424008753BD /* ptc_result.h in Headers */ = {isa = PBXBuildFile; fileRef = 661A6B2922A29424008753BD /* ptc_result.h */; };
-		661A6B3022A29424008753BD /* ptc_crypto.h in Headers */ = {isa = PBXBuildFile; fileRef = 661A6B2A22A29424008753BD /* ptc_crypto.h */; };
-		661A6B3122A29424008753BD /* ptc_base58.h in Headers */ = {isa = PBXBuildFile; fileRef = 661A6B2B22A29424008753BD /* ptc_base58.h */; };
-		661A6B3222A29424008753BD /* ptc_test.h in Headers */ = {isa = PBXBuildFile; fileRef = 661A6B2C22A29424008753BD /* ptc_test.h */; };
-		661A6B3922A2BF60008753BD /* CryptoCore.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 661A6B3722A2BDC9008753BD /* CryptoCore.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		0A928F54BB300589FBFDEBF8 /* Pods_WavesCoreTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 37FFB2A93E0C5A7FA528CA36 /* Pods_WavesCoreTests.framework */; };
 		661A6B3B22A2D9AC008753BD /* ptc_waves_address.h in Headers */ = {isa = PBXBuildFile; fileRef = 661A6B3A22A2D9AC008753BD /* ptc_waves_address.h */; };
 		661A6B3D22A2DB48008753BD /* ptc_waves_transaction.h in Headers */ = {isa = PBXBuildFile; fileRef = 661A6B3C22A2DB48008753BD /* ptc_waves_transaction.h */; };
 		661A6B3F22A2DB70008753BD /* ptc_waves_address.c in Sources */ = {isa = PBXBuildFile; fileRef = 661A6B3E22A2DB70008753BD /* ptc_waves_address.c */; };
@@ -30,6 +24,15 @@
 		66BD7D9F22802A1400BFCB28 /* ptc_waves_test.h in Headers */ = {isa = PBXBuildFile; fileRef = 66BD7D9E22802A1400BFCB28 /* ptc_waves_test.h */; };
 		66C048E522A6713C00031F28 /* WavesTransferTransaction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66C048E422A6713C00031F28 /* WavesTransferTransaction.swift */; };
 		66C048E722A672B100031F28 /* Crypto+WavesTransaction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66C048E622A672B100031F28 /* Crypto+WavesTransaction.swift */; };
+		66C048F022A67A2600031F28 /* ptc_base58.h in Headers */ = {isa = PBXBuildFile; fileRef = 66C048EA22A67A2500031F28 /* ptc_base58.h */; };
+		66C048F122A67A2600031F28 /* ptc_crypto.h in Headers */ = {isa = PBXBuildFile; fileRef = 66C048EB22A67A2500031F28 /* ptc_crypto.h */; };
+		66C048F222A67A2600031F28 /* ptc_result.h in Headers */ = {isa = PBXBuildFile; fileRef = 66C048EC22A67A2500031F28 /* ptc_result.h */; };
+		66C048F322A67A2600031F28 /* ptc_test.h in Headers */ = {isa = PBXBuildFile; fileRef = 66C048ED22A67A2500031F28 /* ptc_test.h */; };
+		66C048F422A67A2600031F28 /* ptc_util.h in Headers */ = {isa = PBXBuildFile; fileRef = 66C048EE22A67A2600031F28 /* ptc_util.h */; };
+		66C048F522A67A2600031F28 /* ptc.h in Headers */ = {isa = PBXBuildFile; fileRef = 66C048EF22A67A2600031F28 /* ptc.h */; };
+		66C048F722A67BEA00031F28 /* CryptoCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 66C048F622A67BEA00031F28 /* CryptoCore.framework */; };
+		66C048FB22A67C4500031F28 /* CryptoCore.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 66C048FA22A67C4500031F28 /* CryptoCore.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		95CF80144F98A1B2873C0D2F /* Pods_WavesCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 26FAE2553ABE75E8EDE8C6C8 /* Pods_WavesCore.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,20 +52,16 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				661A6B3922A2BF60008753BD /* CryptoCore.framework in CopyFiles */,
+				66C048FB22A67C4500031F28 /* CryptoCore.framework in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		661A6B2722A29424008753BD /* ptc_util.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ptc_util.h; sourceTree = "<group>"; };
-		661A6B2822A29424008753BD /* ptc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ptc.h; sourceTree = "<group>"; };
-		661A6B2922A29424008753BD /* ptc_result.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ptc_result.h; sourceTree = "<group>"; };
-		661A6B2A22A29424008753BD /* ptc_crypto.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ptc_crypto.h; sourceTree = "<group>"; };
-		661A6B2B22A29424008753BD /* ptc_base58.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ptc_base58.h; sourceTree = "<group>"; };
-		661A6B2C22A29424008753BD /* ptc_test.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ptc_test.h; sourceTree = "<group>"; };
-		661A6B3722A2BDC9008753BD /* CryptoCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = CryptoCore.framework; sourceTree = "<group>"; };
+		25062DF9BF99B7E9D68B4F0A /* Pods-WavesCoreTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WavesCoreTests.debug.xcconfig"; path = "Target Support Files/Pods-WavesCoreTests/Pods-WavesCoreTests.debug.xcconfig"; sourceTree = "<group>"; };
+		26FAE2553ABE75E8EDE8C6C8 /* Pods_WavesCore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WavesCore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		37FFB2A93E0C5A7FA528CA36 /* Pods_WavesCoreTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WavesCoreTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		661A6B3A22A2D9AC008753BD /* ptc_waves_address.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ptc_waves_address.h; sourceTree = "<group>"; };
 		661A6B3C22A2DB48008753BD /* ptc_waves_transaction.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ptc_waves_transaction.h; sourceTree = "<group>"; };
 		661A6B3E22A2DB70008753BD /* ptc_waves_address.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = ptc_waves_address.c; sourceTree = "<group>"; };
@@ -83,6 +82,17 @@
 		66BD7D9E22802A1400BFCB28 /* ptc_waves_test.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ptc_waves_test.h; sourceTree = "<group>"; };
 		66C048E422A6713C00031F28 /* WavesTransferTransaction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WavesTransferTransaction.swift; sourceTree = "<group>"; };
 		66C048E622A672B100031F28 /* Crypto+WavesTransaction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Crypto+WavesTransaction.swift"; sourceTree = "<group>"; };
+		66C048EA22A67A2500031F28 /* ptc_base58.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ptc_base58.h; sourceTree = "<group>"; };
+		66C048EB22A67A2500031F28 /* ptc_crypto.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ptc_crypto.h; sourceTree = "<group>"; };
+		66C048EC22A67A2500031F28 /* ptc_result.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ptc_result.h; sourceTree = "<group>"; };
+		66C048ED22A67A2500031F28 /* ptc_test.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ptc_test.h; sourceTree = "<group>"; };
+		66C048EE22A67A2600031F28 /* ptc_util.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ptc_util.h; sourceTree = "<group>"; };
+		66C048EF22A67A2600031F28 /* ptc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ptc.h; sourceTree = "<group>"; };
+		66C048F622A67BEA00031F28 /* CryptoCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = CryptoCore.framework; sourceTree = "<group>"; };
+		66C048FA22A67C4500031F28 /* CryptoCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CryptoCore.framework; path = "../../../Library/Developer/Xcode/DerivedData/WavesCore-azcteccovzjvxvadgualtvtvepwp/Build/Products/Debug-iphonesimulator/CryptoCore/CryptoCore.framework"; sourceTree = "<group>"; };
+		A7CB5720A1F13665A4A4172E /* Pods-WavesCore.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WavesCore.release.xcconfig"; path = "Target Support Files/Pods-WavesCore/Pods-WavesCore.release.xcconfig"; sourceTree = "<group>"; };
+		B099FB237443D1440528EFB7 /* Pods-WavesCore.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WavesCore.debug.xcconfig"; path = "Target Support Files/Pods-WavesCore/Pods-WavesCore.debug.xcconfig"; sourceTree = "<group>"; };
+		E0BDFD9824A0635901545A39 /* Pods-WavesCoreTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WavesCoreTests.release.xcconfig"; path = "Target Support Files/Pods-WavesCoreTests/Pods-WavesCoreTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,6 +100,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				66C048F722A67BEA00031F28 /* CryptoCore.framework in Frameworks */,
+				95CF80144F98A1B2873C0D2F /* Pods_WavesCore.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -98,6 +110,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				66BD7D51228018F200BFCB28 /* WavesCore.framework in Frameworks */,
+				0A928F54BB300589FBFDEBF8 /* Pods_WavesCoreTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -115,12 +128,12 @@
 		661A6B2622A28C21008753BD /* paytomat_crypto_core */ = {
 			isa = PBXGroup;
 			children = (
-				661A6B2B22A29424008753BD /* ptc_base58.h */,
-				661A6B2A22A29424008753BD /* ptc_crypto.h */,
-				661A6B2922A29424008753BD /* ptc_result.h */,
-				661A6B2C22A29424008753BD /* ptc_test.h */,
-				661A6B2722A29424008753BD /* ptc_util.h */,
-				661A6B2822A29424008753BD /* ptc.h */,
+				66C048EA22A67A2500031F28 /* ptc_base58.h */,
+				66C048EB22A67A2500031F28 /* ptc_crypto.h */,
+				66C048EC22A67A2500031F28 /* ptc_result.h */,
+				66C048ED22A67A2500031F28 /* ptc_test.h */,
+				66C048EE22A67A2600031F28 /* ptc_util.h */,
+				66C048EF22A67A2600031F28 /* ptc.h */,
 			);
 			path = paytomat_crypto_core;
 			sourceTree = "<group>";
@@ -128,11 +141,13 @@
 		66BD7D3D228018F200BFCB28 = {
 			isa = PBXGroup;
 			children = (
+				66C048FA22A67C4500031F28 /* CryptoCore.framework */,
 				66BD7D61228019DA00BFCB28 /* WavesCore.podspec */,
 				66BD7D49228018F200BFCB28 /* WavesCore */,
 				66BD7D54228018F200BFCB28 /* WavesCoreTests */,
 				66BD7D48228018F200BFCB28 /* Products */,
 				B962EEF8B8CFA4D9BAB49E97 /* Pods */,
+				9BEEB6D7EF33619306B73A0E /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -148,7 +163,7 @@
 		66BD7D49228018F200BFCB28 /* WavesCore */ = {
 			isa = PBXGroup;
 			children = (
-				661A6B3722A2BDC9008753BD /* CryptoCore.framework */,
+				66C048F622A67BEA00031F28 /* CryptoCore.framework */,
 				66BD7D63228019FF00BFCB28 /* Sources */,
 				66BD7D4A228018F200BFCB28 /* WavesCore.h */,
 				66BD7D4B228018F200BFCB28 /* Info.plist */,
@@ -210,9 +225,22 @@
 			path = src;
 			sourceTree = "<group>";
 		};
+		9BEEB6D7EF33619306B73A0E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				26FAE2553ABE75E8EDE8C6C8 /* Pods_WavesCore.framework */,
+				37FFB2A93E0C5A7FA528CA36 /* Pods_WavesCoreTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		B962EEF8B8CFA4D9BAB49E97 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
+				B099FB237443D1440528EFB7 /* Pods-WavesCore.debug.xcconfig */,
+				A7CB5720A1F13665A4A4172E /* Pods-WavesCore.release.xcconfig */,
+				25062DF9BF99B7E9D68B4F0A /* Pods-WavesCoreTests.debug.xcconfig */,
+				E0BDFD9824A0635901545A39 /* Pods-WavesCoreTests.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -224,18 +252,18 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				66C048F322A67A2600031F28 /* ptc_test.h in Headers */,
+				66C048F422A67A2600031F28 /* ptc_util.h in Headers */,
 				661A6B4522A2DC90008753BD /* ptc_waves_crypto.h in Headers */,
-				661A6B3122A29424008753BD /* ptc_base58.h in Headers */,
-				661A6B3022A29424008753BD /* ptc_crypto.h in Headers */,
-				661A6B2D22A29424008753BD /* ptc_util.h in Headers */,
-				661A6B2E22A29424008753BD /* ptc.h in Headers */,
+				66C048F122A67A2600031F28 /* ptc_crypto.h in Headers */,
 				66BD7D6822801A5500BFCB28 /* ptc_waves.h in Headers */,
-				661A6B2F22A29424008753BD /* ptc_result.h in Headers */,
 				66BD7D9F22802A1400BFCB28 /* ptc_waves_test.h in Headers */,
-				661A6B3222A29424008753BD /* ptc_test.h in Headers */,
+				66C048F522A67A2600031F28 /* ptc.h in Headers */,
 				661A6B3B22A2D9AC008753BD /* ptc_waves_address.h in Headers */,
 				661A6B3D22A2DB48008753BD /* ptc_waves_transaction.h in Headers */,
+				66C048F222A67A2600031F28 /* ptc_result.h in Headers */,
 				66BD7D58228018F200BFCB28 /* WavesCore.h in Headers */,
+				66C048F022A67A2600031F28 /* ptc_base58.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -246,6 +274,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 66BD7D5B228018F200BFCB28 /* Build configuration list for PBXNativeTarget "WavesCore" */;
 			buildPhases = (
+				65075ED2B8DA912EE7DDC0F7 /* [CP] Check Pods Manifest.lock */,
 				66BD7D42228018F200BFCB28 /* Headers */,
 				66BD7D43228018F200BFCB28 /* Sources */,
 				66BD7D44228018F200BFCB28 /* Frameworks */,
@@ -265,6 +294,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 66BD7D5E228018F200BFCB28 /* Build configuration list for PBXNativeTarget "WavesCoreTests" */;
 			buildPhases = (
+				BA35B73454AAB6668057F941 /* [CP] Check Pods Manifest.lock */,
 				66BD7D4C228018F200BFCB28 /* Sources */,
 				66BD7D4D228018F200BFCB28 /* Frameworks */,
 				66BD7D4E228018F200BFCB28 /* Resources */,
@@ -333,6 +363,53 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		65075ED2B8DA912EE7DDC0F7 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-WavesCore-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BA35B73454AAB6668057F941 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-WavesCoreTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		66BD7D43228018F200BFCB28 /* Sources */ = {
@@ -492,6 +569,7 @@
 		};
 		66BD7D5C228018F200BFCB28 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B099FB237443D1440528EFB7 /* Pods-WavesCore.debug.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
@@ -525,6 +603,7 @@
 		};
 		66BD7D5D228018F200BFCB28 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A7CB5720A1F13665A4A4172E /* Pods-WavesCore.release.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
@@ -557,6 +636,7 @@
 		};
 		66BD7D5F228018F200BFCB28 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 25062DF9BF99B7E9D68B4F0A /* Pods-WavesCoreTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -576,6 +656,7 @@
 		};
 		66BD7D60228018F200BFCB28 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E0BDFD9824A0635901545A39 /* Pods-WavesCoreTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
