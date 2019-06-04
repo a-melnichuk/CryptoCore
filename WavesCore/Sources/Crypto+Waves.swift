@@ -108,15 +108,15 @@ public extension Crypto.Waves {
                                         feeAssetId: feeAssetId)
     }
     
-    public static func testInt2() -> Int {
+    static func testInt2() -> Int {
         return Crypto.testInt()
     }
     
-    public static func testInt() -> Int {
+    static func testInt() -> Int {
         return Int(ptc_waves_test_int())
     }
     
-    public static func testSha() -> String? {
+    static func testSha() -> String? {
         print("__SHA#1")
         let data = Crypto.data(fromHex: "6f2072656e64657220747261636b20736561726368206b696420766963746f7279207368656c6c206162757365206d65726765207175616c69747920726f79616c20636c69702075676c79206c797269637320726f756768206e6174696f6e2068756765207374727567676c6520686172642065786572636973652062616c6c2070726f766964652064757479206e6f77")!
         var out = Data(count: 32)
@@ -133,7 +133,7 @@ public extension Crypto.Waves {
         return result == PTC_SUCCESS ? Crypto.hex(fromData: out) : nil
     }
     
-    public static func testSha2() -> String? {
+    static func testSha2() -> String? {
         let data = Crypto.data(fromHex: "6f2072656e64657220747261636b20736561726368206b696420766963746f7279207368656c6c206162757365206d65726765207175616c69747920726f79616c20636c69702075676c79206c797269637320726f756768206e6174696f6e2068756765207374727567676c6520686172642065786572636973652062616c6c2070726f766964652064757479206e6f77")!
         guard let sha256 = Crypto.sha256(data) else {
             return nil
@@ -141,7 +141,7 @@ public extension Crypto.Waves {
         return Crypto.hex(fromData: sha256)
     }
     
-    public static func testSha3() -> String? {
+    static func testSha3() -> String? {
         let data = Crypto.data(fromHex: "6f2072656e64657220747261636b20736561726368206b696420766963746f7279207368656c6c206162757365206d65726765207175616c69747920726f79616c20636c69702075676c79206c797269637320726f756768206e6174696f6e2068756765207374727567676c6520686172642065786572636973652062616c6c2070726f766964652064757479206e6f77")!
         var out = Data(count: 32)
         let count = data.count
@@ -157,7 +157,7 @@ public extension Crypto.Waves {
         return result == PTC_SUCCESS ? Crypto.hex(fromData: out) : nil
     }
     
-    public static func test() {
+    static func test() {
         print("_TEST_INT: \(ptc_waves_test_int())");
         ptc_waves_test_print()
     }

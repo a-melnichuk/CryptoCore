@@ -6,26 +6,39 @@ CACHE_KEYS:
     BUILD_SETTINGS_CHECKSUM:
       CryptoCore: fe60faf63ae60401a7e63a90b3605abe
     CHECKOUT_OPTIONS:
-      :commit: c85a75818ec71610eed6478aa73b6d8105fadf29
+      :commit: b9a2f03dd20d95f66a85a88817b7e4350db91e0d
       :git: https://github.com/a-melnichuk/CryptoCore.git
     CHECKSUM: be40593f3d4d2030ecc95fb3567b422ee67954c7
     SPECS:
       - CryptoCore (0.0.8)
   Pods-Examples:
     BUILD_SETTINGS_CHECKSUM:
-      Debug: 451613239e39c04c673162cf549364b2
-      Release: 451613239e39c04c673162cf549364b2
+      Debug: 6755045ddb6e762734bf1930a946308b
+      Release: 6755045ddb6e762734bf1930a946308b
   Pods-ExamplesTests:
     BUILD_SETTINGS_CHECKSUM:
-      Debug: 8ac7cf1278e6b0475271922a9250b3cb
-      Release: 8ac7cf1278e6b0475271922a9250b3cb
+      Debug: 7e66f952cc824da0a53505ea8aaa5811
+      Release: 7e66f952cc824da0a53505ea8aaa5811
   WavesCore:
     BUILD_SETTINGS_CHECKSUM:
-      WavesCore: 320aed46aa4a80f81e36a1b37bada7c9
-    CHECKOUT_OPTIONS:
-      :commit: c85a75818ec71610eed6478aa73b6d8105fadf29
-      :git: https://github.com/a-melnichuk/CryptoCore.git
-    CHECKSUM: 888f320301c6b742e706cc5ec2c52c4e1bf63b48
+      WavesCore: 424651f54b35f32b7ef886508f0f05a7
+    CHECKSUM: 4b34a91bef3159baa683ac9bffbd38b26a5738fc
+    FILES:
+      - "/Users/alexmelnichuk/XcodeProjects/CryptoCore/LICENSE.md"
+      - "/Users/alexmelnichuk/XcodeProjects/CryptoCore/WavesCore/WavesCore/Sources/Crypto+Waves.swift"
+      - "/Users/alexmelnichuk/XcodeProjects/CryptoCore/WavesCore/WavesCore/Sources/Crypto+WavesTransaction.swift"
+      - "/Users/alexmelnichuk/XcodeProjects/CryptoCore/WavesCore/WavesCore/Sources/module.modulemap"
+      - "/Users/alexmelnichuk/XcodeProjects/CryptoCore/WavesCore/WavesCore/Sources/paytomat_waves_core/include/ptc_waves.h"
+      - "/Users/alexmelnichuk/XcodeProjects/CryptoCore/WavesCore/WavesCore/Sources/paytomat_waves_core/include/ptc_waves_address.h"
+      - "/Users/alexmelnichuk/XcodeProjects/CryptoCore/WavesCore/WavesCore/Sources/paytomat_waves_core/include/ptc_waves_crypto.h"
+      - "/Users/alexmelnichuk/XcodeProjects/CryptoCore/WavesCore/WavesCore/Sources/paytomat_waves_core/include/ptc_waves_test.h"
+      - "/Users/alexmelnichuk/XcodeProjects/CryptoCore/WavesCore/WavesCore/Sources/paytomat_waves_core/include/ptc_waves_transaction.h"
+      - "/Users/alexmelnichuk/XcodeProjects/CryptoCore/WavesCore/WavesCore/Sources/paytomat_waves_core/src/ptc_waves_address.c"
+      - "/Users/alexmelnichuk/XcodeProjects/CryptoCore/WavesCore/WavesCore/Sources/paytomat_waves_core/src/ptc_waves_crypto.c"
+      - "/Users/alexmelnichuk/XcodeProjects/CryptoCore/WavesCore/WavesCore/Sources/paytomat_waves_core/src/ptc_waves_test.c"
+      - "/Users/alexmelnichuk/XcodeProjects/CryptoCore/WavesCore/WavesCore/Sources/paytomat_waves_core/src/ptc_waves_transaction.c"
+      - "/Users/alexmelnichuk/XcodeProjects/CryptoCore/WavesCore/WavesCore/Sources/WavesTransferTransaction.swift"
+      - "/Users/alexmelnichuk/XcodeProjects/CryptoCore/WavesCore/WavesCore/WavesCore.h"
     SPECS:
-      - WavesCore (0.0.1)
+      - WavesCore (0.0.3)
 OBJECT_VERSION: 50

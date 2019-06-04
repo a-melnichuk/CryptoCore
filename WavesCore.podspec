@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
     s.name = 'WavesCore'
     s.module_name = 'WavesCore'
-    s.version = '0.0.2'
+    s.version = '0.0.3'
     s.swift_version = '5.0'
     s.summary = 'Waves crypto components for Paytomat Wallet'
     s.description = <<-DESC
@@ -20,13 +20,12 @@ Pod::Spec.new do |s|
         :branch => 'master',
         :tag => 'waves-' + s.version.to_s
     }
-    source = 'WaveCore/'
     s.source_files = [
-        source + 'WavesCore/*.h',
-        source + 'WavesCore/Sources/*.swift',
-        source + 'WavesCore/Sources/paytomat_waves_core/{include,src}/*.{h,c}'
+        'WavesCore/*.h',
+        'WavesCore/Sources/*.swift',
+        'WavesCore/Sources/paytomat_waves_core/{include,src}/*.{h,c}'
     ]
-    s.public_header_files = source + 'WavesCore/*.h'
+    s.public_header_files = 'WavesCore/*.h'
     s.pod_target_xcconfig = {
         'SWIFT_INCLUDE_PATHS' => [
             '$(PODS_TARGET_SRCROOT)/WavesCore/Sources/**',
@@ -40,8 +39,8 @@ Pod::Spec.new do |s|
         ].join(' '),
     }
 
-    s.preserve_paths = source + 'WavesCore/Sources/module.modulemap'
-    s.exclude_files = source + 'Examples/*'
+    s.preserve_paths = 'WavesCore/Sources/module.modulemap'
+    s.exclude_files = 'Examples/*'
     s.frameworks = 'Foundation'
     s.dependency 'CryptoCore', '~> 0.0.8'
 end
