@@ -1,5 +1,5 @@
 PODS:
-  - CryptoCore (0.0.6)
+  - CryptoCore (0.0.7)
 
 DEPENDENCIES:
   - CryptoCore (from `https://github.com/a-melnichuk/CryptoCore.git`)
@@ -10,11 +10,11 @@ EXTERNAL SOURCES:
 
 CHECKOUT OPTIONS:
   CryptoCore:
-    :commit: 8b2be1f2ddd1b302815bf6547102719b34acbcbe
+    :commit: cf6bbf62ea00a6eb7ec9344a18b0c7bb187d0787
     :git: https://github.com/a-melnichuk/CryptoCore.git
 
 SPEC CHECKSUMS:
-  CryptoCore: ae01c7446bff78e370f4abcc2b060df54584efbd
+  CryptoCore: 81f8c475b7b25d19caad238890e43c3c72cf29de
 
 PODFILE CHECKSUM: 6a6c5b7bd37ff70b317182d41a9397fb4e46e241
 

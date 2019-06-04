@@ -17,7 +17,6 @@
 		66BD7D51228018F200BFCB28 /* WavesCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 66BD7D47228018F200BFCB28 /* WavesCore.framework */; };
 		66BD7D56228018F200BFCB28 /* WavesCoreTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66BD7D55228018F200BFCB28 /* WavesCoreTests.swift */; };
 		66BD7D58228018F200BFCB28 /* WavesCore.h in Headers */ = {isa = PBXBuildFile; fileRef = 66BD7D4A228018F200BFCB28 /* WavesCore.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		66BD7D62228019DA00BFCB28 /* WavesCore.podspec in Resources */ = {isa = PBXBuildFile; fileRef = 66BD7D61228019DA00BFCB28 /* WavesCore.podspec */; };
 		66BD7D6822801A5500BFCB28 /* ptc_waves.h in Headers */ = {isa = PBXBuildFile; fileRef = 66BD7D6722801A5500BFCB28 /* ptc_waves.h */; };
 		66BD7D6B22801AC800BFCB28 /* Crypto+Waves.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66BD7D6A22801AC800BFCB28 /* Crypto+Waves.swift */; };
 		66BD7D9D22802A0400BFCB28 /* ptc_waves_test.c in Sources */ = {isa = PBXBuildFile; fileRef = 66BD7D9C22802A0400BFCB28 /* ptc_waves_test.c */; };
@@ -32,6 +31,7 @@
 		66C048F522A67A2600031F28 /* ptc.h in Headers */ = {isa = PBXBuildFile; fileRef = 66C048EF22A67A2600031F28 /* ptc.h */; };
 		66C048F722A67BEA00031F28 /* CryptoCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 66C048F622A67BEA00031F28 /* CryptoCore.framework */; };
 		66C048FB22A67C4500031F28 /* CryptoCore.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 66C048FA22A67C4500031F28 /* CryptoCore.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		66C0490122A6D80000031F28 /* WavesCore.podspec in Resources */ = {isa = PBXBuildFile; fileRef = 66C0490022A6D80000031F28 /* WavesCore.podspec */; };
 		95CF80144F98A1B2873C0D2F /* Pods_WavesCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 26FAE2553ABE75E8EDE8C6C8 /* Pods_WavesCore.framework */; };
 /* End PBXBuildFile section */
 
@@ -74,7 +74,6 @@
 		66BD7D50228018F200BFCB28 /* WavesCoreTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WavesCoreTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		66BD7D55228018F200BFCB28 /* WavesCoreTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WavesCoreTests.swift; sourceTree = "<group>"; };
 		66BD7D57228018F200BFCB28 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		66BD7D61228019DA00BFCB28 /* WavesCore.podspec */ = {isa = PBXFileReference; lastKnownFileType = text; path = WavesCore.podspec; sourceTree = "<group>"; };
 		66BD7D6722801A5500BFCB28 /* ptc_waves.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ptc_waves.h; sourceTree = "<group>"; };
 		66BD7D6922801AA800BFCB28 /* module.modulemap */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.module-map"; path = module.modulemap; sourceTree = "<group>"; };
 		66BD7D6A22801AC800BFCB28 /* Crypto+Waves.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Crypto+Waves.swift"; sourceTree = "<group>"; };
@@ -90,6 +89,7 @@
 		66C048EF22A67A2600031F28 /* ptc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ptc.h; sourceTree = "<group>"; };
 		66C048F622A67BEA00031F28 /* CryptoCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = CryptoCore.framework; sourceTree = "<group>"; };
 		66C048FA22A67C4500031F28 /* CryptoCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CryptoCore.framework; path = "../../../Library/Developer/Xcode/DerivedData/WavesCore-azcteccovzjvxvadgualtvtvepwp/Build/Products/Debug-iphonesimulator/CryptoCore/CryptoCore.framework"; sourceTree = "<group>"; };
+		66C0490022A6D80000031F28 /* WavesCore.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = WavesCore.podspec; path = ../WavesCore.podspec; sourceTree = "<group>"; };
 		A7CB5720A1F13665A4A4172E /* Pods-WavesCore.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WavesCore.release.xcconfig"; path = "Target Support Files/Pods-WavesCore/Pods-WavesCore.release.xcconfig"; sourceTree = "<group>"; };
 		B099FB237443D1440528EFB7 /* Pods-WavesCore.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WavesCore.debug.xcconfig"; path = "Target Support Files/Pods-WavesCore/Pods-WavesCore.debug.xcconfig"; sourceTree = "<group>"; };
 		E0BDFD9824A0635901545A39 /* Pods-WavesCoreTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WavesCoreTests.release.xcconfig"; path = "Target Support Files/Pods-WavesCoreTests/Pods-WavesCoreTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -141,8 +141,8 @@
 		66BD7D3D228018F200BFCB28 = {
 			isa = PBXGroup;
 			children = (
+				66C0490022A6D80000031F28 /* WavesCore.podspec */,
 				66C048FA22A67C4500031F28 /* CryptoCore.framework */,
-				66BD7D61228019DA00BFCB28 /* WavesCore.podspec */,
 				66BD7D49228018F200BFCB28 /* WavesCore */,
 				66BD7D54228018F200BFCB28 /* WavesCoreTests */,
 				66BD7D48228018F200BFCB28 /* Products */,
@@ -351,7 +351,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				66BD7D62228019DA00BFCB28 /* WavesCore.podspec in Resources */,
+				66C0490122A6D80000031F28 /* WavesCore.podspec in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

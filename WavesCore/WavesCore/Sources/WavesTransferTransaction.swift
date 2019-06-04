@@ -24,17 +24,17 @@ public struct WavesTransferTransaction {
     }
     
     // parsed from pcm
-    let id: String
-    let senderPublicKey: String
-    let signature: String
-    let attachment: Data?
-    let timestamp: Int64
+    public let id: String
+    public let senderPublicKey: String
+    public let signature: String
+    public let attachment: Data?
+    public let timestamp: Int64
     // local
-    let recipient: String
-    let amount: Int64
-    let fee: Int64
-    let assetId: String?
-    let feeAssetId: String?
+    public let recipient: String
+    public let amount: Int64
+    public let fee: Int64
+    public let assetId: String?
+    public let feeAssetId: String?
     
     public init?(id: String?,
           senderPublicKey: String?,

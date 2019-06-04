@@ -44,6 +44,24 @@ public extension Crypto.Waves {
         return Crypto.callCrypto(data, outCount: count) { ptc_waves_secure_hash($0, $1, $2) }
     }
     
+    static func sign(_ data: Data, privateKey: inout Data) -> Data? {
+        var signature = Data(count: Int(PTC_WAVES_SIGNATURE_BYTE_COUNT))
+        let count = data.count
+        let result: ptc_result = signature.withUnsafeMutableBytes { signatureBuf in
+            data.withUnsafeBytes { dataBuf in
+                privateKey.withUnsafeBytes { privateKeyBuf in
+                    if let dataPtr = dataBuf.bindMemory(to: UInt8.self).baseAddress,
+                        let privateKeyPtr = privateKeyBuf.bindMemory(to: UInt8.self).baseAddress,
+                        let signaturePtr = signatureBuf.bindMemory(to: UInt8.self).baseAddress {
+                        return ptc_waves_sign(privateKeyPtr, dataPtr, count, signaturePtr)
+                    }
+                    return PTC_ERROR_GENERAL
+                }
+            }
+        }
+        return result == PTC_SUCCESS ? signature : nil
+    }
+    
     static func transferTransaction(senderPrivateKey: Data,
                                     recipientAddress: String,
                                     amount: Int64,
