@@ -5,23 +5,26 @@ PODS:
 
 DEPENDENCIES:
   - CryptoCore (from `https://github.com/a-melnichuk/CryptoCore.git`)
-  - WavesCore (from `../../`)
+  - WavesCore (from `https://github.com/a-melnichuk/CryptoCore.git`)
 
 EXTERNAL SOURCES:
   CryptoCore:
     :git: https://github.com/a-melnichuk/CryptoCore.git
   WavesCore:
-    :path: "../../"
+    :git: https://github.com/a-melnichuk/CryptoCore.git
 
 CHECKOUT OPTIONS:
   CryptoCore:
-    :commit: b9a2f03dd20d95f66a85a88817b7e4350db91e0d
+    :commit: a37fd2845208ad91c194827989a2721a7d609b20
+    :git: https://github.com/a-melnichuk/CryptoCore.git
+  WavesCore:
+    :commit: a37fd2845208ad91c194827989a2721a7d609b20
     :git: https://github.com/a-melnichuk/CryptoCore.git
 
 SPEC CHECKSUMS:
   CryptoCore: be40593f3d4d2030ecc95fb3567b422ee67954c7
   WavesCore: 6ebbe3220ccfab8ec3f618881fb1addcef0f73f4
 
-PODFILE CHECKSUM: 2793c185b18814a5250aaf53d96af2832ef3cabd
+PODFILE CHECKSUM: 92d1c39ebb281b5148344b2e3aed6329740b5a02
 
 COCOAPODS: 1.7.1
