@@ -20,6 +20,6 @@ class ExamplesTests: XCTestCase {
             return
         }
         XCTAssertEqual(secureHash.count, 32)
-        XCTAssertEqual(Crypto.hex(fromData: secureHash), "")
+        XCTAssertEqual(Crypto.hex(fromData: secureHash), "0b0d17e2985e876b36a8d5b0edbadc8234a19feacfc0db3650de1befde7de790")
     }
 }

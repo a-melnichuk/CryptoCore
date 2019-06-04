@@ -1,6 +1,6 @@
 PODS:
   - CryptoCore (0.0.10)
-  - WavesCore (0.0.4):
+  - WavesCore (0.0.5):
     - CryptoCore (~> 0.0.8)
 
 DEPENDENCIES:
@@ -15,15 +15,15 @@ EXTERNAL SOURCES:
 
 CHECKOUT OPTIONS:
   CryptoCore:
-    :commit: 9e62abf8cdc5acb0a9c0069fa8954fd3036de6b7
+    :commit: be52032a8ee7dc94db1b4389028cb9e8fc59840c
     :git: https://github.com/a-melnichuk/CryptoCore.git
   WavesCore:
-    :commit: 9e62abf8cdc5acb0a9c0069fa8954fd3036de6b7
+    :commit: be52032a8ee7dc94db1b4389028cb9e8fc59840c
     :git: https://github.com/a-melnichuk/CryptoCore.git
 
 SPEC CHECKSUMS:
   CryptoCore: 62a941ce6a0661f49e1990d12e555414acedd4ab
-  WavesCore: c3c8708c35880891fb36924f585394d1390f815d
+  WavesCore: a1cd658ff79736ead22d2c77941096b00fc6bb39
 
 PODFILE CHECKSUM: 92d1c39ebb281b5148344b2e3aed6329740b5a02
 

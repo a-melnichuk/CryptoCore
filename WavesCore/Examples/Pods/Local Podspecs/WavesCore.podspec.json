@@ -1,7 +1,7 @@
 {
   "name": "WavesCore",
   "module_name": "WavesCore",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "swift_versions": "5.0",
   "summary": "Waves crypto components for Paytomat Wallet",
   "description": "Waves address generation and transaction for Paytomat Wallet",
@@ -20,7 +20,7 @@
   "source": {
     "git": "https://github.com/a-melnichuk/CryptoCore.git",
     "branch": "master",
-    "tag": "waves-0.0.4"
+    "tag": "waves-0.0.5"
   },
   "source_files": [
     "WavesCore/*.h",
