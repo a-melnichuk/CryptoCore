@@ -23,19 +23,20 @@ Pod::Spec.new do |s|
     s.source_files = [
         'WavesCore/*.h',
         'WavesCore/Sources/*.swift',
+        'WavesCore/Sources/libs/paytomat_crypto_core/*.{h}',
         'WavesCore/Sources/paytomat_waves_core/{include,src}/*.{h,c}'
     ]
     s.public_header_files = 'WavesCore/*.h'
     s.pod_target_xcconfig = {
         'SWIFT_INCLUDE_PATHS' => [
             '$(PODS_TARGET_SRCROOT)/WavesCore/Sources/**',
-            '$(PODS_ROOT)/WavesCore/Sources/**',
             '$(PODS_TARGET_SRCROOT)/WavesCore/Sources/libs',
+            '$(PODS_ROOT)/WavesCore/Sources/**',
             '$(PODS_ROOT)/WavesCore/Sources/libs'
         ],
         'SYSTEM_HEADER_SEARCH_PATHS' => [
             '$(PODS_TARGET_SRCROOT)/WavesCore/Sources/libs',
-            '$(PODS_ROOT)/WavesCore/Sources/libs',
+            '$(PODS_ROOT)/WavesCore/Sources/libs'
         ].join(' '),
     }
 
