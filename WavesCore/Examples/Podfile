@@ -1,0 +1,18 @@
+install! 'cocoapods',
+         :generate_multiple_pod_projects => true,
+         :incremental_installation => true
+
+platform :ios, '9.0'
+use_frameworks!
+
+target 'Examples' do
+ pod 'CryptoCore', :git => 'https://github.com/a-melnichuk/CryptoCore.git'
+ # pod 'CryptoCore', :path => '../../CryptoCore'
+  pod 'WavesCore', :path => '../'
+ 
+
+  target 'ExamplesTests' do
+    inherit! :search_paths
+  end
+
+end
