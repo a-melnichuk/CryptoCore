@@ -1,5 +1,5 @@
 //
-//  Crypto+WavesTransaction.swift
+//  WavesTransaction.swift
 //  WavesCore
 //
 //  Created by Alex Melnichuk on 6/4/19.
@@ -10,14 +10,20 @@ import Foundation
 import CryptoCore
 import paytomat_waves_core
 
-public extension Crypto.Waves {
+public extension WavesCore {
     struct Transaction {
         public enum Kind: UInt8 {
             case transfer = 4
         }
+        private init() {}
     }
     
     enum TransactionError: Error {
+        case invalidAmount
+        case invalidFee
+        case invalidBalance
+        case amountExceedsBalance
+        case cannotSendToSelf
         case transactionIdGenerationFailed
         case publicKeyGenerationFailed
         case addressDecodingFailed
@@ -27,7 +33,7 @@ public extension Crypto.Waves {
     }
 }
 
-public extension Crypto.Waves.Transaction {
+public extension WavesCore.Transaction {
     struct Transfer {
         public enum AssetFlag: UInt8 {
             case waves = 0
@@ -35,16 +41,16 @@ public extension Crypto.Waves.Transaction {
         }
         
         public struct Signed {
-            let id: String
-            let senderPublicKey: String
-            let signature: String
-            let attachment: Data?
-            let timestamp: Int64
-            let recipient: String
-            let amount: Int64
-            let fee: Int64
-            let assetId: String?
-            let feeAssetId: String?
+            public let id: String
+            public let senderPublicKey: String
+            public let signature: String
+            public let attachment: Data?
+            public let timestamp: Int64
+            public let recipient: String
+            public let amount: Int64
+            public let fee: Int64
+            public let assetId: String?
+            public let feeAssetId: String?
         }
         
         public let recipient: String
@@ -54,6 +60,8 @@ public extension Crypto.Waves.Transaction {
         public let feeAssetId: String?
         public let attachment: Data?
         public let timeOffset: Int64
+        public let scheme: UInt8 // W
+        public let balance: Int64?
         
         public init(recipient: String,
                     amount: Int64,
@@ -61,7 +69,9 @@ public extension Crypto.Waves.Transaction {
                     assetId: String?,
                     feeAssetId: String?,
                     attachment: Data?,
-                    timeOffset: Int64) {
+                    timeOffset: Int64,
+                    scheme: UInt8 = 87,
+                    balance: Int64? = nil) {
             self.recipient = recipient
             self.amount = amount
             self.fee = fee
@@ -69,22 +79,45 @@ public extension Crypto.Waves.Transaction {
             self.feeAssetId = feeAssetId
             self.attachment = attachment
             self.timeOffset = timeOffset
+            self.scheme = scheme
+            self.balance = balance
         }
     }
 }
 
-public extension Crypto.Waves.Transaction.Transfer {
+public extension WavesCore.Transaction.Transfer {
     func sign(privateKey: inout Data) throws -> Signed {
-        guard let publicKeyBytes = Crypto.Waves.publicKey(privateKey: privateKey),
+        guard let publicKeyBytes = WavesCore.publicKey(privateKey: privateKey),
             let publicKey = Base58.encode(publicKeyBytes) else {
-            throw Crypto.Waves.TransactionError.publicKeyGenerationFailed
+            throw WavesCore.TransactionError.publicKeyGenerationFailed
         }
-        
         guard let recipient = Base58.decode(self.recipient) else {
-            throw Crypto.Waves.TransactionError.addressDecodingFailed
+            throw WavesCore.TransactionError.addressDecodingFailed
+        }
+        if let sender = WavesCore.address(publicKey: publicKeyBytes, scheme: scheme) {
+            guard sender != self.recipient else {
+                throw WavesCore.TransactionError.cannotSendToSelf
+            }
         }
         
-        let type = Crypto.Waves.Transaction.Kind.transfer
+        var amount = self.amount
+        guard amount > 0 else {
+            throw WavesCore.TransactionError.invalidAmount
+        }
+        guard fee > 0 else {
+            throw WavesCore.TransactionError.invalidFee
+        }
+        if let balance = self.balance, amount == balance {
+            guard balance > 0 else {
+                throw WavesCore.TransactionError.invalidBalance
+            }
+            guard fee < amount else {
+                throw WavesCore.TransactionError.amountExceedsBalance
+            }
+            amount -= fee
+        }
+        
+        let type = WavesCore.Transaction.Kind.transfer
         let dateMillis = Int64((Date().timeIntervalSince1970 * 1000.0).rounded())
         let timestamp = dateMillis + timeOffset
         let attachmentLength = Int16(truncatingIfNeeded: attachment?.count ?? 0)
@@ -97,7 +130,7 @@ public extension Crypto.Waves.Transaction.Transfer {
         
         if let assetId = assetId, !assetId.isEmpty {
             guard let decodedAssetId = Base58.decode(assetId) else {
-                throw Crypto.Waves.TransactionError.assetIdDecodingFailed
+                throw WavesCore.TransactionError.assetIdDecodingFailed
             }
             assetIdData = decodedAssetId
             assetIdFlag = .asset
@@ -108,7 +141,7 @@ public extension Crypto.Waves.Transaction.Transfer {
         
         if let feeAssetId = feeAssetId, !feeAssetId.isEmpty {
             guard let decodedFeeAssetId = Base58.decode(feeAssetId) else {
-                throw Crypto.Waves.TransactionError.feeAssetIdDecodingFailed
+                throw WavesCore.TransactionError.feeAssetIdDecodingFailed
             }
             feeAssetIdData = decodedFeeAssetId
             feeAssetIdFlag = .asset
@@ -137,14 +170,14 @@ public extension Crypto.Waves.Transaction.Transfer {
         serializedTx.append(Data(loadBytes: attachmentLength.bigEndian))
         serializedTx.append(attachmentData)
         
-        guard let signatureBytes = Crypto.Waves.sign(serializedTx, privateKey: &privateKey),
+        guard let signatureBytes = WavesCore.sign(serializedTx, privateKey: &privateKey),
             let signature = Base58.encode(signatureBytes) else {
-            throw Crypto.Waves.TransactionError.signatureFailed
+            throw WavesCore.TransactionError.signatureFailed
         }
         
         guard let idBytes = Crypto.blake2b256(serializedTx),
             let id = Base58.encode(idBytes) else {
-            throw Crypto.Waves.TransactionError.transactionIdGenerationFailed
+            throw WavesCore.TransactionError.transactionIdGenerationFailed
         }
         
         return Signed(id: id,
@@ -160,7 +193,7 @@ public extension Crypto.Waves.Transaction.Transfer {
     }
 }
 
-extension Crypto.Waves.Transaction.Transfer.Signed: Encodable {
+extension WavesCore.Transaction.Transfer.Signed: Encodable {
     private enum CodingKeys: String, CodingKey {
         case id
         case senderPublicKey
