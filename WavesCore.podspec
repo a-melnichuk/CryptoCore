@@ -16,16 +16,17 @@ Pod::Spec.new do |s|
     s.ios.deployment_target = '9.0'
     s.requires_arc = true
     s.source = {
-        :git => 'https://github.com/a-melnichuk/WavesCore.git',
+        :git => 'https://github.com/a-melnichuk/CryptoCore.git',
         :branch => 'master',
-        :tag => s.version.to_s
+        :tag => 'waves-' + s.version.to_s
     }
+    source = 'WaveCore/'
     s.source_files = [
-        'WavesCore/*.h',
-        'WavesCore/Sources/*.swift',
-        'WavesCore/Sources/paytomat_waves_core/{include,src}/*.{h,c}'
+        source + 'WavesCore/*.h',
+        source + 'WavesCore/Sources/*.swift',
+        source + 'WavesCore/Sources/paytomat_waves_core/{include,src}/*.{h,c}'
     ]
-    s.public_header_files = 'WavesCore/*.h'
+    s.public_header_files = source + 'WavesCore/*.h'
     s.pod_target_xcconfig = {
         'SWIFT_INCLUDE_PATHS' => [
             '$(PODS_TARGET_SRCROOT)/WavesCore/Sources/**',
@@ -39,9 +40,9 @@ Pod::Spec.new do |s|
         ].join(' '),
     }
 
-    s.preserve_paths = 'WavesCore/Sources/module.modulemap'
-    s.exclude_files = 'Examples/*'
+    s.preserve_paths = source + 'WavesCore/Sources/module.modulemap'
+    s.exclude_files = source + 'Examples/*'
     s.frameworks = 'Foundation'
-    s.dependency 'CryptoCore', '~> 0.0.6'
+    s.dependency 'CryptoCore', '~> 0.0.8'
 end
 

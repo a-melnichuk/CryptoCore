@@ -98,12 +98,11 @@ extension Crypto {
             fatalError("\(#function) outBytes cannot be negative")
         }
         var out = Data(count: outCount)
-        let count = data.count
         let result: ptc_result = out.withUnsafeMutableBytes { outBuf in
             data.withUnsafeBytes { dataBuf in
                 if let dataPtr = dataBuf.baseAddress,
                     let outPtr = outBuf.bindMemory(to: UInt8.self).baseAddress {
-                    return callback(dataPtr, count, outPtr)
+                    return callback(dataPtr, outCount, outPtr)
                 }
                 return PTC_ERROR_GENERAL
             }
