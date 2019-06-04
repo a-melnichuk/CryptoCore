@@ -1,7 +1,7 @@
 {
   "name": "WavesCore",
   "module_name": "WavesCore",
-  "version": "0.0.1",
+  "version": "0.0.3",
   "swift_versions": "5.0",
   "summary": "Waves crypto components for Paytomat Wallet",
   "description": "Waves address generation and transaction for Paytomat Wallet",
@@ -20,14 +20,14 @@
   "source": {
     "git": "https://github.com/a-melnichuk/CryptoCore.git",
     "branch": "master",
-    "tag": "waves-0.0.1"
+    "tag": "waves-0.0.3"
   },
   "source_files": [
-    "WaveCore/WavesCore/*.h",
-    "WaveCore/WavesCore/Sources/*.swift",
-    "WaveCore/WavesCore/Sources/paytomat_waves_core/{include,src}/*.{h,c}"
+    "WavesCore/*.h",
+    "WavesCore/Sources/*.swift",
+    "WavesCore/Sources/paytomat_waves_core/{include,src}/*.{h,c}"
   ],
-  "public_header_files": "WaveCore/WavesCore/*.h",
+  "public_header_files": "WavesCore/*.h",
   "pod_target_xcconfig": {
     "SWIFT_INCLUDE_PATHS": [
       "$(PODS_TARGET_SRCROOT)/WavesCore/Sources/**",
@@ -37,8 +37,8 @@
     ],
     "SYSTEM_HEADER_SEARCH_PATHS": "$(PODS_TARGET_SRCROOT)/WavesCore/Sources/libs $(PODS_ROOT)/WavesCore/Sources/libs"
   },
-  "preserve_paths": "WaveCore/WavesCore/Sources/module.modulemap",
-  "exclude_files": "WaveCore/Examples/*",
+  "preserve_paths": "WavesCore/Sources/module.modulemap",
+  "exclude_files": "Examples/*",
   "frameworks": "Foundation",
   "dependencies": {
     "CryptoCore": [

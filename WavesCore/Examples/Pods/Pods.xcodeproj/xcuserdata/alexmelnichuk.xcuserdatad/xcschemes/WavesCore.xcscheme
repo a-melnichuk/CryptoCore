@@ -14,10 +14,10 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "CB81004EFFF35F73BC53837CD835E581"
+               BlueprintIdentifier = "80F4F60A8CF85011907B0CCE1C326C61"
                BuildableName = "WavesCore.framework"
                BlueprintName = "WavesCore"
-               ReferencedContainer = "container:WavesCore.xcodeproj">
+               ReferencedContainer = "container:Pods.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>

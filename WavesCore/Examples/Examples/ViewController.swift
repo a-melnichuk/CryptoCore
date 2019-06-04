@@ -14,12 +14,12 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        print("__TEST: \(WavesCrypto.testInt()) \(WavesCrypto.testInt2())")
-        print("__TEST_SHA: \(WavesCrypto.testSha())")
-        print("__TEST_SHA2: \(WavesCrypto.testSha2())")
-        print("__TEST_SHA3: \(WavesCrypto.testSha3())")
         
-        // Do any additional setup after loading the view.
+        print("__TEST: \(Crypto.Waves.testInt()) \(Crypto.Waves.testInt2())")
+        print("__TEST_SHA: \(Crypto.Waves.testSha())")
+        print("__TEST_SHA2: \(Crypto.Waves.testSha2())")
+        print("__TEST_SHA3: \(Crypto.Waves.testSha3())")
+
     }
 
 
