@@ -18,43 +18,33 @@ public extension Crypto {
 
 public extension Crypto.Waves {
     
-    static func publicKey(privateKey: Data) -> Data {
-        var publicKey = Data(count: Int(PTC_WAVES_PUBKEY_BYTE_COUNT))
-        
-        return call
-        
-        publicKey.withUnsafeMutableBytes { (p: UnsafeMutablePointer<UInt8>) in
-            privateKey.withUnsafeBytes { pcm_waves_public_key($0, p) }
-        }
-        return publicKey
+    static func publicKey(privateKey: Data) -> Data? {
+        let count = Int(PTC_WAVES_PUBKEY_BYTE_COUNT)
+        return Crypto.callCrypto(privateKey, outCount: count) { ptc_waves_public_key($0, $2) }
     }
     
-    static func address(publicKey: Data, scheme: UInt8 = Waves.scheme) -> String? {
-        var addressBytes = Data(count: Int(PCM_WAVES_ADDRESS_BYTE_COUNT))
-        let result = addressBytes.withUnsafeMutableBytes { (p: UnsafeMutablePointer<UInt8>) in
-            return publicKey.withUnsafeBytes { pcm_waves_address($0, scheme, p) }
+    static func address(publicKey: Data, scheme: UInt8 = 87 /* "W" */) -> String? {
+        let count = Int(PTC_WAVES_ADDRESS_BYTE_COUNT)
+        let address = Crypto.callCrypto(publicKey, outCount: count) {
+            ptc_waves_address($0, scheme, $2)
         }
-        guard result == PCM_RESULT_SUCCESS else { return nil }
+        guard let addressBytes = address else {
+            return nil
+        }
         return Base58.encode(addressBytes)
     }
     
-    static func valid(address: String, scheme: UInt8 = Waves.scheme) -> Bool {
-        let result = address.withCString { pcm_waves_address_valid($0, scheme) }
-        return result == PCM_RESULT_SUCCESS
+    static func valid(address: String, scheme: UInt8 = 87 /* "W" */) -> Bool {
+        let result = address.withCString { ptc_waves_address_valid($0, scheme) }
+        return result == PTC_SUCCESS
     }
     
-    
-    static func wavesSecureHash(_ data: Data) -> Data? {
-        var secureHash = Data(count: Int(PCM_WAVES_SECURE_HASH_BYTE_COUNT))
-        let result = secureHash.withUnsafeMutableBytes { (p: UnsafeMutablePointer<UInt8>) in
-            return data.withUnsafeBytes { pcm_waves_secure_hash($0, data.count, p) }
-        }
-        guard result == PCM_RESULT_SUCCESS else { return nil }
-        return secureHash
+    static func secureHash(_ data: Data) -> Data? {
+        let count = Int(PTC_WAVES_SECURE_HASH_BYTE_COUNT)
+        return Crypto.callCrypto(data, outCount: count) { ptc_waves_secure_hash($0, $1, $2) }
     }
     
-    
-    public static func transferTransaction(senderPrivateKey: Data,
+    static func transferTransaction(senderPrivateKey: Data,
                                     recipientAddress: String,
                                     amount: Int64,
                                     fee: Int64,

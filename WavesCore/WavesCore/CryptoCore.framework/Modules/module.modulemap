@@ -1,5 +1,5 @@
 framework module CryptoCore {
-  umbrella header "CryptoCore.h"
+  umbrella header "CryptoCore-umbrella.h"
 
   export *
   module * { export * }

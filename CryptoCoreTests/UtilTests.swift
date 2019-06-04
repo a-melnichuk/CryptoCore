@@ -20,4 +20,12 @@ class UtilTests: XCTestCase {
         XCTAssertEqual(data.count, expectedHex.count / 2)
         XCTAssertEqual(Crypto.hex(fromData: data), expectedHex)
     }
+    
+    func testMemoryLoading() {
+        let value = Int32(0xfffff).bigEndian
+        let data = Data(loadBytes: value)
+        let expectedData: [UInt8] = [0, 0x0f, 0xff, 0xff]
+        XCTAssertEqual(expectedData, [UInt8](data))
+        XCTAssertEqual(value, data.loadType(Int32.self))
+    }
 }
