@@ -11,7 +11,7 @@
 #include <openssl/sha.h>
 #include <openssl/ripemd.h>
 #include <openssl/hmac.h>
-
+#include <curve25519/curve25519.h>
 #include "ptc_crypto.h"
 
 // Keccak
@@ -146,3 +146,24 @@ ptc_result ptc_hmacsha512(const void* in_data,
          &length);
     return PTC_SUCCESS;
 }
+
+// Curve25519-Donna
+
+ptc_result ptc_curve25519_donna(const void* in_privkey, const uint8_t* in_basepoint, uint8_t* out_pubkey)
+{
+    int result = curve25519_donna(out_pubkey, in_privkey, in_basepoint);
+    return result == 0 ? PTC_SUCCESS : PTC_ERROR_INVALID_SIGNATURE;
+}
+
+// xed25519
+
+ptc_result ptc_xed25519_sign(const uint8_t* curve25519_privkey,
+                             const uint8_t* msg,
+                             const size_t msg_len,
+                             const uint8_t* random,
+                             uint8_t* signature_out)
+{
+    int result = xed25519_sign(signature_out, curve25519_privkey, msg, msg_len, random);
+    return result == 0 ? PTC_SUCCESS : PTC_ERROR_INVALID_SIGNATURE;
+}
+

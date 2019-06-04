@@ -91,19 +91,18 @@ public struct Crypto {
 
 extension Crypto {
     @inline(__always)
-    private static func callCrypto(_ data: Data,
-                           outCount: Int,
-                           callback: (UnsafeRawPointer, Int, UnsafeMutablePointer<UInt8>) -> ptc_result) -> Data? {
+    public static func callCrypto(_ data: Data,
+                                  outCount: Int,
+                                  callback: (UnsafeRawPointer, Int, UnsafeMutablePointer<UInt8>) -> ptc_result) -> Data? {
         guard outCount >= 0 else {
             fatalError("\(#function) outBytes cannot be negative")
         }
         var out = Data(count: outCount)
-        let count = data.count
         let result: ptc_result = out.withUnsafeMutableBytes { outBuf in
             data.withUnsafeBytes { dataBuf in
                 if let dataPtr = dataBuf.baseAddress,
                     let outPtr = outBuf.bindMemory(to: UInt8.self).baseAddress {
-                    return callback(dataPtr, count, outPtr)
+                    return callback(dataPtr, outCount, outPtr)
                 }
                 return PTC_ERROR_GENERAL
             }
