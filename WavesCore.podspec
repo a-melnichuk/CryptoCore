@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
     s.name = 'WavesCore'
     s.module_name = 'WavesCore'
-    s.version = '0.0.1'
+    s.version = '0.0.2'
     s.swift_version = '5.0'
     s.summary = 'Waves crypto components for Paytomat Wallet'
     s.description = <<-DESC
