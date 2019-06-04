@@ -91,9 +91,9 @@ public struct Crypto {
 
 extension Crypto {
     @inline(__always)
-    private static func callCrypto(_ data: Data,
-                           outCount: Int,
-                           callback: (UnsafeRawPointer, Int, UnsafeMutablePointer<UInt8>) -> ptc_result) -> Data? {
+    public static func callCrypto(_ data: Data,
+                                  outCount: Int,
+                                  callback: (UnsafeRawPointer, Int, UnsafeMutablePointer<UInt8>) -> ptc_result) -> Data? {
         guard outCount >= 0 else {
             fatalError("\(#function) outBytes cannot be negative")
         }

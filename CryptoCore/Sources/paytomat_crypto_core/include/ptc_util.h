@@ -12,6 +12,7 @@
 #include <stddef.h>
 #include <stdint.h>
 #include <stdbool.h>
+#include "ptc_result.h"
 
 uint16_t ptc_swap_uint16(uint16_t val);
 int16_t ptc_swap_int16(int16_t val);
@@ -31,6 +32,6 @@ void ptc_to_hex(const uint8_t* in_string, size_t in_length, char* out_hex_string
 bool ptc_from_hex(const char* in_hex_string, size_t in_length, uint8_t* out_bytes);
 void ptc_print_hex(const char* tag, const void* in_bytes, size_t in_length);
 
-
+ptc_result ptc_random_bytes(uint8_t* out_buffer, size_t in_length);
 
 #endif
