@@ -9,7 +9,6 @@
 #ifndef PTC_H
 #define PTC_H
 
-#include "ptc_test.h"
 #include "ptc_util.h"
 #include "ptc_crypto.h"
 #include "ptc_base58.h"

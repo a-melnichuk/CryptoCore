@@ -9,5 +9,5 @@ PODS_ROOT = ${SRCROOT}
 PODS_TARGET_SRCROOT = ${PODS_ROOT}/WavesCore
 PRODUCT_BUNDLE_IDENTIFIER = org.cocoapods.${PRODUCT_NAME:rfc1034identifier}
 SKIP_INSTALL = YES
-SWIFT_INCLUDE_PATHS = $(inherited) $(PODS_TARGET_SRCROOT)/WavesCore/Sources/** $(PODS_ROOT)/WavesCore/Sources/** $(PODS_TARGET_SRCROOT)/WavesCore/Sources/libs $(PODS_ROOT)/WavesCore/Sources/libs
+SWIFT_INCLUDE_PATHS = $(inherited) $(PODS_TARGET_SRCROOT)/WavesCore/Sources/** $(PODS_TARGET_SRCROOT)/WavesCore/Sources/libs $(PODS_ROOT)/WavesCore/Sources/** $(PODS_ROOT)/WavesCore/Sources/libs
 SYSTEM_HEADER_SEARCH_PATHS = $(PODS_TARGET_SRCROOT)/WavesCore/Sources/libs $(PODS_ROOT)/WavesCore/Sources/libs

@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
   s.name = 'CryptoCore'
   s.module_name = 'CryptoCore'
-  s.version = '0.0.8'
+  s.version = '0.0.9'
   s.swift_version = '5.0'
   s.summary = 'Common crypto components for Paytomat Wallet'
   s.description = <<-DESC

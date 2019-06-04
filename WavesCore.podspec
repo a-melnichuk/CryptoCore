@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
     s.name = 'WavesCore'
     s.module_name = 'WavesCore'
-    s.version = '0.0.3'
+    s.version = '0.0.4'
     s.swift_version = '5.0'
     s.summary = 'Waves crypto components for Paytomat Wallet'
     s.description = <<-DESC
@@ -23,7 +23,7 @@ Pod::Spec.new do |s|
     s.source_files = [
         'WavesCore/*.h',
         'WavesCore/Sources/*.swift',
-        'WavesCore/Sources/libs/paytomat_crypto_core/*.{h}',
+        'WavesCore/Sources/libs/paytomat_crypto_core/*.h',
         'WavesCore/Sources/paytomat_waves_core/{include,src}/*.{h,c}'
     ]
     s.public_header_files = 'WavesCore/*.h'

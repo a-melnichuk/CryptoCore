@@ -15,15 +15,15 @@ EXTERNAL SOURCES:
 
 CHECKOUT OPTIONS:
   CryptoCore:
-    :commit: a37fd2845208ad91c194827989a2721a7d609b20
+    :commit: 2fd4d5b95a1839b54066d9a5a266070bc83b2874
     :git: https://github.com/a-melnichuk/CryptoCore.git
   WavesCore:
-    :commit: a37fd2845208ad91c194827989a2721a7d609b20
+    :commit: 2fd4d5b95a1839b54066d9a5a266070bc83b2874
     :git: https://github.com/a-melnichuk/CryptoCore.git
 
 SPEC CHECKSUMS:
   CryptoCore: be40593f3d4d2030ecc95fb3567b422ee67954c7
-  WavesCore: 6ebbe3220ccfab8ec3f618881fb1addcef0f73f4
+  WavesCore: 9bcdce4bad045d92c8b98d1e57bc227e66da8a4e
 
 PODFILE CHECKSUM: 92d1c39ebb281b5148344b2e3aed6329740b5a02
 
