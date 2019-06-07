@@ -1,0 +1,30 @@
+PODS:
+  - CryptoCore (0.0.10)
+  - WavesCore (0.0.5):
+    - CryptoCore (~> 0.0.8)
+
+DEPENDENCIES:
+  - CryptoCore (from `https://github.com/a-melnichuk/CryptoCore.git`)
+  - WavesCore (from `https://github.com/a-melnichuk/CryptoCore.git`)
+
+EXTERNAL SOURCES:
+  CryptoCore:
+    :git: https://github.com/a-melnichuk/CryptoCore.git
+  WavesCore:
+    :git: https://github.com/a-melnichuk/CryptoCore.git
+
+CHECKOUT OPTIONS:
+  CryptoCore:
+    :commit: be52032a8ee7dc94db1b4389028cb9e8fc59840c
+    :git: https://github.com/a-melnichuk/CryptoCore.git
+  WavesCore:
+    :commit: be52032a8ee7dc94db1b4389028cb9e8fc59840c
+    :git: https://github.com/a-melnichuk/CryptoCore.git
+
+SPEC CHECKSUMS:
+  CryptoCore: 62a941ce6a0661f49e1990d12e555414acedd4ab
+  WavesCore: a1cd658ff79736ead22d2c77941096b00fc6bb39
+
+PODFILE CHECKSUM: 92d1c39ebb281b5148344b2e3aed6329740b5a02
+
+COCOAPODS: 1.7.1

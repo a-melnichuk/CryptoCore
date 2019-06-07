@@ -6,8 +6,8 @@
 //  Copyright © 2019 Alex Melnichuk. All rights reserved.
 //
 
-#ifndef PTWAVES_H
-#define PTWAVES_H
+#ifndef PTC_WAVES_H
+#define PTC_WAVES_H
 
 #include "ptc_waves_address.h"
 #include "ptc_waves_crypto.h"
