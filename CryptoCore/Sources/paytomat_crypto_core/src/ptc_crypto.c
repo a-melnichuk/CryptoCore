@@ -7,6 +7,7 @@
 //
 
 #include <keccak-tiny/keccak-tiny.h>
+#include <keccak-tiny/sha3.h>
 #include <blake2b/blake2b.h>
 #include <openssl/sha.h>
 #include <openssl/ripemd.h>
@@ -32,6 +33,24 @@ ptc_result ptc_keccak512(const void* in_data, size_t in_length, uint8_t* out_byt
     
     int result = keccak_512(out_bytes, 64, in_data, in_length);
     return result == 0 ? PTC_SUCCESS : PTC_ERROR_GENERAL;
+}
+
+// SHA3
+
+ptc_result ptc_sha3_256(const void* in_data, size_t in_length, uint8_t* out_bytes)
+{
+    if (in_data == NULL || out_bytes == NULL)
+        return PTC_ERROR_NULL_ARGUMENT;
+    sha3_256(in_data, in_length, out_bytes);
+    return PTC_SUCCESS;
+}
+
+ptc_result ptc_sha3_512(const void* in_data, size_t in_length, uint8_t* out_bytes)
+{
+    if (in_data == NULL || out_bytes == NULL)
+        return PTC_ERROR_NULL_ARGUMENT;
+    sha3_512(in_data, in_length, out_bytes);
+    return PTC_SUCCESS;
 }
 
 // Blake2b

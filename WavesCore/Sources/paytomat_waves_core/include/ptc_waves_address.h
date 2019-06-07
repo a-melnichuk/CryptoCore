@@ -6,8 +6,8 @@
 //  Copyright © 2019 Alex Melnichuk. All rights reserved.
 //
 
-#ifndef PTWAVES_ADDRESS_H
-#define PTWAVES_ADDRESS_H
+#ifndef PTC_WAVES_ADDRESS_H
+#define PTC_WAVES_ADDRESS_H
 
 #include <stddef.h>
 #include <stdint.h>

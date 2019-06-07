@@ -17,7 +17,6 @@
 		66C04BE322A6F0BA00031F28 /* ptc_base58.h in Headers */ = {isa = PBXBuildFile; fileRef = 66C04BD022A6F0BA00031F28 /* ptc_base58.h */; };
 		66C04BE422A6F0BA00031F28 /* ptc_crypto.h in Headers */ = {isa = PBXBuildFile; fileRef = 66C04BD122A6F0BA00031F28 /* ptc_crypto.h */; };
 		66C04BE522A6F0BA00031F28 /* ptc_result.h in Headers */ = {isa = PBXBuildFile; fileRef = 66C04BD222A6F0BA00031F28 /* ptc_result.h */; };
-		66C04BE722A6F0BA00031F28 /* WavesTransferTransaction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66C04BD522A6F0BA00031F28 /* WavesTransferTransaction.swift */; };
 		66C04BFC22A6F83E00031F28 /* ptc_waves_address.h in Headers */ = {isa = PBXBuildFile; fileRef = 66C04BF222A6F83E00031F28 /* ptc_waves_address.h */; };
 		66C04BFD22A6F83E00031F28 /* ptc_waves_transaction.h in Headers */ = {isa = PBXBuildFile; fileRef = 66C04BF322A6F83E00031F28 /* ptc_waves_transaction.h */; };
 		66C04BFE22A6F83E00031F28 /* ptc_waves_crypto.h in Headers */ = {isa = PBXBuildFile; fileRef = 66C04BF422A6F83E00031F28 /* ptc_waves_crypto.h */; };
@@ -67,7 +66,6 @@
 		66C04BD122A6F0BA00031F28 /* ptc_crypto.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ptc_crypto.h; sourceTree = "<group>"; };
 		66C04BD222A6F0BA00031F28 /* ptc_result.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ptc_result.h; sourceTree = "<group>"; };
 		66C04BD422A6F0BA00031F28 /* module.modulemap */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = "sourcecode.module-map"; path = module.modulemap; sourceTree = "<group>"; };
-		66C04BD522A6F0BA00031F28 /* WavesTransferTransaction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WavesTransferTransaction.swift; sourceTree = "<group>"; };
 		66C04BF222A6F83E00031F28 /* ptc_waves_address.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ptc_waves_address.h; sourceTree = "<group>"; };
 		66C04BF322A6F83E00031F28 /* ptc_waves_transaction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ptc_waves_transaction.h; sourceTree = "<group>"; };
 		66C04BF422A6F83E00031F28 /* ptc_waves_crypto.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ptc_waves_crypto.h; sourceTree = "<group>"; };
@@ -147,7 +145,6 @@
 				66C04BCB22A6F0BA00031F28 /* WavesTransaction.swift */,
 				66C04BCC22A6F0BA00031F28 /* libs */,
 				66C04BD422A6F0BA00031F28 /* module.modulemap */,
-				66C04BD522A6F0BA00031F28 /* WavesTransferTransaction.swift */,
 			);
 			path = Sources;
 			sourceTree = SOURCE_ROOT;
@@ -394,7 +391,6 @@
 				66C04C0322A6F83E00031F28 /* ptc_waves_address.c in Sources */,
 				66C04BE022A6F0BA00031F28 /* WavesTransaction.swift in Sources */,
 				66C04C0022A6F83E00031F28 /* ptc_waves_transaction.c in Sources */,
-				66C04BE722A6F0BA00031F28 /* WavesTransferTransaction.swift in Sources */,
 				66C04BD622A6F0BA00031F28 /* WavesCore.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

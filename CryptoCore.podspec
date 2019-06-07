@@ -1,13 +1,13 @@
 Pod::Spec.new do |s|
   s.name = 'CryptoCore'
   s.module_name = 'CryptoCore'
-  s.version = '0.0.10'
+  s.version = '0.0.11'
   s.swift_version = '5.0'
   s.summary = 'Common crypto components for Paytomat Wallet'
   s.description = <<-DESC
   Bundle of common Paytomat crypto components: hash functions, elliptic curve operations
   and utilities
-                   DESC
+  DESC
 
   s.homepage = 'https://paytomat.com/'
   s.license = { :type => 'MIT', :file => 'LICENSE.md' }
@@ -28,6 +28,7 @@ Pod::Spec.new do |s|
     'CryptoCore/Sources/libs/keccak-tiny/*.{h,c}',
     'CryptoCore/Sources/libs/blake2b/*.{h,c}',
     'CryptoCore/Sources/libs/base58/*.{h,c}',
+    'CryptoCore/Sources/libs/base32/*.{h,c}',
     'CryptoCore/Sources/libs/curve25519/**/*.{h,c}',
     'CryptoCore/Sources/libs/openssl/*.{h}',
     'CryptoCore/Sources/libs/secp256k1/*.{h}'
