@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
     s.name = 'NEMCore'
     s.module_name = 'NEMCore'
-    s.version = '0.0.1'
+    s.version = '0.0.2'
     s.swift_version = '5.0'
     s.summary = 'NEM crypto components for Paytomat Wallet'
     s.description = <<-DESC

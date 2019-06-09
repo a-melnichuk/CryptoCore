@@ -1,10 +1,12 @@
+install! 'cocoapods', :generate_multiple_pod_projects => true, :incremental_installation => true
+
 platform :ios, '9.0'
 use_frameworks!
 
 target 'Examples' do
   pod 'CryptoCore', :git => 'https://github.com/a-melnichuk/CryptoCore.git'
-  #pod 'NEMCore', :git => 'https://github.com/a-melnichuk/CryptoCore.git', :branch => 'nem'
-  pod 'NEMCore', :path => '../../'
+  pod 'NEMCore', :git => 'https://github.com/a-melnichuk/CryptoCore.git'
+  #pod 'NEMCore', :path => '../../'
 
   target 'ExamplesTests' do
     inherit! :search_paths
