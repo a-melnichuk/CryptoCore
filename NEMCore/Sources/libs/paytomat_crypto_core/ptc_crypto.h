@@ -19,6 +19,11 @@
 ptc_result ptc_keccak256(const void* in_data, size_t in_length, uint8_t* out_bytes);
 ptc_result ptc_keccak512(const void* in_data, size_t in_length, uint8_t* out_bytes);
 
+// SHA3
+
+ptc_result ptc_sha3_256(const void* in_data, size_t in_length, uint8_t* out_bytes);
+ptc_result ptc_sha3_512(const void* in_data, size_t in_length, uint8_t* out_bytes);
+
 // Blake2b
 
 ptc_result ptc_blake2b(const void* in_data, size_t in_length, uint8_t* out_bytes, size_t out_length);

@@ -12,7 +12,7 @@
 #include <curve25519/ed25519/ge.h>
 #include <paytomat_crypto_core/ptc_crypto.h>
 #include <paytomat_crypto_core/ptc_util.h>
-//#include <paytomat_crypto_core/ptc_base32.h>
+#include <paytomat_crypto_core/ptc_base32.h>
 #include "ptc_nem_address.h"
 
 ptc_result ptc_nem_public_key(const void* in_privkey, uint8_t* out_pubkey)
@@ -40,7 +40,7 @@ ptc_result ptc_nem_public_key(const void* in_privkey, uint8_t* out_pubkey)
     return PTC_SUCCESS;
 }
 
-ptc_result ptc_nem_address(const void* in_pubkey, uint8_t in_scheme, int8_t* out_address_bytes)
+ptc_result ptc_nem_address(const void* in_pubkey, uint8_t in_scheme, uint8_t* out_address_bytes)
 {
     if (!in_pubkey || !out_address_bytes)
         return PTC_ERROR_NULL_ARGUMENT;
@@ -65,69 +65,39 @@ ptc_result ptc_nem_address(const void* in_pubkey, uint8_t in_scheme, int8_t* out
     return PTC_SUCCESS;
 }
 
-bool ptc_nem_address_valid(const char* in_address, uint8_t in_scheme)
+void ptc_nem_address_normalize(const char* in_address, char* out_normalized_address)
 {
-    if (!in_address)
-        return false;
-    size_t in_address_length = strlen(in_address);
-    if (in_address_length < PTC_NEM_ADDRESS_ENCODED_CHAR_COUNT)
-        return false;
-    bool valid = false;
-    char* address = NULL;
-    size_t trimmed_length = 0;
-    ptc_nem_address_denormalize(in_address, in_address_length, &trimmed_length, NULL);
-    if (trimmed_length == 0 || !(address = malloc(trimmed_length) ))
-        return false;
-    ptc_nem_address_denormalize(in_address, in_address_length, &trimmed_length, address);
-    if (trimmed_length != PTC_NEM_ADDRESS_ENCODED_CHAR_COUNT)
-        goto cleanup;
-    uint8_t decoded_address[PTC_NEM_ADDRESS_DECODED_BYTE_COUNT];
-    if (ptc_b32_decode(address, PTC_NEM_ADDRESS_ENCODED_CHAR_COUNT, decoded_address) != PTC_SUCCESS)
-        goto cleanup;
-    if (decoded_address[0] != in_scheme)
-        goto cleanup;
-    uint8_t checksum[32];
-    if (ptc_sha3_256(decoded_address, 21, checksum) != PTC_SUCCESS)
-        goto cleanup;
-    valid = memcmp(checksum, decoded_address + 21, 4) == 0;
-cleanup:
-    free(address);
-    return valid;
-}
-
-void ptc_nem_address_normalize(const char* in_address, size_t in_address_length, char* out_normalized_address)
-{
+    size_t length = strlen(in_address);
     size_t in_offset = 0;
     size_t out_offset = 0;
-    size_t n = in_address_length / 6;
+    size_t n = length / 6;
     
     for (size_t i = 0; i < n; ++i, out_offset += 7, in_offset += 6) {
         memcpy(out_normalized_address + out_offset, in_address + in_offset, 6);
         out_normalized_address[out_offset + 6] = '-';
     }
-    size_t tail = in_address_length - in_offset;
+    size_t tail = length - in_offset;
     if (tail > 0)
         memcpy(out_normalized_address + out_offset, in_address + in_offset, tail);
 }
 
 void ptc_nem_address_denormalize(const char* in_address,
-                                 size_t in_address_length,
                                  size_t* out_normalized_address_length,
                                  char* out_normalized_address)
 {
-    if (*out_normalized_address_length == 0) {
+    size_t address_length = strlen(in_address);
+    if (out_normalized_address == NULL) {
         size_t count = 0;
-        for (int i = 0; i < in_address_length; ++i) {
+        for (int i = 0; i < address_length; ++i) {
             if (in_address[i] == '-')
                 ++count;
         }
-        *out_normalized_address_length = in_address_length - count;
+        *out_normalized_address_length = address_length - count;
     } else {
-        char c;
-        for (size_t i = 0, j = 0; i < in_address_length; ++i) {
-            c = in_address[i];
-            if (c != '-')
-                out_normalized_address[j++] = c;
+        size_t out_length = *out_normalized_address_length;
+        for (size_t i = 0, j = 0; i < address_length && j < out_length; ++i) {
+            if (in_address[i] != '-')
+                out_normalized_address[j++] = in_address[i];
         }
     }
 }

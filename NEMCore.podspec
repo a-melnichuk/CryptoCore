@@ -43,6 +43,6 @@ Pod::Spec.new do |s|
     s.preserve_paths = 'NEMCore/Sources/module.modulemap'
     s.exclude_files = 'Examples/*'
     s.frameworks = 'Foundation'
-    s.dependency 'CryptoCore', '~> 0.0.11'
+    s.dependency 'CryptoCore'
 end
 

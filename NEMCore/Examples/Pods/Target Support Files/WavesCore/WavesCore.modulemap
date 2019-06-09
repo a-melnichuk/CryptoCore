@@ -1,6 +1,0 @@
-framework module WavesCore {
-  umbrella header "WavesCore-umbrella.h"
-
-  export *
-  module * { export * }
-}

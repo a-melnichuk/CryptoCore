@@ -25,7 +25,7 @@ THE SOFTWARE.
 
 
 
-## WavesCore
+## NEMCore
 
 Copyright (c) 2011-2016 Baltic International Group OU (git clone  https://github.com/paytomat/ScatterKit.git)
 
