@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
     s.name = 'NEMCore'
     s.module_name = 'NEMCore'
-    s.version = '0.0.5'
+    s.version = '0.0.1'
     s.swift_version = '5.0'
     s.summary = 'NEM crypto components for Paytomat Wallet'
     s.description = <<-DESC
@@ -43,6 +43,6 @@ Pod::Spec.new do |s|
     s.preserve_paths = 'NEMCore/Sources/module.modulemap'
     s.exclude_files = 'Examples/*'
     s.frameworks = 'Foundation'
-    s.dependency 'CryptoCore', '~> 0.0.8'
+    s.dependency 'CryptoCore', '~> 0.0.11'
 end
 
