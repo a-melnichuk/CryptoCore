@@ -12,5 +12,6 @@
 #include "ptc_util.h"
 #include "ptc_crypto.h"
 #include "ptc_base58.h"
+#include "ptc_base32.h"
 
 #endif

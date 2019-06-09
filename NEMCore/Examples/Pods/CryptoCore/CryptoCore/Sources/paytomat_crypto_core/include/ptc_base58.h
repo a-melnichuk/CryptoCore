@@ -42,30 +42,4 @@ ptc_result ptc_b58check_encode(const void* in_bytes,
 
 ptc_result ptc_b58check(const char* in_str, const uint8_t* in_version, size_t in_version_length);
 
-// Legacy
-
-ptc_result ptc_base58_encode(const void* in_bytes,
-                             size_t in_length,
-                             uint8_t* out_base58,
-                             size_t* out_length);
-
-ptc_result ptc_base58_decode_init(const void* in_base58,
-                                  size_t in_length,
-                                  uint8_t** out_bytes,
-                                  size_t* out_length);
-
-void ptc_base58_decode_destroy(uint8_t** in_decoded_array);
-
-ptc_result ptc_base58_check(const char* in_str, uint8_t in_pubkeyhash);
-
-ptc_result ptc_base58_check_decode(const char* in_str,
-                                   uint8_t in_version,
-                                   uint8_t** out_bytes,
-                                   size_t* out_length);
-
-ptc_result ptc_base58_check_encode(const void* in_bytes,
-                                   size_t in_length,
-                                   uint8_t in_version,
-                                   char* out_base58,
-                                   size_t* out_length);
 #endif

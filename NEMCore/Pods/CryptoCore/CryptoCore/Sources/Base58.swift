@@ -11,6 +11,8 @@ import paytomat_crypto_core
 
 public struct Base58 {
     
+    private init() {}
+    
     public static func check(encode data: Data, version: [UInt8]) -> String? {
         guard !data.isEmpty, !version.isEmpty else {
             return nil

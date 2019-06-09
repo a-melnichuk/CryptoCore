@@ -3,8 +3,8 @@ use_frameworks!
 
 target 'Examples' do
   pod 'CryptoCore', :git => 'https://github.com/a-melnichuk/CryptoCore.git'
-  pod 'WavesCore', :git => 'https://github.com/a-melnichuk/CryptoCore.git'
-  #pod 'WavesCore', :path => '../../'
+  #pod 'NEMCore', :git => 'https://github.com/a-melnichuk/CryptoCore.git', :branch => 'nem'
+  pod 'NEMCore', :path => '../../'
 
   target 'ExamplesTests' do
     inherit! :search_paths
