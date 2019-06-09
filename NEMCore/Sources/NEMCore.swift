@@ -38,6 +38,7 @@ public struct NEMCore {
     
     public static func valid(address: String, networkByte: UInt8 = NEMCore.mainnetNetworkByte) -> Bool {
         let address = denormalize(address: address)
+        
         guard let decoded = Base32.decode(address) else {
             return false
         }
@@ -46,16 +47,6 @@ public struct NEMCore {
             return false
         }
         return checksum.prefix(4) == decoded.suffix(4)
-//        guard let addressBytes = address.cString(using: .ascii) else {
-//            return false
-//        }
-//        let valid: Bool = addressBytes.withUnsafeBufferPointer { addressBuf in
-//            if let addressPtr = addressBuf.baseAddress {
-//                return ptc_nem_address_valid(addressPtr, networkByte)
-//            }
-//            return false
-//        }
-//        return valid
     }
     
     public static func denormalize(address: String) -> String {

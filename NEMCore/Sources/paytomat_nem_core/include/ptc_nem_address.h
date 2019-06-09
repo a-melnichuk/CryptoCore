@@ -25,7 +25,6 @@
 
 ptc_result ptc_nem_public_key(const void* in_privkey, uint8_t* out_pubkey);
 ptc_result ptc_nem_address(const void* in_pubkey, uint8_t in_scheme, uint8_t* out_address_bytes);
-bool ptc_nem_address_valid(const char* in_address, uint8_t in_scheme);
 void ptc_nem_address_normalize(const char* in_address, char* out_normalized_address);
 void ptc_nem_address_denormalize(const char* in_address,
                                  size_t* out_normalized_address_length,
