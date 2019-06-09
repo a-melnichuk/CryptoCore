@@ -95,7 +95,7 @@
 
 /* Begin PBXFileReference section */
 		17C9E37261D37D345577CE01 /* Pods_NEMCoreTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NEMCoreTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		66920F6B22A8F61100687D96 /* NEMCore.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = NEMCore.podspec; path = ../NEMCore.podspec; sourceTree = "<group>"; };
+		66920F6B22A8F61100687D96 /* NEMCore.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = NEMCore.podspec; path = ../NEMCore.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		66920F6E22A8F64900687D96 /* NEMCoreTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NEMCoreTests.swift; sourceTree = "<group>"; };
 		66920F6F22A8F64900687D96 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		66920F7522A8F65E00687D96 /* ptc_nem_address.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ptc_nem_address.h; sourceTree = "<group>"; };

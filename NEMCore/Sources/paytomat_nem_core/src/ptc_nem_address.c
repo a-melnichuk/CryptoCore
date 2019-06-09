@@ -65,36 +65,6 @@ ptc_result ptc_nem_address(const void* in_pubkey, uint8_t in_scheme, uint8_t* ou
     return PTC_SUCCESS;
 }
 
-bool ptc_nem_address_valid(const char* in_address, uint8_t in_scheme)
-{
-    if (!in_address)
-        return false;
-    size_t in_address_length = strlen(in_address);
-    if (in_address_length < PTC_NEM_ADDRESS_ENCODED_CHAR_COUNT)
-        return false;
-    bool valid = false;
-    char* address = NULL;
-    size_t trimmed_length = 0;
-    ptc_nem_address_denormalize(in_address, &trimmed_length, NULL);
-    if (trimmed_length == 0 || !(address = malloc(trimmed_length) ))
-        return false;
-    ptc_nem_address_denormalize(in_address, &trimmed_length, address);
-    if (trimmed_length != PTC_NEM_ADDRESS_ENCODED_CHAR_COUNT)
-        goto cleanup;
-    int8_t decoded_address[PTC_NEM_ADDRESS_DECODED_BYTE_COUNT];
-    if (ptc_b32_decode(address, PTC_NEM_ADDRESS_ENCODED_CHAR_COUNT, decoded_address) != PTC_SUCCESS)
-        goto cleanup;
-    if (decoded_address[0] != in_scheme)
-        goto cleanup;
-    uint8_t checksum[32];
-    if (ptc_sha3_256(decoded_address, 21, checksum) != PTC_SUCCESS)
-        goto cleanup;
-    valid = memcmp(checksum, decoded_address + 21, 4) == 0;
-cleanup:
-    free(address);
-    return valid;
-}
-
 void ptc_nem_address_normalize(const char* in_address, char* out_normalized_address)
 {
     size_t length = strlen(in_address);
