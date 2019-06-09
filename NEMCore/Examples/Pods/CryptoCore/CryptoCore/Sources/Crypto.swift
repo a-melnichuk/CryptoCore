@@ -20,6 +20,23 @@ public struct Crypto {
         return callCrypto(data, outCount: 32) { ptc_keccak256($0, $1, $2) }
     }
     
+    @inline(__always)
+    public static func keccak512(_ data: Data) -> Data? {
+        return callCrypto(data, outCount: 64) { ptc_keccak512($0, $1, $2) }
+    }
+    
+    // MARK: SHA3
+    
+    @inline(__always)
+    public static func sha3_256(_ data: Data) -> Data? {
+        return callCrypto(data, outCount: 32) { ptc_sha3_256($0, $1, $2) }
+    }
+    
+    @inline(__always)
+    public static func sha3_512(_ data: Data) -> Data? {
+        return callCrypto(data, outCount: 64) { ptc_sha3_512($0, $1, $2) }
+    }
+    
     // MARK: Blake2b
     
     @inline(__always)

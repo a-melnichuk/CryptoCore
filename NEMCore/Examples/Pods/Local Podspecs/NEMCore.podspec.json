@@ -1,0 +1,51 @@
+{
+  "name": "NEMCore",
+  "module_name": "NEMCore",
+  "version": "0.0.1",
+  "swift_versions": "5.0",
+  "summary": "NEM crypto components for Paytomat Wallet",
+  "description": "NEM address generation and transactions for Paytomat Wallet",
+  "homepage": "https://paytomat.com/",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE.md"
+  },
+  "authors": {
+    "Alex Melnichuk": "a.melnichuk@noisyminer.com"
+  },
+  "platforms": {
+    "ios": "9.0"
+  },
+  "requires_arc": true,
+  "source": {
+    "git": "https://github.com/a-melnichuk/CryptoCore.git",
+    "branch": "master",
+    "tag": "nem-0.0.1"
+  },
+  "source_files": [
+    "NEMCore/*.h",
+    "NEMCore/Sources/*.swift",
+    "NEMCore/Sources/libs/paytomat_crypto_core/*.h",
+    "NEMCore/Sources/libs/curve25519/**/*.h",
+    "NEMCore/Sources/paytomat_nem_core/{include,src}/*.{h,c}"
+  ],
+  "public_header_files": "NEMCore/*.h",
+  "pod_target_xcconfig": {
+    "SWIFT_INCLUDE_PATHS": [
+      "$(PODS_TARGET_SRCROOT)/NEMCore/Sources/**",
+      "$(PODS_TARGET_SRCROOT)/NEMCore/Sources/libs",
+      "$(PODS_ROOT)/NEMCore/Sources/**",
+      "$(PODS_ROOT)/NEMCore/Sources/libs"
+    ],
+    "SYSTEM_HEADER_SEARCH_PATHS": "$(PODS_TARGET_SRCROOT)/NEMCore/Sources/libs $(PODS_ROOT)/NEMCore/Sources/libs"
+  },
+  "preserve_paths": "NEMCore/Sources/module.modulemap",
+  "exclude_files": "Examples/*",
+  "frameworks": "Foundation",
+  "dependencies": {
+    "CryptoCore": [
+
+    ]
+  },
+  "swift_version": "5.0"
+}
