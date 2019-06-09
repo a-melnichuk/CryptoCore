@@ -11,6 +11,16 @@
 			<key>orderHint</key>
 			<integer>0</integer>
 		</dict>
+		<key>Pods-NEMCore.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>1</integer>
+		</dict>
+		<key>Pods-NEMCoreTests.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>2</integer>
+		</dict>
 		<key>Pods-WavesCore.xcscheme</key>
 		<dict>
 			<key>isShown</key>
