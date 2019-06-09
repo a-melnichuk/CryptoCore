@@ -10,7 +10,6 @@
 #define PTC_NEM_H
 
 #include "ptc_nem_address.h"
-#include "ptc_nem_crypto.h"
 #include "ptc_nem_transaction.h"
 
 #endif

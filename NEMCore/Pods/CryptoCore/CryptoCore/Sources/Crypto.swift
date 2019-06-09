@@ -10,19 +10,31 @@ import Foundation
 import paytomat_crypto_core
 
 public struct Crypto {
-    public static func testPrint() {
-        ptc_test_print()
-    }
+  
+    private init() {}
     
-    public static func testInt() -> Int {
-        return Int(ptc_test_int())
-    }
-
     // MARK: Keccak
     
     @inline(__always)
     public static func keccak256(_ data: Data) -> Data? {
         return callCrypto(data, outCount: 32) { ptc_keccak256($0, $1, $2) }
+    }
+    
+    @inline(__always)
+    public static func keccak512(_ data: Data) -> Data? {
+        return callCrypto(data, outCount: 64) { ptc_keccak512($0, $1, $2) }
+    }
+    
+    // MARK: SHA3
+    
+    @inline(__always)
+    public static func sha3_256(_ data: Data) -> Data? {
+        return callCrypto(data, outCount: 32) { ptc_sha3_256($0, $1, $2) }
+    }
+    
+    @inline(__always)
+    public static func sha3_512(_ data: Data) -> Data? {
+        return callCrypto(data, outCount: 64) { ptc_sha3_512($0, $1, $2) }
     }
     
     // MARK: Blake2b
@@ -98,11 +110,12 @@ extension Crypto {
             fatalError("\(#function) outBytes cannot be negative")
         }
         var out = Data(count: outCount)
+        let count = data.count
         let result: ptc_result = out.withUnsafeMutableBytes { outBuf in
             data.withUnsafeBytes { dataBuf in
                 if let dataPtr = dataBuf.baseAddress,
                     let outPtr = outBuf.bindMemory(to: UInt8.self).baseAddress {
-                    return callback(dataPtr, outCount, outPtr)
+                    return callback(dataPtr, count, outPtr)
                 }
                 return PTC_ERROR_GENERAL
             }
