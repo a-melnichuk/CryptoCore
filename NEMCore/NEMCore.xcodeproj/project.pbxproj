@@ -198,6 +198,7 @@
 		66920F7222A8F65E00687D96 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
+				66920F7E22A8F65E00687D96 /* libs */,
 				66920F7322A8F65E00687D96 /* paytomat_nem_core */,
 				66920F8522A8F65E00687D96 /* NEMCore.swift */,
 				66920F7D22A8F65E00687D96 /* NEMTransaction.swift */,
@@ -206,7 +207,6 @@
 				66B5BDBD22AA7542003FE77F /* NEMTransferTransactionMosaic.swift */,
 				66B5BDBB22AA7463003FE77F /* NEMTransferTransactionMessage.swift */,
 				66B5BDAD22AA678D003FE77F /* NEMSerializable.swift */,
-				66920F7E22A8F65E00687D96 /* libs */,
 				66920F8622A8F65E00687D96 /* module.modulemap */,
 			);
 			path = Sources;
