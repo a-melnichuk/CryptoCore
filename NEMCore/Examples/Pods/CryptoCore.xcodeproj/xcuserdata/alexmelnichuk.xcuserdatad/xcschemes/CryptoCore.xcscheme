@@ -14,10 +14,10 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "741CA09E8656623B3F2DAA8E51EBEB13"
-               BuildableName = "NEMCore.framework"
-               BlueprintName = "NEMCore"
-               ReferencedContainer = "container:Pods.xcodeproj">
+               BlueprintIdentifier = "ADD50C25668E2626F100D1ADD6C5CED4"
+               BuildableName = "CryptoCore.framework"
+               BlueprintName = "CryptoCore"
+               ReferencedContainer = "container:CryptoCore.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
