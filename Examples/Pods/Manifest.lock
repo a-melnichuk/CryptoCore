@@ -1,5 +1,5 @@
 PODS:
-  - CryptoCore (0.0.12)
+  - CryptoCore (0.0.13)
 
 DEPENDENCIES:
   - CryptoCore (from `../`)
@@ -9,7 +9,7 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  CryptoCore: d37fdfce4664e28def1b54a08b34fe0d30e806c7
+  CryptoCore: b6ec6e00fdc30e18138398f9b21f71050412be35
 
 PODFILE CHECKSUM: c601df8fd8a857116dd5b4287c5ee9ef784f1fd4
 

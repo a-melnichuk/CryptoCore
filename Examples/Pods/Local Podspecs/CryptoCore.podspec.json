@@ -1,7 +1,7 @@
 {
   "name": "CryptoCore",
   "module_name": "CryptoCore",
-  "version": "0.0.12",
+  "version": "0.0.13",
   "swift_versions": "5.0",
   "summary": "Common crypto components for Paytomat Wallet",
   "description": "Bundle of common Paytomat crypto components: hash functions, elliptic curve operations\nand utilities",
@@ -20,11 +20,12 @@
   "source": {
     "git": "https://github.com/a-melnichuk/CryptoCore.git",
     "branch": "master",
-    "tag": "0.0.12"
+    "tag": "0.0.13"
   },
   "source_files": [
     "CryptoCore/*.h",
     "CryptoCore/Sources/*.swift",
+    "CryptoCore/Sources/HD/*.swift",
     "CryptoCore/Sources/paytomat_crypto_core/{include,src}/*.{h,c}",
     "CryptoCore/Sources/libs/keccak-tiny/*.{h,c}",
     "CryptoCore/Sources/libs/blake2b/*.{h,c}",

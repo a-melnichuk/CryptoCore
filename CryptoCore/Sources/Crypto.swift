@@ -82,15 +82,13 @@ public struct Crypto {
     
     public static func hmacsha512(_ data: Data, key: Data) -> Data? {
         var out = Data(count: 64)
-        let dataCount = data.count
-        let keyCount = key.count
         let result: ptc_result = out.withUnsafeMutableBytes { outBuf in
             data.withUnsafeBytes { dataBuf in
                 key.withUnsafeBytes { keyBuf in
                     if let dataPtr = dataBuf.baseAddress,
                         let keyPtr = keyBuf.baseAddress,
                         let outPtr = outBuf.bindMemory(to: UInt8.self).baseAddress {
-                        return ptc_hmacsha512(dataPtr, dataCount, keyPtr, keyCount, outPtr)
+                        return ptc_hmacsha512(dataPtr, dataBuf.count, keyPtr, keyBuf.count, outPtr)
                     }
                     return PTC_ERROR_GENERAL
                 }
@@ -109,12 +107,11 @@ extension Crypto {
             fatalError("\(#function) outBytes cannot be negative")
         }
         var out = Data(count: outCount)
-        let count = data.count
         let result: ptc_result = out.withUnsafeMutableBytes { outBuf in
             data.withUnsafeBytes { dataBuf in
                 if let dataPtr = dataBuf.baseAddress,
                     let outPtr = outBuf.bindMemory(to: UInt8.self).baseAddress {
-                    return callback(dataPtr, count, outPtr)
+                    return callback(dataPtr, dataBuf.count, outPtr)
                 }
                 return PTC_ERROR_GENERAL
             }

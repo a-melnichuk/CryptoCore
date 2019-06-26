@@ -22,7 +22,8 @@ class TestKeyDerivationConsistency: XCTestCase {
     }
     
     func testExample() {
-        let seed = Crypto.data(fromHex: "79b815bc4737394cd39dfecdc494988886b0297ea22f285a8013da2ab52596c205098a238540e2ec60ad0cfbb3112c96954b867e8ef5da047811bca0ac321b42")!
+        let seedData = Crypto.data(fromHex: "79b815bc4737394cd39dfecdc494988886b0297ea22f285a8013da2ab52596c205098a238540e2ec60ad0cfbb3112c96954b867e8ef5da047811bca0ac321b42")!
+        let seed = Seed(seedData)
         let privateKey = HDPrivateKey(seed: seed)!
         XCTAssertEqual(Crypto.hex(fromData: privateKey.raw), "5dae94d797fa5d36f4bb145fed4cb79c5bcc1b2fb90b9d9170b6f96f8b6edd64")
     }
@@ -35,14 +36,15 @@ class TestKeyDerivationConsistency: XCTestCase {
             
             for (i, model) in models.enumerated() {
                 let percent = String(format: "%.2f%%", Double(i) / Double(models.count) * 100)
-                print("\(#function) \(percent), model: \(model)")
+                print("\(#function) \(percent)")
                 
-                guard let seed = Mnemonic.seed(mnemonic: model.mnemonic) else {
+                let mnemonic = Mnemonic(model.mnemonic)
+                guard let seed = Seed(mnemonic: mnemonic) else {
                     XCTFail("Unable to generate seed phrase")
                     return
                 }
                 
-                XCTAssertEqual(Crypto.hex(fromData: seed), model.seed, "Seed mismatch")
+                XCTAssertEqual(Crypto.hex(fromData: seed.raw), model.seed, "Seed mismatch")
                 
                 guard let privateKey = HDPrivateKey(seed: seed) else {
                     XCTFail("Unable to create a private key from seed")

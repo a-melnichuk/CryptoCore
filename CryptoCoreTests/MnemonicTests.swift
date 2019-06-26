@@ -24,7 +24,7 @@ class MnemonicTests: XCTestCase {
         let validMnemonicString4 = "cream crumble left pepper lend better resist raw illegal use squirrel supply column tumble quote clog poet curtain brand army mixture"
         let validMnemonicString5 = "response regular scorpion short grace hip cute race exact owner trap surface repeat drill stadium huge furnace expand actress reunion coffee index middle human"
         
-        let validMnemonicStrings: [String] = [
+        let validMnemonicStrings = [
             validMnemonicString1,
             validMnemonicString2,
             validMnemonicString3,
@@ -49,7 +49,7 @@ class MnemonicTests: XCTestCase {
         let invalidMnemonicString4 = "crumble left pepper lend better resist raw illegal use squirrel supply column tumble quote clog poet curtain brand army mixture"
         // blank
         let invalidMnemonicString5 = "      "
-        let invalidMnemonicStrings: [String] = [
+        let invalidMnemonicStrings = [
             invalidMnemonicString1,
             invalidMnemonicString2,
             invalidMnemonicString3,

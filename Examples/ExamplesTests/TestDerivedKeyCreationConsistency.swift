@@ -26,11 +26,13 @@ class TestDerivedKeyCreationConsistency: XCTestCase {
                 let percent = String(format: "%.2f%%", Double(i) / Double(models.count) * 100)
                 print("\(#function) \(percent)")
                 
-                guard let seed = Mnemonic.seed(mnemonic: model.mnemonic) else {
+                let mnemonic = Mnemonic(model.mnemonic)
+                
+                guard let seed = Seed(mnemonic: mnemonic) else {
                     XCTFail("Unable to generate seed phrase")
                     return
                 }
-                let seedHex = Crypto.hex(fromData: seed)
+                let seedHex = Crypto.hex(fromData: seed.raw)
                 XCTAssertEqual(seedHex, model.seed)
             }
             

@@ -18,14 +18,12 @@ public struct Base58 {
             return nil
         }
         var size: size_t = 0
-        let dataCount = data.count
-        let versionCount = version.count
         _ = data.withUnsafeBytes { dataBuf in
             version.withUnsafeBytes { versionBuf in
                 guard let versionPtr = versionBuf.bindMemory(to: UInt8.self).baseAddress else {
                     return
                 }
-                ptc_b58check_encode(dataBuf.baseAddress, dataCount, versionPtr, versionCount, nil, &size)
+                ptc_b58check_encode(dataBuf.baseAddress, dataBuf.count, versionPtr, versionBuf.count, nil, &size)
             }
         }
         guard size > 0 else {
@@ -39,7 +37,7 @@ public struct Base58 {
                 guard let versionPtr = versionBuf.bindMemory(to: UInt8.self).baseAddress else {
                     return PTC_ERROR_GENERAL
                 }
-                return ptc_b58check_encode(dataBuf.baseAddress, dataCount, versionPtr, versionCount, p, &size)
+                return ptc_b58check_encode(dataBuf.baseAddress, dataBuf.count, versionPtr, versionBuf.count, p, &size)
             }
         }
         return result == PTC_SUCCESS ? String(cString: p) : nil
@@ -51,11 +49,10 @@ public struct Base58 {
         }
         var c = ptc_base58_context()
         defer { ptc_b58_decode_destroy(&c) }
-        let count = version.count
         let result: ptc_result = version.withUnsafeBytes { versionBuf in
             string.withCString { strPtr in
                 if let versionPtr = versionBuf.bindMemory(to: UInt8.self).baseAddress {
-                    return ptc_b58check_decode(&c, strPtr, versionPtr , count)
+                    return ptc_b58check_decode(&c, strPtr, versionPtr, versionBuf.count)
                 }
                 return PTC_ERROR_GENERAL
             }
@@ -68,9 +65,8 @@ public struct Base58 {
             return nil
         }
         var size: size_t = 0
-        let count = data.count
         _ = data.withUnsafeBytes {
-            ptc_b58_encode($0.baseAddress, count, nil, &size)
+            ptc_b58_encode($0.baseAddress, $0.count, nil, &size)
         }
         guard size > 0 else {
             return nil
@@ -79,7 +75,7 @@ public struct Base58 {
         p.initialize(to: 0)
         defer { p.deallocate() }
         let result = data.withUnsafeBytes {
-            ptc_b58_encode($0.baseAddress, data.count, p, &size)
+            ptc_b58_encode($0.baseAddress, $0.count, p, &size)
         }
         return result == PTC_SUCCESS ? String(cString: p) : nil
     }

@@ -24,11 +24,8 @@ public class Mnemonic {
         self.init(array, language: language)
     }
     
-    public func seed(passphrase: String = "") -> Data? {
-        var mnemonic = array.joined(separator: " ").decomposedStringWithCompatibilityMapping.data(using: .utf8)!
-        defer { mnemonic.zeroOut() }
-        let salt = ("mnemonic" + passphrase).decomposedStringWithCompatibilityMapping.data(using: .utf8)!
-        return Crypto.Key.derive(password: mnemonic, salt: salt, iterations: 2048, keyLength: 64)
+    deinit {
+        zeroOut()
     }
 }
 
