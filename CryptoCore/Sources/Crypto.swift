@@ -83,7 +83,6 @@ public struct Crypto {
     public static func hmacsha512(_ data: Data, key: Data) -> Data? {
         var out = Data(count: 64)
         let dataCount = data.count
-        
         let keyCount = key.count
         let result: ptc_result = out.withUnsafeMutableBytes { outBuf in
             data.withUnsafeBytes { dataBuf in

@@ -1,8 +1,8 @@
 {
   "name": "CryptoCore",
   "module_name": "CryptoCore",
-  "version": "0.0.5",
-  "swift_version": "5.0",
+  "version": "0.0.12",
+  "swift_versions": "5.0",
   "summary": "Common crypto components for Paytomat Wallet",
   "description": "Bundle of common Paytomat crypto components: hash functions, elliptic curve operations\nand utilities",
   "homepage": "https://paytomat.com/",
@@ -11,7 +11,7 @@
     "file": "LICENSE.md"
   },
   "authors": {
-    "Alex Melnichuk": "a.melnichuk@noisyminer.com"
+    "Alex Melnichuk": "a.melnichuk@yahoo.com"
   },
   "platforms": {
     "ios": "9.0"
@@ -20,7 +20,7 @@
   "source": {
     "git": "https://github.com/a-melnichuk/CryptoCore.git",
     "branch": "master",
-    "tag": "0.0.5"
+    "tag": "0.0.12"
   },
   "source_files": [
     "CryptoCore/*.h",
@@ -29,12 +29,15 @@
     "CryptoCore/Sources/libs/keccak-tiny/*.{h,c}",
     "CryptoCore/Sources/libs/blake2b/*.{h,c}",
     "CryptoCore/Sources/libs/base58/*.{h,c}",
+    "CryptoCore/Sources/libs/base32/*.{h,c}",
     "CryptoCore/Sources/libs/curve25519/**/*.{h,c}",
-    "CryptoCore/Sources/libs/openssl/*.{h}"
+    "CryptoCore/Sources/libs/openssl/*.{h}",
+    "CryptoCore/Sources/libs/secp256k1/*.{h}"
   ],
   "public_header_files": "CryptoCore/*.h",
   "pod_target_xcconfig": {
     "WARNING_CFLAGS": "-Wno-shorten-64-to-32",
+    "HEADER_SEARCH_PATHS": "$(PODS_TARGET_SRCROOT)/CryptoCore/Sources $(PODS_ROOT)/CryptoCore/Sources $(PODS_TARGET_SRCROOT)/CryptoCore/Sources/paytomat_crypto_core $(PODS_ROOT)/CryptoCore/Sources/paytomat_crypto_core $(PODS_TARGET_SRCROOT)/CryptoCore/Sources/paytomat_crypto_core/include $(PODS_ROOT)/CryptoCore/Sources/paytomat_crypto_core/include",
     "LIBRARY_SEARCH_PATHS": "$(PODS_TARGET_SRCROOT)/CryptoCore/Sources/libs/openssl $(PODS_ROOT)/CryptoCore/Sources/libs/openssl $(PODS_TARGET_SRCROOT)/CryptoCore/Sources/libs/secp256k1 $(PODS_ROOT)/CryptoCore/Sources/libs/secp256k1",
     "SYSTEM_HEADER_SEARCH_PATHS": "$(PODS_TARGET_SRCROOT)/CryptoCore/Sources/libs $(PODS_ROOT)/CryptoCore/Sources/libs",
     "SWIFT_INCLUDE_PATHS": [
@@ -53,5 +56,6 @@
     "CryptoCore/Sources/module.modulemap",
     "Examples/*"
   ],
-  "frameworks": "Foundation"
+  "frameworks": "Foundation",
+  "swift_version": "5.0"
 }

@@ -1,14 +1,15 @@
 CONFIGURATION_BUILD_DIR = ${PODS_CONFIGURATION_BUILD_DIR}/CryptoCore
 GCC_PREPROCESSOR_DEFINITIONS = $(inherited) COCOAPODS=1
-LIBRARY_SEARCH_PATHS = $(inherited) "${PODS_ROOT}/CryptoCore/CryptoCore/Sources/libs/openssl" "${PODS_ROOT}/CryptoCore/CryptoCore/Sources/libs/secp256k1" $(PODS_TARGET_SRCROOT)/CryptoCore/Sources/libs/openssl $(PODS_ROOT)/CryptoCore/Sources/libs/openssl $(PODS_TARGET_SRCROOT)/CryptoCore/Sources/libs/secp256k1 $(PODS_ROOT)/CryptoCore/Sources/libs/secp256k1
+HEADER_SEARCH_PATHS = $(inherited) $(PODS_TARGET_SRCROOT)/CryptoCore/Sources $(PODS_ROOT)/CryptoCore/Sources $(PODS_TARGET_SRCROOT)/CryptoCore/Sources/paytomat_crypto_core $(PODS_ROOT)/CryptoCore/Sources/paytomat_crypto_core $(PODS_TARGET_SRCROOT)/CryptoCore/Sources/paytomat_crypto_core/include $(PODS_ROOT)/CryptoCore/Sources/paytomat_crypto_core/include
+LIBRARY_SEARCH_PATHS = $(inherited) "${PODS_ROOT}/../../CryptoCore/Sources/libs/openssl" "${PODS_ROOT}/../../CryptoCore/Sources/libs/secp256k1" $(PODS_TARGET_SRCROOT)/CryptoCore/Sources/libs/openssl $(PODS_ROOT)/CryptoCore/Sources/libs/openssl $(PODS_TARGET_SRCROOT)/CryptoCore/Sources/libs/secp256k1 $(PODS_ROOT)/CryptoCore/Sources/libs/secp256k1
 OTHER_LDFLAGS = $(inherited) -l"crypto" -l"secp256k1" -framework "Foundation"
 OTHER_SWIFT_FLAGS = $(inherited) -D COCOAPODS
 PODS_BUILD_DIR = ${BUILD_DIR}
 PODS_CONFIGURATION_BUILD_DIR = ${PODS_BUILD_DIR}/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)
 PODS_ROOT = ${SRCROOT}
-PODS_TARGET_SRCROOT = ${PODS_ROOT}/CryptoCore
+PODS_TARGET_SRCROOT = ${PODS_ROOT}/../..
 PRODUCT_BUNDLE_IDENTIFIER = org.cocoapods.${PRODUCT_NAME:rfc1034identifier}
 SKIP_INSTALL = YES
-SWIFT_INCLUDE_PATHS = $(PODS_TARGET_SRCROOT)/CryptoCore/Sources/** $(PODS_ROOT)/CryptoCore/Sources/** $(PODS_TARGET_SRCROOT)/CryptoCore/Sources/libs $(PODS_ROOT)/CryptoCore/Sources/libs
+SWIFT_INCLUDE_PATHS = $(inherited) $(PODS_TARGET_SRCROOT)/CryptoCore/Sources/** $(PODS_ROOT)/CryptoCore/Sources/** $(PODS_TARGET_SRCROOT)/CryptoCore/Sources/libs $(PODS_ROOT)/CryptoCore/Sources/libs
 SYSTEM_HEADER_SEARCH_PATHS = $(PODS_TARGET_SRCROOT)/CryptoCore/Sources/libs $(PODS_ROOT)/CryptoCore/Sources/libs
 WARNING_CFLAGS = -Wno-shorten-64-to-32

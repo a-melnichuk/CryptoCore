@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "0930"
+   LastUpgradeVersion = "1100"
    version = "1.3">
    <BuildAction
       parallelizeBuildables = "YES"
@@ -14,7 +14,7 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "14C910C961EFF50BFDB33F321A248E5D"
+               BlueprintIdentifier = "C2846A7EF48418DA2CA932919F7C85DE"
                BuildableName = "CryptoCore.framework"
                BlueprintName = "CryptoCore"
                ReferencedContainer = "container:Pods.xcodeproj">
