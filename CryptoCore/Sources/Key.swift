@@ -17,8 +17,6 @@ public extension Crypto {
 
 public extension Crypto.Key {
     static func derive(password: Data, salt: Data, iterations: Int32, keyLength: Int32) -> Data? {
-        let saltLength = Int32(clamping: salt.count)
-        let passwordLength = Int32(clamping: password.count)
         var data = Data(count: Int(keyLength))
         let result: ptc_result = data.withUnsafeMutableBytes { dataBuf in
             return password.withUnsafeBytes { passwordBuf in
@@ -27,9 +25,9 @@ public extension Crypto.Key {
                         let passwordPtr = passwordBuf.bindMemory(to: UInt8.self).baseAddress,
                         let saltPtr = saltBuf.bindMemory(to: UInt8.self).baseAddress {
                         return ptc_derive_key(passwordPtr,
-                                              passwordLength,
+                                              Int32(passwordBuf.count),
                                               saltPtr,
-                                              saltLength,
+                                              Int32(saltBuf.count),
                                               iterations,
                                               keyLength,
                                               dataPtr)
@@ -45,12 +43,10 @@ public extension Crypto.Key {
         var publicKey = ptc_buffer()
         ptc_buffer_init(&publicKey)
         defer { ptc_buffer_destroy(&publicKey) }
-        
-        let privateKeyLength = Int32(privateKey.count)
         let result: ptc_result = privateKey.withUnsafeBytes { privateKeyBuf in
             if let privateKeyPtr = privateKeyBuf.bindMemory(to: UInt8.self).baseAddress {
                 return ptc_create_public_key(privateKeyPtr,
-                                             privateKeyLength,
+                                             Int32(privateKeyBuf.count),
                                              compressed,
                                              &publicKey)
             }

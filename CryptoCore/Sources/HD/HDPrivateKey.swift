@@ -13,12 +13,12 @@ public class HDPrivateKey {
     public let depth: UInt8
     public let fingerprint: UInt32
     public let childIndex: UInt32
-    public let raw: Data
+    private(set) public var raw: Data
     public let chainCode: Data
     
-    public convenience init?(seed: Data) {
+    public convenience init?(seed: Seed) {
         let key = "Bitcoin seed".data(using: .ascii)!
-        guard let hmac = Crypto.hmacsha512(seed, key: key) else {
+        guard let hmac = Crypto.hmacsha512(seed.raw, key: key) else {
             return nil
         }
         let privateKey = hmac[0..<32]
@@ -36,6 +36,10 @@ public class HDPrivateKey {
         self.depth = depth
         self.fingerprint = fingerprint
         self.childIndex = childIndex
+    }
+    
+    deinit {
+        zeroOut()
     }
     
     public func publicKey() -> HDPublicKey? {
@@ -95,6 +99,12 @@ public class HDPrivateKey {
                 return nil
         }
         return derivedKey
+    }
+}
+
+extension HDPrivateKey: ZeroOutable {
+    public func zeroOut() {
+        raw.zeroOut()
     }
 }
 

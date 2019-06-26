@@ -25,9 +25,9 @@ extension ptc_hd_key {
                     }
                     return ptc_hd_key_create(&hdKey,
                                              privateKeyPtr,
-                                             privateKey.raw.count,
+                                             privateKeyBuf.count,
                                              publicKeyPtr,
-                                             publicKey.raw.count,
+                                             publicKeyBuf.count,
                                              chainCodePtr,
                                              privateKey.depth,
                                              privateKey.fingerprint,

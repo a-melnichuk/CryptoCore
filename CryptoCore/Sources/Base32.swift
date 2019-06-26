@@ -20,7 +20,7 @@ public struct Base32 {
             return data.withUnsafeBytes { dataBuf in
                 if let encodedPtr = encodedBuf.bindMemory(to: UInt8.self).baseAddress,
                     let dataPtr = dataBuf.bindMemory(to: UInt8.self).baseAddress {
-                    return ptc_b32_encode(dataPtr, data.count, encodedPtr)
+                    return ptc_b32_encode(dataPtr, dataBuf.count, encodedPtr)
                 }
                 return PTC_ERROR_GENERAL
             }

@@ -250,6 +250,7 @@
 		66EA783F22C362C900E4BE7C /* WordList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66EA783E22C362C900E4BE7C /* WordList.swift */; };
 		66EA784122C36B2400E4BE7C /* Array+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66EA784022C36B2400E4BE7C /* Array+Extension.swift */; };
 		66EA784322C37D0D00E4BE7C /* MnemonicTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66EA784222C37D0D00E4BE7C /* MnemonicTests.swift */; };
+		66EA784522C387B700E4BE7C /* Seed.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66EA784422C387B700E4BE7C /* Seed.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -513,6 +514,7 @@
 		66EA783E22C362C900E4BE7C /* WordList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordList.swift; sourceTree = "<group>"; };
 		66EA784022C36B2400E4BE7C /* Array+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+Extension.swift"; sourceTree = "<group>"; };
 		66EA784222C37D0D00E4BE7C /* MnemonicTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MnemonicTests.swift; sourceTree = "<group>"; };
+		66EA784422C387B700E4BE7C /* Seed.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Seed.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -588,19 +590,15 @@
 				6671AD1A22799BB1009001F8 /* module.modulemap */,
 				66C225B8227B3FFE00E4C7F9 /* libs */,
 				6671AD1322799967009001F8 /* paytomat_crypto_core */,
+				66EA784622C39A0100E4BE7C /* HD */,
 				6671AD1822799A67009001F8 /* Crypto.swift */,
+				6642D25C227B7E31009F2D3E /* Crypto+Util.swift */,
+				666B71C822C213820071DE64 /* Key.swift */,
 				66A2797A227F3BBA0099BAB9 /* Base58.swift */,
 				66920F9922A908FB00687D96 /* Base32.swift */,
-				6642D25C227B7E31009F2D3E /* Crypto+Util.swift */,
 				6642D25A227B7B53009F2D3E /* ptc_result+Extension.swift */,
-				66C048FE22A69F0300031F28 /* Data+Extension.swift */,
 				66879E1022C0BF6C009D2659 /* ZeroOuted.swift */,
-				66879E1222C0C1F4009D2659 /* Mnemonic.swift */,
-				66879E1422C0C4D7009D2659 /* HDPrivateKey.swift */,
-				66879E1622C0C4DF009D2659 /* HDPublicKey.swift */,
-				666B71C822C213820071DE64 /* Key.swift */,
-				66EA783822C351B300E4BE7C /* ptc_hd_key+Extension.swift */,
-				66EA783E22C362C900E4BE7C /* WordList.swift */,
+				66C048FE22A69F0300031F28 /* Data+Extension.swift */,
 				66EA784022C36B2400E4BE7C /* Array+Extension.swift */,
 			);
 			path = Sources;
@@ -959,6 +957,19 @@
 			path = nacl_sha512;
 			sourceTree = "<group>";
 		};
+		66EA784622C39A0100E4BE7C /* HD */ = {
+			isa = PBXGroup;
+			children = (
+				66EA783E22C362C900E4BE7C /* WordList.swift */,
+				66879E1222C0C1F4009D2659 /* Mnemonic.swift */,
+				66EA784422C387B700E4BE7C /* Seed.swift */,
+				66879E1422C0C4D7009D2659 /* HDPrivateKey.swift */,
+				66879E1622C0C4DF009D2659 /* HDPublicKey.swift */,
+				66EA783822C351B300E4BE7C /* ptc_hd_key+Extension.swift */,
+			);
+			path = HD;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -1237,6 +1248,7 @@
 				66A7301022C11920001DA94B /* ptc_hd.c in Sources */,
 				66879E1722C0C4DF009D2659 /* HDPublicKey.swift in Sources */,
 				66DC945622A54770002B24F7 /* ge_p3_dbl.c in Sources */,
+				66EA784522C387B700E4BE7C /* Seed.swift in Sources */,
 				66DC947822A54770002B24F7 /* sc_isreduced.c in Sources */,
 				66DC944F22A54770002B24F7 /* curve25519-donna.c in Sources */,
 				66DC948522A54771002B24F7 /* ge_isneutral.c in Sources */,
