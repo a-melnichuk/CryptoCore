@@ -15,6 +15,7 @@ extension ptc_hd_key {
             return nil
         }
         var hdKey = ptc_hd_key()
+        ptc_hd_key_init(&hdKey)
         let success: Bool = privateKey.raw.withUnsafeBytes { privateKeyBuf in
             return publicKey.raw.withUnsafeBytes { publicKeyBuf in
                 return privateKey.chainCode.withUnsafeBytes { chainCodeBuf in
@@ -38,6 +39,7 @@ extension ptc_hd_key {
         }
         
         guard success else {
+            ptc_hd_key_destroy(&hdKey)
             return nil
         }
         self = hdKey
