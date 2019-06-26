@@ -1,7 +1,7 @@
 {
   "name": "NEMCore",
   "module_name": "NEMCore",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "swift_versions": "5.0",
   "summary": "NEM crypto components for Paytomat Wallet",
   "description": "NEM address generation and transactions for Paytomat Wallet",
@@ -20,7 +20,7 @@
   "source": {
     "git": "https://github.com/a-melnichuk/CryptoCore.git",
     "branch": "master",
-    "tag": "nem-0.0.1"
+    "tag": "nem-0.0.2"
   },
   "source_files": [
     "NEMCore/*.h",

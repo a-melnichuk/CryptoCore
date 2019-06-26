@@ -89,3 +89,4 @@ class CryptoTests: XCTestCase {
         XCTAssertEqual(Crypto.hex(fromData: hmacsha512), "c912c37a5435b1a0cfe8f2dfd69a71a6a9b93575f5e739fa3bcc8b82045463cac6c744ec4618f54cecfaf08c1e75f6c64a8c6baa277ba516c988703e08418df2")
     }
 }
+

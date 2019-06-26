@@ -3,16 +3,22 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		666B71CF22C233880071DE64 /* TestPublicKeyCreationConsistency.swift in Sources */ = {isa = PBXBuildFile; fileRef = 666B71CE22C233870071DE64 /* TestPublicKeyCreationConsistency.swift */; };
+		666B71D122C2339C0071DE64 /* TestKeyDerivationConsistency.swift in Sources */ = {isa = PBXBuildFile; fileRef = 666B71D022C2339C0071DE64 /* TestKeyDerivationConsistency.swift */; };
+		666B71D322C236DD0071DE64 /* public_key_creation.txt in Resources */ = {isa = PBXBuildFile; fileRef = 666B71D222C236DC0071DE64 /* public_key_creation.txt */; };
+		666B71D522C236EF0071DE64 /* key_derivation.txt in Resources */ = {isa = PBXBuildFile; fileRef = 666B71D422C236EF0071DE64 /* key_derivation.txt */; };
 		66C22551227AD4F900E4C7F9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66C22550227AD4F900E4C7F9 /* AppDelegate.swift */; };
 		66C22553227AD4F900E4C7F9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66C22552227AD4F900E4C7F9 /* ViewController.swift */; };
 		66C22556227AD4F900E4C7F9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 66C22554227AD4F900E4C7F9 /* Main.storyboard */; };
 		66C22558227AD4FB00E4C7F9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 66C22557227AD4FB00E4C7F9 /* Assets.xcassets */; };
 		66C2255B227AD4FB00E4C7F9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 66C22559227AD4FB00E4C7F9 /* LaunchScreen.storyboard */; };
 		66C22566227AD4FB00E4C7F9 /* ExamplesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66C22565227AD4FB00E4C7F9 /* ExamplesTests.swift */; };
+		66D9006A22C20EF300AE7D24 /* TestDerivedKeyCreationConsistency.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66D9006922C20EF300AE7D24 /* TestDerivedKeyCreationConsistency.swift */; };
+		66D9006E22C20F9600AE7D24 /* derived_key_creation.txt in Resources */ = {isa = PBXBuildFile; fileRef = 66D9006D22C20F9600AE7D24 /* derived_key_creation.txt */; };
 		70B9E11E6A84C5B84C904802 /* Pods_Examples.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2099D90DB241F62862A0D426 /* Pods_Examples.framework */; };
 		716C4B10E39A78304C4A8890 /* Pods_ExamplesTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 19D965A216C81C75AB148BA0 /* Pods_ExamplesTests.framework */; };
 /* End PBXBuildFile section */
@@ -44,6 +50,10 @@
 		19D965A216C81C75AB148BA0 /* Pods_ExamplesTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ExamplesTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2099D90DB241F62862A0D426 /* Pods_Examples.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Examples.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		236E8F6C8277EA9BF6AD436E /* Pods-Examples.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Examples.release.xcconfig"; path = "Target Support Files/Pods-Examples/Pods-Examples.release.xcconfig"; sourceTree = "<group>"; };
+		666B71CE22C233870071DE64 /* TestPublicKeyCreationConsistency.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestPublicKeyCreationConsistency.swift; sourceTree = "<group>"; };
+		666B71D022C2339C0071DE64 /* TestKeyDerivationConsistency.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestKeyDerivationConsistency.swift; sourceTree = "<group>"; };
+		666B71D222C236DC0071DE64 /* public_key_creation.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = public_key_creation.txt; sourceTree = "<group>"; };
+		666B71D422C236EF0071DE64 /* key_derivation.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = key_derivation.txt; sourceTree = "<group>"; };
 		66C2254D227AD4F900E4C7F9 /* Examples.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Examples.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		66C22550227AD4F900E4C7F9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		66C22552227AD4F900E4C7F9 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -54,6 +64,8 @@
 		66C22561227AD4FB00E4C7F9 /* ExamplesTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ExamplesTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		66C22565227AD4FB00E4C7F9 /* ExamplesTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExamplesTests.swift; sourceTree = "<group>"; };
 		66C22567227AD4FB00E4C7F9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		66D9006922C20EF300AE7D24 /* TestDerivedKeyCreationConsistency.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestDerivedKeyCreationConsistency.swift; sourceTree = "<group>"; };
+		66D9006D22C20F9600AE7D24 /* derived_key_creation.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = derived_key_creation.txt; sourceTree = "<group>"; };
 		863B6B842326494730D7684F /* Pods-Examples.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Examples.debug.xcconfig"; path = "Target Support Files/Pods-Examples/Pods-Examples.debug.xcconfig"; sourceTree = "<group>"; };
 		B236091A0F3519008C34ECBB /* Pods-ExamplesTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ExamplesTests.debug.xcconfig"; path = "Target Support Files/Pods-ExamplesTests/Pods-ExamplesTests.debug.xcconfig"; sourceTree = "<group>"; };
 		F96FEE339661E579CB512DE2 /* Pods-ExamplesTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ExamplesTests.release.xcconfig"; path = "Target Support Files/Pods-ExamplesTests/Pods-ExamplesTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -117,6 +129,12 @@
 			children = (
 				66C22565227AD4FB00E4C7F9 /* ExamplesTests.swift */,
 				66C22567227AD4FB00E4C7F9 /* Info.plist */,
+				66D9006922C20EF300AE7D24 /* TestDerivedKeyCreationConsistency.swift */,
+				66D9006D22C20F9600AE7D24 /* derived_key_creation.txt */,
+				666B71CE22C233870071DE64 /* TestPublicKeyCreationConsistency.swift */,
+				666B71D222C236DC0071DE64 /* public_key_creation.txt */,
+				666B71D022C2339C0071DE64 /* TestKeyDerivationConsistency.swift */,
+				666B71D422C236EF0071DE64 /* key_derivation.txt */,
 			);
 			path = ExamplesTests;
 			sourceTree = "<group>";
@@ -153,7 +171,7 @@
 				66C2254A227AD4F900E4C7F9 /* Frameworks */,
 				66C2254B227AD4F900E4C7F9 /* Resources */,
 				66C225A8227B3B0400E4C7F9 /* Embed Frameworks */,
-				620303067242D7502360902F /* [CP] Embed Pods Frameworks */,
+				1421ED0AB0F82A10509DB2C0 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -236,12 +254,32 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				666B71D322C236DD0071DE64 /* public_key_creation.txt in Resources */,
+				66D9006E22C20F9600AE7D24 /* derived_key_creation.txt in Resources */,
+				666B71D522C236EF0071DE64 /* key_derivation.txt in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		1421ED0AB0F82A10509DB2C0 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Examples/Pods-Examples-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Examples/Pods-Examples-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Examples/Pods-Examples-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		497F738EE08F0413FF322258 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -262,28 +300,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		620303067242D7502360902F /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Examples/Pods-Examples-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/CryptoCore/CryptoCore.framework",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CryptoCore.framework",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Examples/Pods-Examples-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		85EC7E5E94C7FDEE5662D06A /* [CP] Check Pods Manifest.lock */ = {
@@ -325,6 +341,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				66C22566227AD4FB00E4C7F9 /* ExamplesTests.swift in Sources */,
+				666B71D122C2339C0071DE64 /* TestKeyDerivationConsistency.swift in Sources */,
+				666B71CF22C233880071DE64 /* TestPublicKeyCreationConsistency.swift in Sources */,
+				66D9006A22C20EF300AE7D24 /* TestDerivedKeyCreationConsistency.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
