@@ -8,7 +8,7 @@
 
 import Foundation
 
-public class Seed {
+public final class Seed {
     private(set) public var raw: Data
     
     public init(_ raw: Data) {
