@@ -10,7 +10,7 @@ EXTERNAL SOURCES:
 
 CHECKOUT OPTIONS:
   CryptoCore:
-    :commit: 84ae26dc368f47d7fed875384e0f776abf8a2579
+    :commit: 4f00720a92b428313ad4055c2ca3fae59f782096
     :git: https://github.com/a-melnichuk/CryptoCore.git
 
 SPEC CHECKSUMS:
@@ -18,4 +18,4 @@ SPEC CHECKSUMS:
 
 PODFILE CHECKSUM: dd51e21419336a217dfe75343e590237cd774a2c
 
-COCOAPODS: 1.7.2
+COCOAPODS: 1.7.3
