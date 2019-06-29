@@ -99,7 +99,6 @@
 		66745E24227DD2A8008ACCBA /* ocsp.h in Headers */ = {isa = PBXBuildFile; fileRef = 66745DD7227DD2A8008ACCBA /* ocsp.h */; };
 		66745E25227DD2A8008ACCBA /* ecdsa.h in Headers */ = {isa = PBXBuildFile; fileRef = 66745DD8227DD2A8008ACCBA /* ecdsa.h */; };
 		66745E26227DD2A8008ACCBA /* rc5.h in Headers */ = {isa = PBXBuildFile; fileRef = 66745DD9227DD2A8008ACCBA /* rc5.h */; };
-		66745E2A227DEE6D008ACCBA /* libcrypto.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 66745E29227DEE6D008ACCBA /* libcrypto.a */; };
 		66879E1122C0BF6C009D2659 /* ZeroOuted.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66879E1022C0BF6C009D2659 /* ZeroOuted.swift */; };
 		66879E1322C0C1F4009D2659 /* Mnemonic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66879E1222C0C1F4009D2659 /* Mnemonic.swift */; };
 		66879E1522C0C4D7009D2659 /* HDPrivateKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66879E1422C0C4D7009D2659 /* HDPrivateKey.swift */; };
@@ -110,6 +109,8 @@
 		66920FA122A90A2F00687D96 /* ptc_base32.c in Sources */ = {isa = PBXBuildFile; fileRef = 66920F9F22A90A2F00687D96 /* ptc_base32.c */; };
 		66920FA422A90BC800687D96 /* base32.h in Headers */ = {isa = PBXBuildFile; fileRef = 66920FA222A90BC700687D96 /* base32.h */; };
 		66920FA522A90BC800687D96 /* base32.c in Sources */ = {isa = PBXBuildFile; fileRef = 66920FA322A90BC700687D96 /* base32.c */; };
+		669DE36E22C4A7C800C9C5E6 /* libcrypto.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 66745E29227DEE6D008ACCBA /* libcrypto.a */; };
+		669DE3A122C4EC2B00C9C5E6 /* ptc_buffer.h in Headers */ = {isa = PBXBuildFile; fileRef = 669DE3A022C4EC2900C9C5E6 /* ptc_buffer.h */; };
 		66A2796F227F19180099BAB9 /* base58.h in Headers */ = {isa = PBXBuildFile; fileRef = 66A2796D227F19170099BAB9 /* base58.h */; };
 		66A27970227F19180099BAB9 /* base58.c in Sources */ = {isa = PBXBuildFile; fileRef = 66A2796E227F19180099BAB9 /* base58.c */; };
 		66A27972227F1BD20099BAB9 /* ptc_base58.h in Headers */ = {isa = PBXBuildFile; fileRef = 66A27971227F1BD20099BAB9 /* ptc_base58.h */; };
@@ -125,7 +126,6 @@
 		66A2798E227FA88E0099BAB9 /* hash.h in Headers */ = {isa = PBXBuildFile; fileRef = 66A27989227FA88E0099BAB9 /* hash.h */; };
 		66A7300F22C11920001DA94B /* ptc_hd.h in Headers */ = {isa = PBXBuildFile; fileRef = 66A7300D22C11920001DA94B /* ptc_hd.h */; };
 		66A7301022C11920001DA94B /* ptc_hd.c in Sources */ = {isa = PBXBuildFile; fileRef = 66A7300E22C11920001DA94B /* ptc_hd.c */; };
-		66A7301322C12731001DA94B /* ptc_buffer.h in Headers */ = {isa = PBXBuildFile; fileRef = 66A7301122C12731001DA94B /* ptc_buffer.h */; };
 		66A7301422C12731001DA94B /* ptc_buffer.c in Sources */ = {isa = PBXBuildFile; fileRef = 66A7301222C12731001DA94B /* ptc_buffer.c */; };
 		66C048FF22A69F0300031F28 /* Data+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66C048FE22A69F0300031F28 /* Data+Extension.swift */; };
 		66C225BE227B418700E4C7F9 /* sha3.h in Headers */ = {isa = PBXBuildFile; fileRef = 66C225BC227B418700E4C7F9 /* sha3.h */; settings = {ATTRIBUTES = (Private, ); }; };
@@ -372,6 +372,7 @@
 		66920F9F22A90A2F00687D96 /* ptc_base32.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = ptc_base32.c; sourceTree = "<group>"; };
 		66920FA222A90BC700687D96 /* base32.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = base32.h; sourceTree = "<group>"; };
 		66920FA322A90BC700687D96 /* base32.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = base32.c; sourceTree = "<group>"; };
+		669DE3A022C4EC2900C9C5E6 /* ptc_buffer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ptc_buffer.h; sourceTree = "<group>"; };
 		66A2796D227F19170099BAB9 /* base58.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = base58.h; sourceTree = "<group>"; };
 		66A2796E227F19180099BAB9 /* base58.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = base58.c; sourceTree = "<group>"; };
 		66A27971227F1BD20099BAB9 /* ptc_base58.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ptc_base58.h; sourceTree = "<group>"; };
@@ -387,7 +388,6 @@
 		66A27989227FA88E0099BAB9 /* hash.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = hash.h; sourceTree = "<group>"; };
 		66A7300D22C11920001DA94B /* ptc_hd.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ptc_hd.h; sourceTree = "<group>"; };
 		66A7300E22C11920001DA94B /* ptc_hd.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = ptc_hd.c; sourceTree = "<group>"; };
-		66A7301122C12731001DA94B /* ptc_buffer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = ptc_buffer.h; path = ../src/ptc_buffer.h; sourceTree = "<group>"; };
 		66A7301222C12731001DA94B /* ptc_buffer.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = ptc_buffer.c; sourceTree = "<group>"; };
 		66BAE596227C6D6800A61E22 /* LICENSE.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = LICENSE.md; sourceTree = "<group>"; };
 		66BAE597227C86D300A61E22 /* CryptoCore.podspec */ = {isa = PBXFileReference; lastKnownFileType = text; path = CryptoCore.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
@@ -522,7 +522,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				66745E2A227DEE6D008ACCBA /* libcrypto.a in Frameworks */,
+				669DE36E22C4A7C800C9C5E6 /* libcrypto.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -749,6 +749,7 @@
 		66C225A9227B3DC300E4C7F9 /* include */ = {
 			isa = PBXGroup;
 			children = (
+				669DE3A022C4EC2900C9C5E6 /* ptc_buffer.h */,
 				6671AD1B2279E280009001F8 /* ptc.h */,
 				66C225C6227B42F700E4C7F9 /* ptc_crypto.h */,
 				66A27971227F1BD20099BAB9 /* ptc_base58.h */,
@@ -756,7 +757,6 @@
 				66C225C4227B42E900E4C7F9 /* ptc_util.h */,
 				66C225CD227B511D00E4C7F9 /* ptc_result.h */,
 				66A7300D22C11920001DA94B /* ptc_hd.h */,
-				66A7301122C12731001DA94B /* ptc_buffer.h */,
 				666B71CA22C214890071DE64 /* ptc_key.h */,
 			);
 			path = include;
@@ -1069,6 +1069,7 @@
 				66745DDF227DD2A8008ACCBA /* hmac.h in Headers */,
 				66A27972227F1BD20099BAB9 /* ptc_base58.h in Headers */,
 				66DC94AC22A54771002B24F7 /* crypto_sign.h in Headers */,
+				669DE3A122C4EC2B00C9C5E6 /* ptc_buffer.h in Headers */,
 				66C225C5227B42E900E4C7F9 /* ptc_util.h in Headers */,
 				66DC944E22A54770002B24F7 /* curve25519-donna.h in Headers */,
 				66745DF1227DD2A8008ACCBA /* symhacks.h in Headers */,
@@ -1092,7 +1093,6 @@
 				66745DF3227DD2A8008ACCBA /* stack.h in Headers */,
 				6671AD092279992B009001F8 /* CryptoCore.h in Headers */,
 				66745DE6227DD2A8008ACCBA /* dsa.h in Headers */,
-				66A7301322C12731001DA94B /* ptc_buffer.h in Headers */,
 				66745DDA227DD2A8008ACCBA /* asn1t.h in Headers */,
 				66745E18227DD2A8008ACCBA /* srp.h in Headers */,
 				66745DDB227DD2A8008ACCBA /* ripemd.h in Headers */,
@@ -1486,6 +1486,7 @@
 				LIBRARY_SEARCH_PATHS = (
 					"$(SRCROOT)/CryptoCore/Sources/libs/openssl",
 					"$(SRCROOT)/CryptoCore/Sources/libs/secp256k1",
+					"$(PROJECT_DIR)/CryptoCore/Sources/libs/openssl",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.paytomat.CryptoCore;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
@@ -1522,6 +1523,7 @@
 				LIBRARY_SEARCH_PATHS = (
 					"$(SRCROOT)/CryptoCore/Sources/libs/openssl",
 					"$(SRCROOT)/CryptoCore/Sources/libs/secp256k1",
+					"$(PROJECT_DIR)/CryptoCore/Sources/libs/openssl",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.paytomat.CryptoCore;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";

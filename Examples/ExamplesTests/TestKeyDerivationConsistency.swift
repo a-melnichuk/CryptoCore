@@ -21,7 +21,7 @@ class TestKeyDerivationConsistency: XCTestCase {
         let publicKey: String
     }
     
-    func testExample() {
+    func testKeyCreationFromSeed() {
         let seedData = Crypto.data(fromHex: "79b815bc4737394cd39dfecdc494988886b0297ea22f285a8013da2ab52596c205098a238540e2ec60ad0cfbb3112c96954b867e8ef5da047811bca0ac321b42")!
         let seed = Seed(seedData)
         let privateKey = HDPrivateKey(seed: seed)!

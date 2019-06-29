@@ -9,7 +9,7 @@
 import Foundation
 import paytomat_crypto_core
 
-public class HDPrivateKey {
+public final class HDPrivateKey {
     public let depth: UInt8
     public let fingerprint: UInt32
     public let childIndex: UInt32
