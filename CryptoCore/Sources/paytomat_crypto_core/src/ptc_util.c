@@ -114,7 +114,7 @@ static const int8_t ptc_hexmap[] = {
 
 
 void ptc_reverse(void* in_bytes, size_t in_length)
-{
+{ 
     uint8_t *lo = in_bytes;
     uint8_t *hi = in_bytes + in_length - 1;
     uint8_t swap;

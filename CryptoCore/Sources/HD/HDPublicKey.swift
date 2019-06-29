@@ -8,19 +8,19 @@
 
 import Foundation
 
-public class HDPublicKey {
+public struct HDPublicKey {
     public let depth: UInt8
     public let fingerprint: UInt32
     public let childIndex: UInt32
     public let raw: Data
     public let chainCode: Data
     
-    public convenience init?(privateKey: HDPrivateKey,
-                             compressed: Bool = true,
-                             chainCode: Data? = nil,
-                             depth: UInt8 = 0,
-                             fingerprint: UInt32 = 0,
-                             childIndex: UInt32 = 0) {
+    public init?(privateKey: HDPrivateKey,
+                 compressed: Bool = true,
+                 chainCode: Data? = nil,
+                 depth: UInt8 = 0,
+                 fingerprint: UInt32 = 0,
+                 childIndex: UInt32 = 0) {
         guard let raw = Crypto.Key.publicKey(from: privateKey.raw, compressed: compressed) else {
             return nil
         }
