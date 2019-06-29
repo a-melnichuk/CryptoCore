@@ -58,7 +58,6 @@ public extension Mnemonic {
         var bin = String(entropy.flatMap { byte -> Substring in
             return ("00000000" + String(byte, radix:2)).suffix(8)
         })
-        print("\(#function): bin - \(bin.count) \(bin)")
         guard let hash = Crypto.sha256(entropy) else {
             throw MnemonicError.hashFailed
         }
@@ -69,7 +68,6 @@ public extension Mnemonic {
             return ("00000000" + String(byte, radix:2)).suffix(8)
         })
         let checksum = String(hashbits.prefix(cs))
-        print("\(#function): checksum - \(checksum.count) \(checksum)")
         bin += checksum
         
         var mnemonic = [String]()
