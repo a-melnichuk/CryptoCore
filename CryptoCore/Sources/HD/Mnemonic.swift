@@ -8,7 +8,7 @@
 
 import Foundation
 
-public class Mnemonic {
+public final class Mnemonic {
     public let strength: Strength
     public let language: Language
     private(set) public var array: [String]
