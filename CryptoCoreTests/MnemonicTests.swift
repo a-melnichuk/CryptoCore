@@ -10,6 +10,25 @@ import XCTest
 import CryptoCore
 
 class MnemonicTests: XCTestCase {
+    func testMnemonicWords() {
+        let strengthLevels: [(strength: Mnemonic.Strength, wordCount: Int)] = [
+            (.default, 12),
+            (.low, 15),
+            (.medium, 18),
+            (.high, 21),
+            (.veryHigh, 24)
+        ]
+        for i in (0..<30) {
+            let strength = Mnemonic.Strength(wordCount: i)
+            if let strengthLevel = strengthLevels.first(where: { $0.wordCount == i }) {
+                XCTAssertNotNil(strength)
+                XCTAssertEqual(strength?.rawValue, strengthLevel.strength.rawValue)
+                XCTAssertEqual(strength?.wordCount, strengthLevel.wordCount)
+            } else {
+                XCTAssertNil(strength)
+            }
+        }
+    }
     
     func testMnemonicGeneration() {
         XCTAssertNoThrow(try Mnemonic.Strength.allCases.forEach { strength in
