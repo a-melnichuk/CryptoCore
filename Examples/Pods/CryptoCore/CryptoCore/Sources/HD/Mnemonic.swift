@@ -8,7 +8,7 @@
 
 import Foundation
 
-public class Mnemonic {
+public final class Mnemonic {
     public let strength: Strength
     public let language: Language
     private(set) public var array: [String]
@@ -145,11 +145,15 @@ public extension Mnemonic {
     enum Language {
         case english
         
-        var wordList: [Substring] {
+        public var wordList: [Substring] {
             switch self {
             case .english:
                 return WordList.english
             }
+        }
+        
+        public var validWords: Set<Substring> {
+            return Set(wordList)
         }
     }
 }
@@ -170,7 +174,7 @@ public extension Mnemonic {
         case high = 224
         case veryHigh = 256
         
-        init?(wordCount: Int) {
+        public init?(wordCount: Int) {
             switch wordCount {
             case 12:
                 self = .default
@@ -187,7 +191,7 @@ public extension Mnemonic {
             }
         }
         
-        var wordCount: Int {
+        public var wordCount: Int {
             switch self {
             case .default:
                 return 12

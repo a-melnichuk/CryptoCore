@@ -14,7 +14,17 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        let wordList = Mnemonic.Language.english.wordList
+        print("let wordList = [")
+        for (i, word) in wordList.enumerated() {
+            if i == wordList.count - 1 {
+                print("\t\"\(word)\"")
+            } else {
+                print("\t\"\(word)\",")
+            }
+        }
+        print("]")
         if let keccak = CryptoCore.Crypto.keccak256(Data([0, 2, 4])) {
             print("__KECCAK \(keccak.count) \(Crypto.hex(fromData: keccak))")
         }

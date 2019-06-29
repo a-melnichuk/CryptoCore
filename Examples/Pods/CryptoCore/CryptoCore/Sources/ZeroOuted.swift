@@ -8,7 +8,7 @@
 
 import Foundation
 
-public class ZeroOuted<T: ZeroOutable> {
+public final class ZeroOuted<T: ZeroOutable> {
     private var value: T
     
     public init(_ value: inout T) {

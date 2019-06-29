@@ -145,14 +145,14 @@ public extension Mnemonic {
     enum Language {
         case english
         
-        public var wordList: [Substring] {
+        public var wordList: [String] {
             switch self {
             case .english:
                 return WordList.english
             }
         }
         
-        public var validWords: Set<Substring> {
+        public var validWords: Set<String> {
             return Set(wordList)
         }
     }
