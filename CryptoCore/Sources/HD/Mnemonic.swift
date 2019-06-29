@@ -55,11 +55,10 @@ public extension Mnemonic {
     }
     
     static func generate(entropy: Data, language: Language = .english) throws -> Mnemonic {
-        let list = language.wordList
         var bin = String(entropy.flatMap { byte -> Substring in
             return ("00000000" + String(byte, radix:2)).suffix(8)
         })
-        
+        print("\(#function): bin - \(bin.count) \(bin)")
         guard let hash = Crypto.sha256(entropy) else {
             throw MnemonicError.hashFailed
         }
@@ -70,12 +69,13 @@ public extension Mnemonic {
             return ("00000000" + String(byte, radix:2)).suffix(8)
         })
         let checksum = String(hashbits.prefix(cs))
+        print("\(#function): checksum - \(checksum.count) \(checksum)")
         bin += checksum
         
         var mnemonic = [String]()
         for i in 0..<(bin.count / 11) {
             let wi = Int(bin[bin.index(bin.startIndex, offsetBy: i * 11)..<bin.index(bin.startIndex, offsetBy: (i + 1) * 11)], radix: 2)!
-            mnemonic.append(String(list[wi]))
+            mnemonic.append(language.wordList[wi])
         }
         return Mnemonic(mnemonic, language: language)
     }
@@ -175,35 +175,17 @@ public extension Mnemonic {
         case veryHigh = 256
         
         public init?(wordCount: Int) {
-            switch wordCount {
-            case 12:
-                self = .default
-            case 15:
-                self = .low
-            case 18:
-                self = .medium
-            case 21:
-                self = .high
-            case 24:
-                self = .veryHigh
-            default:
+            guard wordCount <= Strength.veryHigh.wordCount else {
                 return nil
             }
+            let bits = 32 * 11 * wordCount / (32 + 1)
+            self.init(rawValue: bits)
         }
         
         public var wordCount: Int {
-            switch self {
-            case .default:
-                return 12
-            case .low:
-                return 15
-            case .medium:
-                return 18
-            case .high:
-                return 21
-            case .veryHigh:
-                return 24
-            }
+            let bits = rawValue
+            let checksum = bits / 32
+            return (bits + checksum) / 11
         }
     }
 }
