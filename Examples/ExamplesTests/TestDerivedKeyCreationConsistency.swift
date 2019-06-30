@@ -32,7 +32,7 @@ class TestDerivedKeyCreationConsistency: XCTestCase {
                     XCTFail("Unable to generate seed phrase")
                     return
                 }
-                let seedHex = Crypto.hex(fromData: seed.raw)
+                let seedHex = Hex.encode(seed.raw)
                 XCTAssertEqual(seedHex, model.seed)
             }
             

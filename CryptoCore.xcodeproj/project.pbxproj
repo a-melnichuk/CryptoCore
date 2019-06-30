@@ -137,6 +137,7 @@
 		66C225C9227B430900E4C7F9 /* ptc_util.c in Sources */ = {isa = PBXBuildFile; fileRef = 66C225C8227B430900E4C7F9 /* ptc_util.c */; };
 		66C225CB227B431500E4C7F9 /* ptc_crypto.c in Sources */ = {isa = PBXBuildFile; fileRef = 66C225CA227B431500E4C7F9 /* ptc_crypto.c */; };
 		66C225CE227B511D00E4C7F9 /* ptc_result.h in Headers */ = {isa = PBXBuildFile; fileRef = 66C225CD227B511D00E4C7F9 /* ptc_result.h */; };
+		66D6A6E122C938DE00DF8EC4 /* Hex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66D6A6E022C938DE00DF8EC4 /* Hex.swift */; };
 		66DC944E22A54770002B24F7 /* curve25519-donna.h in Headers */ = {isa = PBXBuildFile; fileRef = 66DC93DC22A54770002B24F7 /* curve25519-donna.h */; };
 		66DC944F22A54770002B24F7 /* curve25519-donna.c in Sources */ = {isa = PBXBuildFile; fileRef = 66DC93DD22A54770002B24F7 /* curve25519-donna.c */; };
 		66DC945022A54770002B24F7 /* ge_msub.c in Sources */ = {isa = PBXBuildFile; fileRef = 66DC93DF22A54770002B24F7 /* ge_msub.c */; };
@@ -401,6 +402,7 @@
 		66C225C8227B430900E4C7F9 /* ptc_util.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = ptc_util.c; sourceTree = "<group>"; };
 		66C225CA227B431500E4C7F9 /* ptc_crypto.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = ptc_crypto.c; sourceTree = "<group>"; };
 		66C225CD227B511D00E4C7F9 /* ptc_result.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ptc_result.h; sourceTree = "<group>"; };
+		66D6A6E022C938DE00DF8EC4 /* Hex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Hex.swift; sourceTree = "<group>"; };
 		66DC93DC22A54770002B24F7 /* curve25519-donna.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "curve25519-donna.h"; sourceTree = "<group>"; };
 		66DC93DD22A54770002B24F7 /* curve25519-donna.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = "curve25519-donna.c"; sourceTree = "<group>"; };
 		66DC93DF22A54770002B24F7 /* ge_msub.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = ge_msub.c; sourceTree = "<group>"; };
@@ -594,6 +596,7 @@
 				6671AD1822799A67009001F8 /* Crypto.swift */,
 				6642D25C227B7E31009F2D3E /* Crypto+Util.swift */,
 				666B71C822C213820071DE64 /* Key.swift */,
+				66D6A6E022C938DE00DF8EC4 /* Hex.swift */,
 				66A2797A227F3BBA0099BAB9 /* Base58.swift */,
 				66920F9922A908FB00687D96 /* Base32.swift */,
 				6642D25A227B7B53009F2D3E /* ptc_result+Extension.swift */,
@@ -1277,6 +1280,7 @@
 				66EA783922C351B300E4BE7C /* ptc_hd_key+Extension.swift in Sources */,
 				66C225C3227B419600E4C7F9 /* keccak-tiny.c in Sources */,
 				66DC948C22A54771002B24F7 /* ge_p3_to_montx.c in Sources */,
+				66D6A6E122C938DE00DF8EC4 /* Hex.swift in Sources */,
 				66DC94B322A54771002B24F7 /* ge_p1p1_to_p3.c in Sources */,
 				66C048FF22A69F0300031F28 /* Data+Extension.swift in Sources */,
 				66C225C2227B419600E4C7F9 /* sha3.c in Sources */,

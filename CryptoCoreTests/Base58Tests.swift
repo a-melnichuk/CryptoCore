@@ -58,7 +58,7 @@ class TestBase58: XCTestCase {
             return
         }
         let raw = decoded.dropFirst().dropLast(4)
-        XCTAssertEqual(Crypto.hex(fromData: raw), "fa66f475ad1f0bc09f17c7e3d7f2d4a2cf9b7f41ee173455988456b41bbedef401")
+        XCTAssertEqual(Hex.encode(raw), "fa66f475ad1f0bc09f17c7e3d7f2d4a2cf9b7f41ee173455988456b41bbedef401")
         guard let encoded = Base58.check(encode: raw, version: [0x80]) else {
             XCTFail("Unable to encode key")
             return
