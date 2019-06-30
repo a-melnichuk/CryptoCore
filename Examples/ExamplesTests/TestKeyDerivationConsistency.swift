@@ -22,10 +22,10 @@ class TestKeyDerivationConsistency: XCTestCase {
     }
     
     func testKeyCreationFromSeed() {
-        let seedData = Crypto.data(fromHex: "79b815bc4737394cd39dfecdc494988886b0297ea22f285a8013da2ab52596c205098a238540e2ec60ad0cfbb3112c96954b867e8ef5da047811bca0ac321b42")!
+        let seedData = Hex.decode("79b815bc4737394cd39dfecdc494988886b0297ea22f285a8013da2ab52596c205098a238540e2ec60ad0cfbb3112c96954b867e8ef5da047811bca0ac321b42")!
         let seed = Seed(seedData)
         let privateKey = HDPrivateKey(seed: seed)!
-        XCTAssertEqual(Crypto.hex(fromData: privateKey.raw), "5dae94d797fa5d36f4bb145fed4cb79c5bcc1b2fb90b9d9170b6f96f8b6edd64")
+        XCTAssertEqual(Hex.encode(privateKey.raw), "5dae94d797fa5d36f4bb145fed4cb79c5bcc1b2fb90b9d9170b6f96f8b6edd64")
     }
     
     func testKeyDerivationConsistency() {
@@ -44,25 +44,25 @@ class TestKeyDerivationConsistency: XCTestCase {
                     return
                 }
                 
-                XCTAssertEqual(Crypto.hex(fromData: seed.raw), model.seed, "Seed mismatch")
+                XCTAssertEqual(Hex.encode(seed.raw), model.seed, "Seed mismatch")
                 
                 guard let privateKey = HDPrivateKey(seed: seed) else {
                     XCTFail("Unable to create a private key from seed")
                     return
                 }
-                XCTAssertEqual(Crypto.hex(fromData: privateKey.raw), model.rootPrivateKey, "Root private key mismatch")
+                XCTAssertEqual(Hex.encode(privateKey.raw), model.rootPrivateKey, "Root private key mismatch")
                 guard let derivedKey = privateKey.derived(for: model.path) else {
                     XCTFail("Unable to derive a private key for path: \(model.path)")
                     return
                 }
-                XCTAssertEqual(Crypto.hex(fromData: derivedKey.raw), model.derivedPrivateKey, "Derived key mismatch")
+                XCTAssertEqual(Hex.encode(derivedKey.raw), model.derivedPrivateKey, "Derived key mismatch")
                 
                 guard let publicKey = Crypto.Key.publicKey(from: derivedKey.raw, compressed: model.compressed)  else {
                     XCTFail("Unable to create a public key")
                     return
                 }
                 
-                XCTAssertEqual(Crypto.hex(fromData: publicKey), model.publicKey)
+                XCTAssertEqual(Hex.encode(publicKey), model.publicKey)
             }
             
         } catch {

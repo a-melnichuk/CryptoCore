@@ -26,7 +26,7 @@ class TestPublicKeyCreationConsistency: XCTestCase {
             for (i, model) in models.enumerated() {
                 let percent = String(format: "%.2f%%", Double(i) / Double(models.count) * 100)
                 print("\(#function) \(percent)")
-                guard let privateKey = Crypto.data(fromHex: model.privateKey) else {
+                guard let privateKey = Hex.decode(model.privateKey) else {
                     XCTFail("Unable to decode private key")
                     return
                 }
@@ -34,7 +34,7 @@ class TestPublicKeyCreationConsistency: XCTestCase {
                     XCTFail("Unable to create a public key")
                     return
                 }
-                let publicKeyHex = Crypto.hex(fromData: publicKey)
+                let publicKeyHex = Hex.encode(publicKey)
                 XCTAssertEqual(publicKeyHex, model.publicKey)
             }
             

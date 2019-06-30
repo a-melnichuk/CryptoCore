@@ -26,11 +26,11 @@ class ViewController: UIViewController {
         }
         print("]")
         if let keccak = CryptoCore.Crypto.keccak256(Data([0, 2, 4])) {
-            print("__KECCAK \(keccak.count) \(Crypto.hex(fromData: keccak))")
+            print("__KECCAK \(keccak.count) \(Hex.encode(keccak))")
         }
         
         if let sha = CryptoCore.Crypto.sha256(Data([0, 2, 4])) {
-            print("__SHA \(sha.count) \(Crypto.hex(fromData: sha))")
+            print("__SHA \(sha.count) \(Hex.encode(sha))")
         }
         
         if let decoded = Base58.decode("72k1xXWG59wUsYv7h2"),
