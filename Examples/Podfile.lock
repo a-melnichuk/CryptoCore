@@ -10,7 +10,7 @@ EXTERNAL SOURCES:
 
 CHECKOUT OPTIONS:
   CryptoCore:
-    :commit: 4f00720a92b428313ad4055c2ca3fae59f782096
+    :commit: 9bc539576d0738ab313be887ee5c968f01133360
     :git: https://github.com/a-melnichuk/CryptoCore.git
 
 SPEC CHECKSUMS:
