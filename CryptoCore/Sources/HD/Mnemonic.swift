@@ -78,19 +78,19 @@ public extension Mnemonic {
         return Mnemonic(mnemonic, language: language)
     }
     
-    static func valid(mnemoic: [String], strength: Strength = .default, language: Language = .english) -> Bool {
-        if mnemoic.isEmpty {
+    static func valid(mnemonic: [String], strength: Strength = .default, language: Language = .english) -> Bool {
+        if mnemonic.isEmpty {
             return false
         }
-        if mnemoic.count % 3 > 0 {
+        if mnemonic.count % 3 > 0 {
             // Word list size must be multiple of three words.
             return false
         }
         let list = language.wordList
         
-        let concatLenBits = 11 * mnemoic.count
+        let concatLenBits = 11 * mnemonic.count
         var concatBits = Array(repeating: false, count: concatLenBits)
-        for (wordIndex, word) in mnemoic.enumerated() {
+        for (wordIndex, word) in mnemonic.enumerated() {
             guard let index = list.binarySearch(word, equal: { $0 == $1 }, less: { $0 < $1 }) else {
                 return false
             }
