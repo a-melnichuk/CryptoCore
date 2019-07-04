@@ -78,12 +78,15 @@ public extension Mnemonic {
         return Mnemonic(mnemonic, language: language)
     }
     
-    static func valid(mnemonic: [String], strength: Strength = .default, language: Language = .english) -> Bool {
+    static func valid(mnemonic: [String], language: Language = .english) -> Bool {
         if mnemonic.isEmpty {
             return false
         }
         if mnemonic.count % 3 > 0 {
             // Word list size must be multiple of three words.
+            return false
+        }
+        guard let strength = Strength(wordCount: mnemonic.count) else {
             return false
         }
         let list = language.wordList

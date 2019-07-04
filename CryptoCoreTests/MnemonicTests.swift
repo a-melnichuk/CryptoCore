@@ -53,7 +53,7 @@ class MnemonicTests: XCTestCase {
         
         for mnemonicString in validMnemonicStrings {
             let mnemonic = Mnemonic(string: mnemonicString)
-            XCTAssertTrue(Mnemonic.valid(mnemonic: mnemonic.array, strength: mnemonic.strength, language: mnemonic.language))
+            XCTAssertTrue(Mnemonic.valid(mnemonic: mnemonic.array, language: mnemonic.language))
         }
     }
     
@@ -78,8 +78,7 @@ class MnemonicTests: XCTestCase {
         
         for mnemonicString in invalidMnemonicStrings {
             let mnemonic = mnemonicString.components(separatedBy: " ")
-            let strength = Mnemonic.Strength(rawValue: mnemonic.count) ?? .default
-            XCTAssertFalse(Mnemonic.valid(mnemonic: mnemonic, strength: strength, language: .english), "Mnemonic is valid: \(mnemonicString)")
+            XCTAssertFalse(Mnemonic.valid(mnemonic: mnemonic, language: .english), "Mnemonic is valid: \(mnemonicString)")
         }
     }
     
