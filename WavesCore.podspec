@@ -45,4 +45,3 @@ Pod::Spec.new do |s|
     s.frameworks = 'Foundation'
     s.dependency 'CryptoCore', '~> 0.0.8'
 end
-

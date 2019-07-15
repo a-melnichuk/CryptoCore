@@ -1,5 +1,0 @@
-module paytomat_waves_core [system][extern_c] {
-    header "paytomat_waves_core/include/ptc_waves.h"
-    export *
-}
-

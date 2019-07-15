@@ -1,0 +1,13 @@
+platform :ios, '9.0'
+use_frameworks!
+
+target 'Examples' do
+  pod 'CryptoCore', :path => '../../'
+  #pod 'EthereumCore', :git => 'https://github.com/a-melnichuk/CryptoCore.git'
+  pod 'EthereumCore', :path => '../../'
+
+  target 'ExamplesTests' do
+    inherit! :search_paths
+  end
+
+end

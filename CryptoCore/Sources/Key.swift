@@ -40,21 +40,20 @@ public extension Crypto.Key {
     }
     
     static func publicKey(from privateKey: Data, compressed: Bool) -> Data? {
-        var publicKey = ptc_buffer()
-        ptc_buffer_init(&publicKey)
-        defer { ptc_buffer_destroy(&publicKey) }
-        let result: ptc_result = privateKey.withUnsafeBytes { privateKeyBuf in
-            if let privateKeyPtr = privateKeyBuf.bindMemory(to: UInt8.self).baseAddress {
-                return ptc_create_public_key(privateKeyPtr,
-                                             Int32(privateKeyBuf.count),
-                                             compressed,
-                                             &publicKey)
+        let count = Int(compressed ? PTC_PUBLIC_KEY_COMPRESSED : PTC_PUBLIC_KEY_UNCOMPRESSED)
+        var publicKey = Data(count: count)
+        let result: ptc_result = publicKey.withUnsafeMutableBytes { publicKeyBuf in
+            privateKey.withUnsafeBytes { privateKeyBuf in
+                if let publicKeyPtr = publicKeyBuf.bindMemory(to: UInt8.self).baseAddress,
+                    let privateKeyPtr = privateKeyBuf.bindMemory(to: UInt8.self).baseAddress {
+                    return ptc_create_public_key(privateKeyPtr,
+                                                 Int32(privateKeyBuf.count),
+                                                 compressed,
+                                                 publicKeyPtr)
+                }
+                return PTC_ERROR_GENERAL
             }
-            return PTC_ERROR_GENERAL
         }
-        guard result == PTC_SUCCESS else {
-            return nil
-        }
-        return Data(bytes: publicKey.data, count: publicKey.length)
+        return result == PTC_SUCCESS ? publicKey : nil
     }
 }
