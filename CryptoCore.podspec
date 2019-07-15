@@ -34,7 +34,7 @@ Pod::Spec.new do |s|
     'CryptoCore/Sources/libs/openssl/*.{h}'
   ]
   s.public_header_files = 'CryptoCore/*.h'
-  s.private_header_files = 'CryptoCore/Sources/libs/secp256k1/*.h', '$(PODS_TARGET_SRCROOT)/CryptoCore/Sources/libs/secp256k1/*.h', '$(PODS_ROOT)/CryptoCore/Sources/libs/secp256k1/*.h',
+  s.private_header_files = 'CryptoCore/Sources/libs/secp256k1/*.h', '$(PODS_TARGET_SRCROOT)/CryptoCore/Sources/libs/secp256k1/*.h', '$(PODS_ROOT)/CryptoCore/Sources/libs/secp256k1/*.h'
   s.pod_target_xcconfig = {
       'WARNING_CFLAGS' => [
         '-Wno-shorten-64-to-32'
