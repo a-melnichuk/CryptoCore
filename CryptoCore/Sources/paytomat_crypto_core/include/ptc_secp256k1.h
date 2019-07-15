@@ -7,7 +7,7 @@
 //
 
 #ifndef PTC_SECP256K1_H
-#define ptc_secp256k1_h
+#define PTC_SECP256K1_H
 
 #include <stdio.h>
 #include <stddef.h>
@@ -19,4 +19,4 @@ ptc_result ptc_secp256k1_recoverable_sign_hash_sha256(const uint8_t* hash,
                                                       size_t private_key_length,
                                                       uint8_t* signature);
 
-#endif /* ptc_secp256k1_h */
+#endif

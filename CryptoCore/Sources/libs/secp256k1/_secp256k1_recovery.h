@@ -1,7 +1,7 @@
-#ifndef PTC_SECP256K1_RECOVERY_H
-#define PTC_SECP256K1_RECOVERY_H
+#ifndef _SECP256K1_RECOVERY_H
+#define _SECP256K1_RECOVERY_H
 
-#include "ptc_secp256k1.h"
+#include "_secp256k1.h"
 
 #ifdef __cplusplus
 extern "C" {
