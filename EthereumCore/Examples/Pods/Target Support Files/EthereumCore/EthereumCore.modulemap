@@ -1,0 +1,6 @@
+framework module EthereumCore {
+  umbrella header "EthereumCore-umbrella.h"
+
+  export *
+  module * { export * }
+}

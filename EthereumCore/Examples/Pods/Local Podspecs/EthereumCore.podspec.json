@@ -1,0 +1,53 @@
+{
+  "name": "EthereumCore",
+  "module_name": "EthereumCore",
+  "version": "0.0.1",
+  "swift_versions": "5.0",
+  "summary": "Ethereum crypto components for Paytomat Wallet",
+  "description": "Ethereum address generation and transaction for Paytomat Wallet",
+  "homepage": "https://paytomat.com/",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE.md"
+  },
+  "authors": {
+    "Alex Melnichuk": "a.melnichuk@noisyminer.com"
+  },
+  "platforms": {
+    "ios": "9.0"
+  },
+  "requires_arc": true,
+  "source": {
+    "git": "https://github.com/a-melnichuk/CryptoCore.git",
+    "branch": "master",
+    "tag": "eth-0.0.1"
+  },
+  "source_files": [
+    "EthereumCore/*.h",
+    "EthereumCore/Sources/*.swift",
+    "EthereumCore/Sources/libs/paytomat_crypto_core/*.h",
+    "EthereumCore/Sources/paytomat_eth_core/{include,src}/*.{h,c}"
+  ],
+  "public_header_files": "EthereumCore/*.h",
+  "pod_target_xcconfig": {
+    "SWIFT_INCLUDE_PATHS": [
+      "$(PODS_TARGET_SRCROOT)/EthereumCore/Sources/**",
+      "$(PODS_TARGET_SRCROOT)/EthereumCore/Sources/libs",
+      "$(PODS_ROOT)/EthereumCore/Sources/**",
+      "$(PODS_ROOT)/EthereumCore/Sources/libs"
+    ],
+    "SYSTEM_HEADER_SEARCH_PATHS": "$(PODS_TARGET_SRCROOT)/EthereumCore/Sources/libs $(PODS_ROOT)/EthereumCore/Sources/libs"
+  },
+  "preserve_paths": "EthereumCore/Sources/module.modulemap",
+  "exclude_files": "Examples/*",
+  "frameworks": "Foundation",
+  "dependencies": {
+    "CryptoCore": [
+
+    ],
+    "web3swift.pod": [
+
+    ]
+  },
+  "swift_version": "5.0"
+}
