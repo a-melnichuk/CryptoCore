@@ -6,8 +6,8 @@
 //  Copyright © 2019 Alex Melnichuk. All rights reserved.
 //
 
-#include <secp256k1/secp256k1.h>
-#include <secp256k1/secp256k1_recovery.h>
+#include "secp256k1/secp256k1.h"
+#include "secp256k1/secp256k1_recovery.h"
 #include "ptc_secp256k1.h"
 #include "ptc_key.h"
 #include "ptc_crypto.h"
