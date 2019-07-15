@@ -114,7 +114,7 @@ trap "{ cd - ; rm -rf $LIB_DIR; exit 255; }" SIGINT
 mkdir -p "$LIB_DIR"
 cd "$LIB_DIR"
 
-#ios_openssl_build
+ios_openssl_build
 ios_secp256k1_build
 
 cd "$SCRIPT_DIR"
