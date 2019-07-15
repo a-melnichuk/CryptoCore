@@ -5,8 +5,7 @@ target 'Examples' do
   #pod 'CryptoCore', :path => '../../'
   pod 'CryptoCore', :git => 'https://github.com/a-melnichuk/CryptoCore.git'
   #pod 'EthereumCore', :path => '../../'
-  pod 'EthereumCore', :git => 'https://github.com/a-melnichuk/CryptoCore.git'
-
+  pod 'EthereumCore', :git => 'https://github.com/a-melnichuk/CryptoCore.git', :branch => 'test_podspec'
   target 'ExamplesTests' do
     inherit! :search_paths
   end

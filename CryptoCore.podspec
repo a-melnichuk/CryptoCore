@@ -31,8 +31,7 @@ Pod::Spec.new do |s|
     'CryptoCore/Sources/libs/base58/*.{h,c}',
     'CryptoCore/Sources/libs/base32/*.{h,c}',
     'CryptoCore/Sources/libs/curve25519/**/*.{h,c}',
-    'CryptoCore/Sources/libs/openssl/*.{h}',
-    'CryptoCore/Sources/libs/secp256k1/*.{h}'
+    'CryptoCore/Sources/libs/openssl/*.{h}'
   ]
   s.public_header_files = 'CryptoCore/*.h'
   s.private_header_files = 'CryptoCore/Sources/libs/secp256k1/*.h'

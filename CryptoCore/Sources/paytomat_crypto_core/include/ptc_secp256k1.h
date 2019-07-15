@@ -7,7 +7,7 @@
 //
 
 #ifndef PTC_SECP256K1_H
-#define ptc_secp256k1_h
+#define PTC_SECP256K1_H
 
 #include <stdio.h>
 #include <stddef.h>

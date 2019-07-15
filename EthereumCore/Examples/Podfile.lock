@@ -27,7 +27,7 @@ PODS:
 
 DEPENDENCIES:
   - CryptoCore (from `https://github.com/a-melnichuk/CryptoCore.git`)
-  - EthereumCore (from `https://github.com/a-melnichuk/CryptoCore.git`)
+  - EthereumCore (from `https://github.com/a-melnichuk/CryptoCore.git`, branch `test_podspec`)
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
@@ -43,14 +43,15 @@ EXTERNAL SOURCES:
   CryptoCore:
     :git: https://github.com/a-melnichuk/CryptoCore.git
   EthereumCore:
+    :branch: test_podspec
     :git: https://github.com/a-melnichuk/CryptoCore.git
 
 CHECKOUT OPTIONS:
   CryptoCore:
-    :commit: a0e2ee3622246bea7e8599820091c8fe304743e4
+    :commit: 16bbf4819e6673d951f9df7cbb7b51ef8ec227be
     :git: https://github.com/a-melnichuk/CryptoCore.git
   EthereumCore:
-    :commit: a0e2ee3622246bea7e8599820091c8fe304743e4
+    :commit: 16bbf4819e6673d951f9df7cbb7b51ef8ec227be
     :git: https://github.com/a-melnichuk/CryptoCore.git
 
 SPEC CHECKSUMS:
@@ -64,6 +65,6 @@ SPEC CHECKSUMS:
   SipHash: fad90a4683e420c52ef28063063dbbce248ea6d4
   web3swift.pod: e3bd1c18a84e9fc1c4bfab8ebc0754b0806a7bcd
 
-PODFILE CHECKSUM: c8944240b53d605edbb9831431a7283811329d8e
+PODFILE CHECKSUM: 1b1fced9e8ca8ff3c70298921993151bc0420989
 
 COCOAPODS: 1.7.4
