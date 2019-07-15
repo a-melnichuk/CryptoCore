@@ -47,10 +47,10 @@ EXTERNAL SOURCES:
 
 CHECKOUT OPTIONS:
   CryptoCore:
-    :commit: a0e2ee3622246bea7e8599820091c8fe304743e4
+    :commit: 16bbf4819e6673d951f9df7cbb7b51ef8ec227be
     :git: https://github.com/a-melnichuk/CryptoCore.git
   EthereumCore:
-    :commit: a0e2ee3622246bea7e8599820091c8fe304743e4
+    :commit: 16bbf4819e6673d951f9df7cbb7b51ef8ec227be
     :git: https://github.com/a-melnichuk/CryptoCore.git
 
 SPEC CHECKSUMS:
