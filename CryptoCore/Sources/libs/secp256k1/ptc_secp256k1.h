@@ -1,5 +1,5 @@
-#ifndef SECP256K1_H
-#define SECP256K1_H
+#ifndef PTC_SECP256K1_H
+#define PTC_SECP256K1_H
 
 #ifdef __cplusplus
 extern "C" {

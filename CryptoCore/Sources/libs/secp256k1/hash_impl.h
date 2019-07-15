@@ -4,8 +4,8 @@
  * file COPYING or http://www.opensource.org/licenses/mit-license.php.*
  **********************************************************************/
 
-#ifndef SECP256K1_HASH_IMPL_H
-#define SECP256K1_HASH_IMPL_H
+#ifndef PTC_SECP256K1_HASH_IMPL_H
+#define PTC_SECP256K1_HASH_IMPL_H
 
 #include "hash.h"
 
