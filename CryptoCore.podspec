@@ -41,8 +41,6 @@ Pod::Spec.new do |s|
         '-Wno-shorten-64-to-32'
       ].join(' '),
     'HEADER_SEARCH_PATHS' => [
-        '$(PODS_TARGET_SRCROOT)/CryptoCore/Sources/libs',
-        '$(PODS_ROOT)/CryptoCore/Sources/libs',
         '$(PODS_TARGET_SRCROOT)/CryptoCore/Sources',
         '$(PODS_ROOT)/CryptoCore/Sources',
         '$(PODS_TARGET_SRCROOT)/CryptoCore/Sources/paytomat_crypto_core',
