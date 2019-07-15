@@ -1,0 +1,5 @@
+module paytomat_eth_core [system][extern_c] {
+    header "paytomat_eth_core/include/ptc_eth.h"
+    export *
+}
+
