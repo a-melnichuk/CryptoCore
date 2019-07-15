@@ -16,5 +16,6 @@
 #include "ptc_buffer.h"
 #include "ptc_hd.h"
 #include "ptc_key.h"
+#include "ptc_secp256k1.h"
 
 #endif
