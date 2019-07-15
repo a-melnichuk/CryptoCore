@@ -51,7 +51,7 @@ CHECKOUT OPTIONS:
     :commit: 16bbf4819e6673d951f9df7cbb7b51ef8ec227be
     :git: https://github.com/a-melnichuk/CryptoCore.git
   EthereumCore:
-    :commit: 16bbf4819e6673d951f9df7cbb7b51ef8ec227be
+    :commit: 0bd41f826b1ba854ddbe42aa572abde3c14691b3
     :git: https://github.com/a-melnichuk/CryptoCore.git
 
 SPEC CHECKSUMS:
