@@ -34,12 +34,14 @@ Pod::Spec.new do |s|
     'CryptoCore/Sources/libs/openssl/*.{h}'
   ]
   s.public_header_files = 'CryptoCore/*.h'
-  s.private_header_files = '$(PODS_TARGET_SRCROOT)/CryptoCore/Sources/libs/secp256k1/*.h', '$(PODS_ROOT)/CryptoCore/Sources/libs/secp256k1/*.h'
+  s.private_header_files = 'CryptoCore/Sources/libs/secp256k1/*.h', '$(PODS_TARGET_SRCROOT)/CryptoCore/Sources/libs/secp256k1/*.h', '$(PODS_ROOT)/CryptoCore/Sources/libs/secp256k1/*.h',
   s.pod_target_xcconfig = {
       'WARNING_CFLAGS' => [
         '-Wno-shorten-64-to-32'
       ].join(' '),
     'HEADER_SEARCH_PATHS' => [
+        '$(PODS_TARGET_SRCROOT)/CryptoCore/Sources/libs',
+        '$(PODS_ROOT)/CryptoCore/Sources/libs',
         '$(PODS_TARGET_SRCROOT)/CryptoCore/Sources',
         '$(PODS_ROOT)/CryptoCore/Sources',
         '$(PODS_TARGET_SRCROOT)/CryptoCore/Sources/paytomat_crypto_core',
