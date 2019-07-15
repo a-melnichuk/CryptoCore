@@ -1,7 +1,7 @@
-#ifndef SECP256K1_ECDH_H
-#define SECP256K1_ECDH_H
+#ifndef PTC_SECP256K1_ECDH_H
+#define PTC_SECP256K1_ECDH_H
 
-#include "secp256k1.h"
+#include "ptc_secp256k1.h"
 
 #ifdef __cplusplus
 extern "C" {
