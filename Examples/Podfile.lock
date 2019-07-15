@@ -1,21 +1,16 @@
 PODS:
-  - CryptoCore (0.0.18)
+  - CryptoCore (0.0.20)
 
 DEPENDENCIES:
-  - CryptoCore (from `https://github.com/a-melnichuk/CryptoCore.git`)
+  - CryptoCore (from `../`)
 
 EXTERNAL SOURCES:
   CryptoCore:
-    :git: https://github.com/a-melnichuk/CryptoCore.git
-
-CHECKOUT OPTIONS:
-  CryptoCore:
-    :commit: 49b9089f30672de5f69bd71683a67836c4e72c38
-    :git: https://github.com/a-melnichuk/CryptoCore.git
+    :path: "../"
 
 SPEC CHECKSUMS:
-  CryptoCore: 044183c6acb65dd3720a3c39c6992150df8e2dc8
+  CryptoCore: 5cb2efbd8239a147ab5855f180972e769c62a3f3
 
-PODFILE CHECKSUM: dd51e21419336a217dfe75343e590237cd774a2c
+PODFILE CHECKSUM: c601df8fd8a857116dd5b4287c5ee9ef784f1fd4
 
-COCOAPODS: 1.7.3
+COCOAPODS: 1.7.4
