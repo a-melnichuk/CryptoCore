@@ -1,5 +1,0 @@
-module paytomat_nem_core [system][extern_c] {
-    header "paytomat_nem_core/include/ptc_nem.h"
-    export *
-}
-

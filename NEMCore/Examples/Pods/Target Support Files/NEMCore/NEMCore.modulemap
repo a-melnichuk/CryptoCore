@@ -1,6 +1,0 @@
-framework module NEMCore {
-  umbrella header "NEMCore-umbrella.h"
-
-  export *
-  module * { export * }
-}
