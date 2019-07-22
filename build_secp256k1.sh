@@ -34,9 +34,9 @@ SDK_PATH="`xcrun -sdk $SDK --show-sdk-path`"
 
 ./configure --enable-module-recovery --libdir="$TARGETDIR" --host="$HOST" \
     CC=`xcrun -find clang` \
-    CFLAGS="-O3 -arch $ARCH -isysroot $SDK_PATH -fembed-bitcode-marker -miphoneos-version-min=9.0" \
+    CFLAGS="-O3 -arch $ARCH -isysroot $SDK_PATH -fembed-bitcode -miphoneos-version-min=9.0" \
     CXX=`xcrun -find clang++` \
-    CXXFLAGS="-O3 -n -arch $ARCH -isysroot $SDK_PATH -fembed-bitcode-marker -miphoneos-version-min=9.0"
+    CXXFLAGS="-O3 -n -arch $ARCH -isysroot $SDK_PATH -fembed-bitcode -miphoneos-version-min=9.0"
 make install
 
 cd -

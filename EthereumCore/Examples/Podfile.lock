@@ -1,7 +1,7 @@
 PODS:
   - BigInt (3.1.0):
     - SipHash (~> 1.2)
-  - CryptoCore (0.0.21)
+  - CryptoCore (0.0.22)
   - EthereumCore (0.0.1):
     - CryptoCore
     - web3swift.pod
@@ -47,15 +47,15 @@ EXTERNAL SOURCES:
 
 CHECKOUT OPTIONS:
   CryptoCore:
-    :commit: 16bbf4819e6673d951f9df7cbb7b51ef8ec227be
+    :commit: b01e51b5b72a1d9eb8e0728bb182d3b99a89c33d
     :git: https://github.com/a-melnichuk/CryptoCore.git
   EthereumCore:
-    :commit: 16bbf4819e6673d951f9df7cbb7b51ef8ec227be
+    :commit: b01e51b5b72a1d9eb8e0728bb182d3b99a89c33d
     :git: https://github.com/a-melnichuk/CryptoCore.git
 
 SPEC CHECKSUMS:
   BigInt: 76b5dfdfa3e2e478d4ffdf161aeede5502e2742f
-  CryptoCore: ca1cb153e549edbc41b87f774d7f2fa302e4f57b
+  CryptoCore: dfa4fb1811817efacdd56dbeb760b6fdafe47e2d
   EthereumCore: b5dd639c245787d076b6b31ef027a49603874a72
   keccak.c: 859583afdaccb4e4fcc0f0096064d101580313f4
   PromiseKit: 1fdaeb6c0a94a5114fcb814ff3d772b86886ad4e
