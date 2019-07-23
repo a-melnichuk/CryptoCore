@@ -145,7 +145,7 @@ public extension EthereumCore.Transaction.Transfer {
         guard let txBytes = tx.encode(forSignature: false, chainId: chainId) else {
             throw EthereumCore.TransactionError.encodingFailed
         }
-        let txHex = EthereumCore.prefix + Hex.encode(txBytes).lowercased()
+        let txHex = Hex.encode(txBytes).lowercased().withEthereumPrefix
         
         return Signed(from: sender,
                       to: recipient,

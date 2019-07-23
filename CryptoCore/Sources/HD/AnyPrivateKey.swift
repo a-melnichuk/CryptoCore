@@ -10,7 +10,11 @@ import Foundation
 
 public protocol AnyPrivateKey {
     var raw: Data { get }
+    
     init?(seed: Seed)
+    init?(rawPrivateKey: String)
+    
     func anyDerivedPrivateKey(path: BIP32Path) -> AnyPrivateKey?
+    func rawPrivateKey() -> String?
     func anyPublicKey() -> AnyPublicKey?
 }
