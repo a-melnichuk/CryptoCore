@@ -255,6 +255,9 @@
 		66EA784122C36B2400E4BE7C /* Array+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66EA784022C36B2400E4BE7C /* Array+Extension.swift */; };
 		66EA784322C37D0D00E4BE7C /* MnemonicTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66EA784222C37D0D00E4BE7C /* MnemonicTests.swift */; };
 		66EA784522C387B700E4BE7C /* Seed.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66EA784422C387B700E4BE7C /* Seed.swift */; };
+		66F4322422E707BB00092C23 /* BIP32Path.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66F4322322E707BB00092C23 /* BIP32Path.swift */; };
+		66F4322622E7080400092C23 /* AnyPrivateKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66F4322522E7080400092C23 /* AnyPrivateKey.swift */; };
+		66F4322822E7081000092C23 /* AnyPublicKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66F4322722E7081000092C23 /* AnyPublicKey.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -523,6 +526,9 @@
 		66EA784022C36B2400E4BE7C /* Array+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+Extension.swift"; sourceTree = "<group>"; };
 		66EA784222C37D0D00E4BE7C /* MnemonicTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MnemonicTests.swift; sourceTree = "<group>"; };
 		66EA784422C387B700E4BE7C /* Seed.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Seed.swift; sourceTree = "<group>"; };
+		66F4322322E707BB00092C23 /* BIP32Path.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BIP32Path.swift; sourceTree = "<group>"; };
+		66F4322522E7080400092C23 /* AnyPrivateKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnyPrivateKey.swift; sourceTree = "<group>"; };
+		66F4322722E7081000092C23 /* AnyPublicKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnyPublicKey.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -979,6 +985,9 @@
 				66879E1422C0C4D7009D2659 /* HDPrivateKey.swift */,
 				66879E1622C0C4DF009D2659 /* HDPublicKey.swift */,
 				66EA783822C351B300E4BE7C /* ptc_hd_key+Extension.swift */,
+				66F4322322E707BB00092C23 /* BIP32Path.swift */,
+				66F4322522E7080400092C23 /* AnyPrivateKey.swift */,
+				66F4322722E7081000092C23 /* AnyPublicKey.swift */,
 			);
 			path = HD;
 			sourceTree = "<group>";
@@ -1251,6 +1260,7 @@
 				66DC947522A54770002B24F7 /* gen_eddsa.c in Sources */,
 				66DC949922A54771002B24F7 /* ge_p3_to_cached.c in Sources */,
 				66DC94A622A54771002B24F7 /* ge_frombytes.c in Sources */,
+				66F4322422E707BB00092C23 /* BIP32Path.swift in Sources */,
 				66C225C9227B430900E4C7F9 /* ptc_util.c in Sources */,
 				66DC946A22A54770002B24F7 /* ge_neg.c in Sources */,
 				66920FA522A90BC800687D96 /* base32.c in Sources */,
@@ -1291,6 +1301,7 @@
 				66DC94A722A54771002B24F7 /* fe_sq.c in Sources */,
 				66EA783922C351B300E4BE7C /* ptc_hd_key+Extension.swift in Sources */,
 				66C225C3227B419600E4C7F9 /* keccak-tiny.c in Sources */,
+				66F4322622E7080400092C23 /* AnyPrivateKey.swift in Sources */,
 				66DC948C22A54771002B24F7 /* ge_p3_to_montx.c in Sources */,
 				66D6A6E122C938DE00DF8EC4 /* Hex.swift in Sources */,
 				66DC94B322A54771002B24F7 /* ge_p1p1_to_p3.c in Sources */,
@@ -1321,6 +1332,7 @@
 				66DC949D22A54771002B24F7 /* ge_scalarmult_base.c in Sources */,
 				66DC94B222A54771002B24F7 /* sc_reduce.c in Sources */,
 				66DC947122A54770002B24F7 /* ge_p3_add.c in Sources */,
+				66F4322822E7081000092C23 /* AnyPublicKey.swift in Sources */,
 				66DC949222A54771002B24F7 /* fe_copy.c in Sources */,
 				66DC94B422A54771002B24F7 /* fe_mul.c in Sources */,
 				66920F9A22A908FB00687D96 /* Base32.swift in Sources */,
