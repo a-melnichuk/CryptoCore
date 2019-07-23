@@ -9,7 +9,7 @@
 import Foundation
 
 public final class ZeroOuted<T: ZeroOutable> {
-    private var value: T
+    private(set) public var value: T
     
     public init(_ value: inout T) {
         self.value = value
