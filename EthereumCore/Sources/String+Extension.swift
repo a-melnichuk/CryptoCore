@@ -42,8 +42,8 @@ public extension String {
         }
         
         // Validate checksum
-        let address = self.withoutEthereumPrefix.lowercased()
-        let addressData = Data(address.utf8)
+        let address = self.withoutEthereumPrefix
+        let addressData = Data(address.lowercased().utf8)
         guard let addressHashData = Crypto.keccak256(addressData) else {
             return false
         }

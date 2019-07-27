@@ -1,8 +1,8 @@
 PODS:
   - BigInt (3.1.0):
     - SipHash (~> 1.2)
-  - CryptoCore (0.0.22)
-  - EthereumCore (0.0.1):
+  - CryptoCore (0.0.25)
+  - EthereumCore (0.0.3):
     - CryptoCore
     - web3swift.pod
   - keccak.c (0.1.3)
@@ -27,7 +27,7 @@ PODS:
 
 DEPENDENCIES:
   - CryptoCore (from `https://github.com/a-melnichuk/CryptoCore.git`)
-  - EthereumCore (from `https://github.com/a-melnichuk/CryptoCore.git`)
+  - EthereumCore (from `../../`)
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
@@ -43,20 +43,17 @@ EXTERNAL SOURCES:
   CryptoCore:
     :git: https://github.com/a-melnichuk/CryptoCore.git
   EthereumCore:
-    :git: https://github.com/a-melnichuk/CryptoCore.git
+    :path: "../../"
 
 CHECKOUT OPTIONS:
   CryptoCore:
-    :commit: b01e51b5b72a1d9eb8e0728bb182d3b99a89c33d
-    :git: https://github.com/a-melnichuk/CryptoCore.git
-  EthereumCore:
-    :commit: b01e51b5b72a1d9eb8e0728bb182d3b99a89c33d
+    :commit: 79166a7a800e8768ab21675c2c15db6372fa939c
     :git: https://github.com/a-melnichuk/CryptoCore.git
 
 SPEC CHECKSUMS:
   BigInt: 76b5dfdfa3e2e478d4ffdf161aeede5502e2742f
-  CryptoCore: dfa4fb1811817efacdd56dbeb760b6fdafe47e2d
-  EthereumCore: b5dd639c245787d076b6b31ef027a49603874a72
+  CryptoCore: 7dd79d29361caae9f6a3d9ac413a03fec1953501
+  EthereumCore: 481a4ea931b4963b71f4c413105e370aa51592d9
   keccak.c: 859583afdaccb4e4fcc0f0096064d101580313f4
   PromiseKit: 1fdaeb6c0a94a5114fcb814ff3d772b86886ad4e
   scrypt.c: b42ae06183251329d2b2c620c226fb541a4a3592
@@ -64,6 +61,6 @@ SPEC CHECKSUMS:
   SipHash: fad90a4683e420c52ef28063063dbbce248ea6d4
   web3swift.pod: e3bd1c18a84e9fc1c4bfab8ebc0754b0806a7bcd
 
-PODFILE CHECKSUM: c8944240b53d605edbb9831431a7283811329d8e
+PODFILE CHECKSUM: a5aba78b18a511a5da0464dfd77dc60376356de4
 
-COCOAPODS: 1.7.4
+COCOAPODS: 1.7.5

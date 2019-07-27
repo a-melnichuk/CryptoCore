@@ -17,6 +17,17 @@ class TestTransaction: XCTestCase {
         var erc20TokenContractAddress: String
     }
     
+    func testEthereumAddressValidation() {
+        let address = "0xd05950FfF256542a3D4484802473965E8DB55A98"
+        let hashData = Data(address.withoutEthereumPrefix.lowercased().utf8)
+        let hash1 = CryptoCore.Crypto.sha3_256(hashData)
+        let hash2 = CryptoCore.Crypto.keccak256(hashData)
+        XCTAssertEqual(Hex.encode(hash1!), "28d466e0a231a1702e4b2fa3fcb5b0ed6ffa6cc6e420af0bc4c389dd2b58b481")
+        XCTAssertEqual(Hex.encode(hash2!), "28d466e0a231a1702e4b2fa3fcb5b0ed6ffa6cc6e420af0bc4c389dd2b58b481")
+        
+        XCTAssertTrue(address.isValidEthereumAddress)
+    }
+    
     func testEthTransactionRequest() {
         let promise = XCTestExpectation(description: "\(#function)")
         let queue = DispatchQueue(label: "\(#function)")
