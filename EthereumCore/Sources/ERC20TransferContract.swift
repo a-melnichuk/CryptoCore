@@ -8,6 +8,7 @@
 
 import Foundation
 import struct BigInt.BigUInt
+import web3swift
 
 struct ERC20TransferContract {
     let token: ERC20TokenProtocol
