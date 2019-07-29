@@ -10,7 +10,7 @@
 #include <openssl/sha.h>
 #include <openssl/hmac.h>
 #include <openssl/ec.h>
-#include <secp256k1/_secp256k1.h>
+#include <secp256k1/secp256k1.h>
 #include "ptc_key.h"
 
 ptc_result ptc_create_public_key(const uint8_t* private_key,
