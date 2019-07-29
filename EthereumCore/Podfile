@@ -3,9 +3,12 @@ use_frameworks!
 
 target 'EthereumCore' do
 
-  pod 'web3swift.pod'
-  #pod 'CryptoCore', :path => '../'
-  pod 'CryptoCore', :git => 'https://github.com/a-melnichuk/CryptoCore.git'
+  #pod 'web3swift.pod'
+  pod 'PromiseKit', '~> 6.4'
+  pod 'BigInt', '~> 3.1'
+  pod 'scrypt.c', '~> 0.1'
+  pod 'CryptoCore', :path => '../'
+  #pod 'CryptoCore', :git => 'https://github.com/a-melnichuk/CryptoCore.git'
   
   target 'EthereumCoreTests' do
     inherit! :search_paths

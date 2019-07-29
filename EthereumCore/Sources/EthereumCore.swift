@@ -10,7 +10,6 @@ import Foundation
 import CryptoCore
 import paytomat_eth_core
 import paytomat_crypto_core
-import web3swift
 import struct BigInt.BigUInt
 
 public extension Crypto {
