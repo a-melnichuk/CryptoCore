@@ -10,6 +10,7 @@ import Foundation
 import CryptoCore
 import paytomat_eth_core
 import struct BigInt.BigUInt
+import web3swift
 
 public extension EthereumCore {
     struct Transaction {}
