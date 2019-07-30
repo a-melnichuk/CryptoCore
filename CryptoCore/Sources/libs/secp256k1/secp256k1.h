@@ -765,4 +765,3 @@ extern "C" {
 #endif
 
 #endif /* SECP256K1_H */
-

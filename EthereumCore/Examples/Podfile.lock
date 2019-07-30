@@ -1,29 +1,14 @@
 PODS:
-  - BigInt (3.1.0):
-    - SipHash (~> 1.2)
-  - CryptoCore (0.0.25)
-  - EthereumCore (0.0.4):
-    - CryptoCore
-    - web3swift.pod
-  - keccak.c (0.1.3)
-  - PromiseKit (6.10.0):
-    - PromiseKit/CorePromise (= 6.10.0)
-    - PromiseKit/Foundation (= 6.10.0)
-    - PromiseKit/UIKit (= 6.10.0)
-  - PromiseKit/CorePromise (6.10.0)
-  - PromiseKit/Foundation (6.10.0):
-    - PromiseKit/CorePromise
-  - PromiseKit/UIKit (6.10.0):
-    - PromiseKit/CorePromise
-  - scrypt.c (0.1.1)
-  - secp256k1.c (0.1.2)
-  - SipHash (1.2.2)
-  - web3swift.pod (2.1.10):
-    - BigInt (~> 3.1)
-    - keccak.c (~> 0.1)
-    - PromiseKit (~> 6.4)
-    - scrypt.c (~> 0.1)
+  - BigInt (4.0.0)
+  - CryptoCore (0.0.27):
     - secp256k1.c (~> 0.1)
+  - EthereumCore (0.0.5):
+    - BigInt
+    - CryptoCore
+    - keccak.c (~> 0.1)
+    - secp256k1.c (~> 0.1)
+  - keccak.c (0.1.3)
+  - secp256k1.c (0.1.2)
 
 DEPENDENCIES:
   - CryptoCore (from `https://github.com/a-melnichuk/CryptoCore.git`)
@@ -33,11 +18,7 @@ SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - BigInt
     - keccak.c
-    - PromiseKit
-    - scrypt.c
     - secp256k1.c
-    - SipHash
-    - web3swift.pod
 
 EXTERNAL SOURCES:
   CryptoCore:
@@ -47,19 +28,15 @@ EXTERNAL SOURCES:
 
 CHECKOUT OPTIONS:
   CryptoCore:
-    :commit: 79166a7a800e8768ab21675c2c15db6372fa939c
+    :commit: 9a86e77f13821c30b260e847c886830e913f49df
     :git: https://github.com/a-melnichuk/CryptoCore.git
 
 SPEC CHECKSUMS:
-  BigInt: 76b5dfdfa3e2e478d4ffdf161aeede5502e2742f
-  CryptoCore: 7dd79d29361caae9f6a3d9ac413a03fec1953501
-  EthereumCore: d2efe837713f113b2b66721dc3d627a839d43d86
+  BigInt: 2aad1a9942dc932ec8b84290d2c564a3d76f97ab
+  CryptoCore: 36fa5d3c1938a7a01533b7fbb8f88465a8bd41e0
+  EthereumCore: 17c86c2f6dada23dd5e3ae4d956585994c02cd54
   keccak.c: 859583afdaccb4e4fcc0f0096064d101580313f4
-  PromiseKit: 1fdaeb6c0a94a5114fcb814ff3d772b86886ad4e
-  scrypt.c: b42ae06183251329d2b2c620c226fb541a4a3592
   secp256k1.c: db47b726585d80f027423682eb369729e61b3b20
-  SipHash: fad90a4683e420c52ef28063063dbbce248ea6d4
-  web3swift.pod: e3bd1c18a84e9fc1c4bfab8ebc0754b0806a7bcd
 
 PODFILE CHECKSUM: a5aba78b18a511a5da0464dfd77dc60376356de4
 

@@ -2,8 +2,8 @@ platform :ios, '9.0'
 use_frameworks!
 
 target 'EthereumCore' do
-
-  pod 'web3swift.pod'
+  pod 'keccak.c', '~> 0.1'
+  pod 'BigInt'
   pod 'CryptoCore', :path => '../'
   #pod 'CryptoCore', :git => 'https://github.com/a-melnichuk/CryptoCore.git'
   
