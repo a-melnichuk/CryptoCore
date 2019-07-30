@@ -10,7 +10,6 @@ import Foundation
 import CryptoCore
 import paytomat_eth_core
 import struct BigInt.BigUInt
-import web3swift
 
 public extension EthereumCore {
     struct Transaction {}
@@ -34,7 +33,6 @@ public extension EthereumCore.Transaction {
             public let from: EthereumAddress
             public let to: EthereumAddress
             public let amount: BigUInt
-            public let transaction: EthereumTransaction
             public let serializedTransactionHex: String
         }
         
@@ -91,7 +89,8 @@ public extension EthereumCore.Transaction.Transfer {
             if let ethBalance = ethBalance, fee > ethBalance {
                  throw EthereumCore.TransactionError.notEnoughGas
             }
-            let contract = ERC20TransferContract(token: token,
+            let contract = ERC20TransferContract(networkId: chainId,
+                                                 token: token,
                                                  sender: sender,
                                                  recipient: recipient,
                                                  amount: amount)
@@ -150,7 +149,6 @@ public extension EthereumCore.Transaction.Transfer {
         return Signed(from: sender,
                       to: recipient,
                       amount: amount,
-                      transaction: tx,
                       serializedTransactionHex: txHex)
     }
 }

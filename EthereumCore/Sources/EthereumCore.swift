@@ -11,7 +11,7 @@ import CryptoCore
 import paytomat_eth_core
 import paytomat_crypto_core
 import struct BigInt.BigUInt
-import web3swift
+
 
 public extension Crypto {
     typealias Ethereum = EthereumCore

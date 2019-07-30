@@ -8,9 +8,9 @@
 
 import Foundation
 import struct BigInt.BigUInt
-import web3swift
 
 struct ERC20TransferContract {
+    let networkId: NetworkId
     let token: ERC20TokenProtocol
     let sender: EthereumAddress
     let recipient: EthereumAddress
@@ -21,17 +21,15 @@ struct ERC20TransferContract {
         guard contractAddress.isValid else {
             throw EthereumCore.TransactionError.invalidAddress
         }
-        var options = Web3Options.defaultOptions()
-    
+        var options = Web3Options.default
         options.from = sender
         options.to = contractAddress
         options.value = 0
-        let web3 = Web3.InfuraMainnetWeb3()
-        
+
         let contract: Web3Contract
-        let transfer: Web3Contract.TransactionIntermediate
+        let transfer: TransactionIntermediate
         do {
-            contract = try web3.contract(Web3Utils.erc20ABI, at: contractAddress)
+            contract = try Web3Contract(networkId: networkId, abiString: Web3Utils.erc20ABI, at: contractAddress, options: options)
         } catch {
             throw EthereumCore.TransactionError.contractCreationFailed(error)
         }

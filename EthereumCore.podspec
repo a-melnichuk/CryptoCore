@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
     s.name = 'EthereumCore'
     s.module_name = 'EthereumCore'
-    s.version = '0.0.5'
+    s.version = '0.0.6'
     s.swift_version = '5.0'
     s.summary = 'Ethereum crypto components for Paytomat Wallet'
     s.description = <<-DESC
@@ -22,7 +22,7 @@ Pod::Spec.new do |s|
     }
     s.source_files = [
         'EthereumCore/*.h',
-        'EthereumCore/Sources/*.swift',
+        'EthereumCore/Sources/**/*.swift',
         'EthereumCore/Sources/libs/paytomat_crypto_core/*.h',
         'EthereumCore/Sources/paytomat_eth_core/{include,src}/*.{h,c}'
     ]
@@ -44,6 +44,8 @@ Pod::Spec.new do |s|
     s.exclude_files = 'Examples/*'
     s.frameworks = 'Foundation'
     s.dependency 'CryptoCore'
-    s.dependency 'web3swift.pod'
+    s.dependency 'BigInt'
+    s.dependency 'secp256k1.c', '~> 0.1'
+    s.dependency 'keccak.c', '~> 0.1'
 end
 
