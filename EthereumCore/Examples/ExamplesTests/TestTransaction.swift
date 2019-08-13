@@ -28,7 +28,6 @@ class TestTransaction: XCTestCase {
         XCTAssertTrue(address.isValidEthereumAddress)
     }
     
-    func testEthTransactionRequest() {
         let promise = XCTestExpectation(description: "\(#function)")
         let queue = DispatchQueue(label: "\(#function)")
         queue.async {
