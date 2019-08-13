@@ -20,7 +20,7 @@ public extension Data {
     
     func loadType<T>(_: T.Type) -> T {
         return self.withUnsafeBytes {
-            $0.baseAddress!.load(as: T.self)
-        }
+            $0.baseAddress!.bindMemory(to: T.self, capacity: 1)
+        }.pointee
     }
 }
