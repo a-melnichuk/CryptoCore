@@ -32,10 +32,10 @@ class TestTransaction: XCTestCase {
         }
     
         let utxo = UTXO(address: "LfseFCxaErQdM5thXBzWKpdiEPrm2vziGr",
-                        txHex: "f8e1fc136f2a821113faa771c67788544c5970738d34f27ef30fd62a3aa75fd7",
+                        txId: Hex.decode("f8e1fc136f2a821113faa771c67788544c5970738d34f27ef30fd62a3aa75fd7")!,
                         value: 519900000,
                         outputIndex: 4,
-                        subScriptHex: "76a914e2834837c89a20b1f250187d02ef7262597d37a588ac")
+                        subScript: Hex.decode("76a914e2834837c89a20b1f250187d02ef7262597d37a588ac")!)
         
         let utxos: [UTXO] = [
             utxo
