@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		6642D25B227B7B53009F2D3E /* ptc_result+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6642D25A227B7B53009F2D3E /* ptc_result+Extension.swift */; };
 		6642D25D227B7E31009F2D3E /* Crypto+Util.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6642D25C227B7E31009F2D3E /* Crypto+Util.swift */; };
+		6663C2A52318439C00EE0626 /* WIF.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6663C2A42318439C00EE0626 /* WIF.swift */; };
+		6663C2A72318450B00EE0626 /* Base58Check.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6663C2A62318450B00EE0626 /* Base58Check.swift */; };
 		666B71C922C213820071DE64 /* Key.swift in Sources */ = {isa = PBXBuildFile; fileRef = 666B71C822C213820071DE64 /* Key.swift */; };
 		666B71CC22C214890071DE64 /* ptc_key.h in Headers */ = {isa = PBXBuildFile; fileRef = 666B71CA22C214890071DE64 /* ptc_key.h */; };
 		666B71CD22C214890071DE64 /* ptc_key.c in Sources */ = {isa = PBXBuildFile; fileRef = 666B71CB22C214890071DE64 /* ptc_key.c */; };
@@ -267,6 +269,8 @@
 /* Begin PBXFileReference section */
 		6642D25A227B7B53009F2D3E /* ptc_result+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ptc_result+Extension.swift"; sourceTree = "<group>"; };
 		6642D25C227B7E31009F2D3E /* Crypto+Util.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Crypto+Util.swift"; sourceTree = "<group>"; };
+		6663C2A42318439C00EE0626 /* WIF.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WIF.swift; sourceTree = "<group>"; };
+		6663C2A62318450B00EE0626 /* Base58Check.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Base58Check.swift; sourceTree = "<group>"; };
 		666B71C822C213820071DE64 /* Key.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Key.swift; sourceTree = "<group>"; };
 		666B71CA22C214890071DE64 /* ptc_key.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ptc_key.h; sourceTree = "<group>"; };
 		666B71CB22C214890071DE64 /* ptc_key.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = ptc_key.c; sourceTree = "<group>"; };
@@ -599,6 +603,8 @@
 				666B71C822C213820071DE64 /* Key.swift */,
 				66D6A6E022C938DE00DF8EC4 /* Hex.swift */,
 				66A2797A227F3BBA0099BAB9 /* Base58.swift */,
+				6663C2A62318450B00EE0626 /* Base58Check.swift */,
+				6663C2A42318439C00EE0626 /* WIF.swift */,
 				66920F9922A908FB00687D96 /* Base32.swift */,
 				6642D25A227B7B53009F2D3E /* ptc_result+Extension.swift */,
 				66879E1022C0BF6C009D2659 /* ZeroOuted.swift */,
@@ -1253,6 +1259,7 @@
 				66DC947822A54770002B24F7 /* sc_isreduced.c in Sources */,
 				66DC944F22A54770002B24F7 /* curve25519-donna.c in Sources */,
 				66DC948522A54771002B24F7 /* ge_isneutral.c in Sources */,
+				6663C2A72318450B00EE0626 /* Base58Check.swift in Sources */,
 				66DC948E22A54771002B24F7 /* ge_p3_0.c in Sources */,
 				66DC946422A54770002B24F7 /* sc_clamp.c in Sources */,
 				66A27970227F19180099BAB9 /* base58.c in Sources */,
@@ -1290,6 +1297,7 @@
 				6642D25B227B7B53009F2D3E /* ptc_result+Extension.swift in Sources */,
 				66C225CB227B431500E4C7F9 /* ptc_crypto.c in Sources */,
 				66DC948022A54771002B24F7 /* ge_scalarmult_cofactor.c in Sources */,
+				6663C2A52318439C00EE0626 /* WIF.swift in Sources */,
 				66DC949B22A54771002B24F7 /* fe_neg.c in Sources */,
 				66DC945122A54770002B24F7 /* fe_sq2.c in Sources */,
 				66DC948A22A54771002B24F7 /* fe_isreduced.c in Sources */,

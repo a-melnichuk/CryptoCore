@@ -57,12 +57,34 @@ class TestBase58: XCTestCase {
             XCTFail("Unable to decode key")
             return
         }
-        let raw = decoded.dropFirst().dropLast(4)
+        let raw = decoded
         XCTAssertEqual(Hex.encode(raw), "fa66f475ad1f0bc09f17c7e3d7f2d4a2cf9b7f41ee173455988456b41bbedef401")
         guard let encoded = Base58.check(encode: raw, version: [0x80]) else {
             XCTFail("Unable to encode key")
             return
         }
+        XCTAssertEqual(encoded, wif)
+    }
+    
+    func testUncompressedWIF() {
+        let wif = "5HueCGU8rMjxEXxiPuD5BDku4MkFqeZyd4dZ1jvhTVqvbTLvyTJ"
+        guard let decoded = WIF.decode(wif, version: [0x80], compressed: false) else {
+            XCTFail("Unable to decode WIF")
+            return
+        }
+        XCTAssertEqual(Hex.encode(decoded).uppercased(), "0C28FCA386C7A227600B2FE50B7CAE11EC86D3BF1FBE471BE89827E19D72AA1D")
+        let encoded = WIF.encode(decoded, version: [0x80], compressed: false)
+        XCTAssertEqual(encoded, wif)
+    }
+    
+    func testCompressedWIF() {
+        let wif = "5HueCGU8rMjxEXxiPuD5BDku4MkFqeZyd4dZ1jvhTVqvYM7zbMx"
+        guard let decoded = WIF.decode(wif, version: [0x80], compressed: true) else {
+            XCTFail("Unable to decode WIF")
+            return
+        }
+        XCTAssertEqual(Hex.encode(decoded).uppercased(), "0C28FCA386C7A227600B2FE50B7CAE11EC86D3BF1FBE471BE89827E19D72AA")
+        let encoded = WIF.encode(decoded, version: [0x80], compressed: true)
         XCTAssertEqual(encoded, wif)
     }
 }

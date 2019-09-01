@@ -8,7 +8,9 @@
 
 import Foundation
 
-public final class Mnemonic {
+public final class Mnemonic: ExpressibleByStringLiteral {
+    public typealias StringLiteralType = String
+    
     public let strength: Strength
     public let language: Language
     private(set) public var array: [String]
@@ -22,6 +24,10 @@ public final class Mnemonic {
     public convenience init(string: String, separatedBy separator: String = " ", language: Language = .english) {
         let array = string.components(separatedBy: separator)
         self.init(array, language: language)
+    }
+    
+    public convenience init(stringLiteral value: StringLiteralType) {
+        self.init(string: value)
     }
     
     deinit {
