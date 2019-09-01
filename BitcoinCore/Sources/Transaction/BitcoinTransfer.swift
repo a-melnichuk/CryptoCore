@@ -167,29 +167,6 @@ public extension BitcoinCore.Transaction.Transfer {
         
         let recipientIsSegwit = BitcoinCore.isSegwitAddress(recipientAddress, network: network)
         
-        let decodedUtxos = try utxoKeyPairs.map { utxoKeyPair -> DecodedUTXO in
-            let utxo = utxoKeyPair.utxo
-            let privateKey = utxoKeyPair.privateKey
-            let publicKey = utxoKeyPair.publicKey
-            guard let txId = Hex.decode(utxo.txHex) else {
-                throw TransactionError.invalidTxId
-            }
-            guard let subScript = Hex.decode(utxo.subScriptHex) else {
-                throw TransactionError.invalidSubScript
-            }
-            
-            // Caution: split by `OP_CODESEPARATOR` is not implemented
-            // A new subscript is created from the instruction from the most recently parsed `OP_CODESEPARATOR` (last one in script) to the end of the script.
-            // If there is no `OP_CODESEPARATOR` the entire script becomes the subscript (hereby referred to as subScript)
-            return DecodedUTXO(privateKey: privateKey,
-                               publicKey: publicKey,
-                               txId: txId,
-                               address: utxo.address,
-                               subScript: subScript,
-                               vout: utxo.outputIndex,
-                               value: utxo.value)
-        }
-        
         // lockingScript = pk_script = Usually contains the public key as a Bitcoin script setting up conditions to claim this output.
         // Public Key Hash is equivalent to the bitcoin address of the cafe, without the Base58Check encoding.
         // Most applications would show the public key hash in hexadecimal encoding and not the familiar bitcoin address Base58Check format that begins with a "1."
@@ -216,14 +193,14 @@ public extension BitcoinCore.Transaction.Transfer {
                                                      fee: fee,
                                                      changePkScipt: nil,
                                                      externalOutput: dummyExternalOutput,
-                                                     utxos: decodedUtxos)
+                                                     utxos: utxoKeyPairs)
             guard amount > totalFee else {
                 throw TransactionError.amountTooSmall
             }
             amount -= totalFee
             let externalOutput = Transaction.Output(value: amount, lockingScript: externalPkScipt)
             outputs = [externalOutput]
-            inputs = try createSignedInputs(utxos: decodedUtxos, outputs: outputs)
+            inputs = try createSignedInputs(utxos: utxoKeyPairs, outputs: outputs)
         } else {
             guard let changePubKeyHash = Crypto.sha256ripemd160(senderPublicKey),
                 let changePkScipt = network.buildP2PKHScript(pubKeyHash: changePubKeyHash, blockInfo: blockInfo) else {
@@ -236,7 +213,7 @@ public extension BitcoinCore.Transaction.Transfer {
                                                      fee: fee,
                                                      changePkScipt: changePkScipt,
                                                      externalOutput: externalOutput,
-                                                     utxos: decodedUtxos)
+                                                     utxos: utxoKeyPairs)
             var change = totalInputAmount - amount - totalFee
     
             if change < 0 {
@@ -259,7 +236,7 @@ public extension BitcoinCore.Transaction.Transfer {
                 outputs = [externalOutput, changeOutput]
             }
             
-            inputs = try createSignedInputs(utxos: decodedUtxos, outputs: outputs)
+            inputs = try createSignedInputs(utxos: utxoKeyPairs, outputs: outputs)
         }
         
         let tx = Transaction(version: version,
@@ -277,7 +254,7 @@ public extension BitcoinCore.Transaction.Transfer {
                                        fee: Int64,
                                        changePkScipt: Data?,
                                        externalOutput: Transaction.Output,
-                                       utxos: [DecodedUTXO]) throws -> Int64 {
+                                       utxos: [UTXOKeyPair]) throws -> Int64 {
         if network.hasStaticFees {
             return fee
         }
@@ -291,7 +268,7 @@ public extension BitcoinCore.Transaction.Transfer {
     private func computeTransactionSize(totalInputAmount: Int64,
                                         changePkScipt: Data?,
                                         externalOutput: Transaction.Output,
-                                        utxos: [DecodedUTXO]) throws -> Int64 {
+                                        utxos: [UTXOKeyPair]) throws -> Int64 {
         let outputs: [Transaction.Output]
         if let changePkScipt = changePkScipt {
             let dummyChangeOutput = Transaction.Output(value: totalInputAmount - amount, lockingScript: changePkScipt)
@@ -324,12 +301,12 @@ public extension BitcoinCore.Transaction.Transfer {
     /// - returns:
     /// Array of signed transaction inputs
     
-    private func createSignedInputs(utxos: [DecodedUTXO], outputs: [Transaction.Output]) throws -> [Transaction.Input] {
+    private func createSignedInputs(utxos: [UTXOKeyPair], outputs: [Transaction.Output]) throws -> [Transaction.Input] {
         
-        return try utxos.enumerated().map { (i, utxo) -> Transaction.Input in
-            let sigInputs = utxos.enumerated().map { (j, innerUtxo) -> Transaction.Input in
-                let subScript = i == j ? innerUtxo.subScript : Data()
-                return Transaction.Input(previousOutput: innerUtxo.output,
+        return try utxos.enumerated().map { (i, utxoKeyPair) -> Transaction.Input in
+            let sigInputs = utxos.enumerated().map { (j, innerUtxoKeyPair) -> Transaction.Input in
+                let subScript = i == j ? innerUtxoKeyPair.utxo.subScript : Data()
+                return Transaction.Input(previousOutput: innerUtxoKeyPair.utxo.output,
                                          signatureScript: subScript,
                                          sequence: sequence)
             }
@@ -343,11 +320,11 @@ public extension BitcoinCore.Transaction.Transfer {
             sigDigest.append(sigTx.serialized())
             sigDigest.append(Data(loadBytes: UInt32(Signature.SIGHASH_ALL).littleEndian))
             guard let sigTxHash = Crypto.sha256sha256(sigDigest),
-                let sig = BitcoinCore.sign(sigTxHash, privateKeyBytes: utxo.privateKey) else {
+                let sig = BitcoinCore.sign(sigTxHash, privateKeyBytes: utxoKeyPair.privateKey) else {
                     throw TransactionError.signatureFailed
             }
-            let scriptSig = createScriptSig(sig: sig, pubkey: utxo.publicKey)
-            return Transaction.Input(previousOutput: utxo.output,
+            let scriptSig = createScriptSig(sig: sig, pubkey: utxoKeyPair.publicKey)
+            return Transaction.Input(previousOutput: utxoKeyPair.utxo.output,
                                      signatureScript: scriptSig,
                                      sequence: sequence)
         }

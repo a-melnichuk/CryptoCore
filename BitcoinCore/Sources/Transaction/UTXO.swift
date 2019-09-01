@@ -25,7 +25,7 @@ public struct UTXO {
     
     /// `hash` or `txid`: `char[32]` - The hash of the previous referenced transaction.
     
-    public var txHex: String
+    public var txId: Data
     
     /// Transaction amount in bitcoins, initally parsed as `String`
     
@@ -45,18 +45,21 @@ public struct UTXO {
     ///
     /// [Detailed description](https://en.bitcoin.it/wiki/OP_CHECKSIG)
     
-    public var subScriptHex: String
+    public var subScript: Data
+    
+    public var output: BitcoinCore.Transaction.OutPoint
     
     public init(address: String,
-                txHex: String,
+                txId: Data,
                 value: Int64,
                 outputIndex: UInt32,
-                subScriptHex: String) {
+                subScript: Data) {
         self.address = address
-        self.txHex = txHex
+        self.txId = txId
         self.value = value
         self.outputIndex = outputIndex
-        self.subScriptHex = subScriptHex
+        self.subScript = subScript
+        self.output = BitcoinCore.Transaction.OutPoint(hash: txId, index: outputIndex)
     }
 }
 
