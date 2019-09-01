@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		660B8D442316A22600A9FB41 /* BitcoinCore.podspec in Resources */ = {isa = PBXBuildFile; fileRef = 660B8D432316A22500A9FB41 /* BitcoinCore.podspec */; };
 		6663C2082318260700EE0626 /* Bitcoin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6663C2072318260700EE0626 /* Bitcoin.swift */; };
-		66BBA7E123195704007C1836 /* DecodedUTXO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66BBA7E023195704007C1836 /* DecodedUTXO.swift */; };
 		66BBA7E323195A05007C1836 /* BitcoinTransfer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66BBA7E223195A05007C1836 /* BitcoinTransfer.swift */; };
 		66BD7D51228018F200BFCB28 /* BitcoinCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 66BD7D47228018F200BFCB28 /* BitcoinCore.framework */; };
 		66BD7D56228018F200BFCB28 /* BitcoinCoreTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66BD7D55228018F200BFCB28 /* BitcoinCoreTests.swift */; };
@@ -69,7 +68,6 @@
 		5EDF979A351FDECC9461C3D2 /* Pods-BitcoinCoreTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BitcoinCoreTests.release.xcconfig"; path = "Target Support Files/Pods-BitcoinCoreTests/Pods-BitcoinCoreTests.release.xcconfig"; sourceTree = "<group>"; };
 		660B8D432316A22500A9FB41 /* BitcoinCore.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = BitcoinCore.podspec; path = ../BitcoinCore.podspec; sourceTree = "<group>"; };
 		6663C2072318260700EE0626 /* Bitcoin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bitcoin.swift; sourceTree = "<group>"; };
-		66BBA7E023195704007C1836 /* DecodedUTXO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DecodedUTXO.swift; sourceTree = "<group>"; };
 		66BBA7E223195A05007C1836 /* BitcoinTransfer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BitcoinTransfer.swift; sourceTree = "<group>"; };
 		66BD7D47228018F200BFCB28 /* BitcoinCore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = BitcoinCore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		66BD7D50228018F200BFCB28 /* BitcoinCoreTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BitcoinCoreTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -262,7 +260,6 @@
 				66D22BCC2317E67F00A88B3D /* VarInt.swift */,
 				66D22BC62317D57300A88B3D /* Signature.swift */,
 				66D22BD02318188800A88B3D /* UTXO.swift */,
-				66BBA7E023195704007C1836 /* DecodedUTXO.swift */,
 			);
 			path = Transaction;
 			sourceTree = "<group>";
@@ -454,7 +451,6 @@
 				66D22BC72317D57300A88B3D /* Signature.swift in Sources */,
 				66F4322A22E70D6B00092C23 /* BaseBitcoinPrivateKey.swift in Sources */,
 				66D22BC92317D61600A88B3D /* BlockInfoProtocol.swift in Sources */,
-				66BBA7E123195704007C1836 /* DecodedUTXO.swift in Sources */,
 				66C04C0322A6F83E00031F28 /* ptc_btc_address.c in Sources */,
 				66FEA139231C25C30004659E /* BitcoinPrivateKeyProtocol.swift in Sources */,
 				6663C2082318260700EE0626 /* Bitcoin.swift in Sources */,
