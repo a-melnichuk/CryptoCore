@@ -13,51 +13,19 @@ public struct Base58 {
     
     private init() {}
     
+    @available(*, deprecated, message: "Use Base58Check.encode")
     public static func check(encode data: Data, version: [UInt8]) -> String? {
-        guard !data.isEmpty, !version.isEmpty else {
-            return nil
-        }
-        var size: size_t = 0
-        _ = data.withUnsafeBytes { dataBuf in
-            version.withUnsafeBytes { versionBuf in
-                guard let versionPtr = versionBuf.bindMemory(to: UInt8.self).baseAddress else {
-                    return
-                }
-                ptc_b58check_encode(dataBuf.baseAddress, dataBuf.count, versionPtr, versionBuf.count, nil, &size)
-            }
-        }
-        guard size > 0 else {
-            return nil
-        }
-        var p = UnsafeMutablePointer<CChar>.allocate(capacity: size)
-        p.initialize(to: 0)
-        defer { p.deallocate() }
-        let result: ptc_result = data.withUnsafeBytes { dataBuf in
-            version.withUnsafeBytes { versionBuf in
-                guard let versionPtr = versionBuf.bindMemory(to: UInt8.self).baseAddress else {
-                    return PTC_ERROR_GENERAL
-                }
-                return ptc_b58check_encode(dataBuf.baseAddress, dataBuf.count, versionPtr, versionBuf.count, p, &size)
-            }
-        }
-        return result == PTC_SUCCESS ? String(cString: p) : nil
+        return Base58Check.encode(data, version: version)
     }
     
+    @available(*, deprecated, message: "Use Base58Check.decode")
     public static func check(decode string: String, version: [UInt8]) -> Data? {
-        guard !string.isEmpty, !version.isEmpty else {
-            return nil
-        }
-        var c = ptc_base58_context()
-        defer { ptc_b58_decode_destroy(&c) }
-        let result: ptc_result = version.withUnsafeBytes { versionBuf in
-            string.withCString { strPtr in
-                if let versionPtr = versionBuf.bindMemory(to: UInt8.self).baseAddress {
-                    return ptc_b58check_decode(&c, strPtr, versionPtr, versionBuf.count)
-                }
-                return PTC_ERROR_GENERAL
-            }
-        }
-        return result == PTC_SUCCESS ? Data(bytes: c.bytes, count: c.length) : nil
+        return Base58Check.decode(string, version: version)
+    }
+    
+    @available(*, deprecated, message: "Use Base58Check.valid")
+    public static func check(string: String, version: [UInt8]) -> Bool {
+        return Base58Check.valid(string, version: version)
     }
     
     public static func encode(_ data: Data) -> String? {
@@ -93,20 +61,6 @@ public struct Base58 {
         return result == PTC_SUCCESS ? Data(bytes: c.bytes, count: c.length) : nil
     }
     
-    public static func check(string: String, version: [UInt8]) -> Bool {
-        guard !version.isEmpty, !string.isEmpty else {
-            return false
-        }
-        let count = version.count
-        let result: ptc_result = string.withCString { strPtr in
-            version.withUnsafeBytes { versionBuf in
-                if let versionPtr = versionBuf.bindMemory(to: UInt8.self).baseAddress {
-                    return ptc_b58check(strPtr, versionPtr, count)
-                }
-                return PTC_ERROR_GENERAL
-            }
-        }
-        return result == PTC_SUCCESS
-    }
+    
 }
 

@@ -1,0 +1,12 @@
+platform :ios, '9.0'
+use_frameworks!
+
+target 'BitcoinCore' do
+  pod 'CryptoCore', :path => '../'
+  #pod 'CryptoCore', :git => 'https://github.com/a-melnichuk/CryptoCore.git'
+  
+  target 'BitcoinCoreTests' do
+    inherit! :search_paths
+  end
+
+end
