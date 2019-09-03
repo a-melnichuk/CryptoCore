@@ -10,10 +10,10 @@ import Foundation
 import CryptoCore
 
 public extension String {
-    func isValidBitcoinOrAltcoinAddress(_ address: String, network: Network) -> Bool {
-        if Base58Check.valid(address, version: network.pubkeyhash) {
+    func isValidBitcoinOrAltcoinAddress(network: Network) -> Bool {
+        if Base58Check.valid(self, version: network.pubkeyhash) {
             return true
         }
-        return BitcoinCore.isSegwitAddress(address, network: network)
+        return BitcoinCore.isSegwitAddress(self, network: network)
     }
 }
