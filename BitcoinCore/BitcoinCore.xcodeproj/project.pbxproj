@@ -17,6 +17,7 @@
 		66C04BFC22A6F83E00031F28 /* ptc_btc_address.h in Headers */ = {isa = PBXBuildFile; fileRef = 66C04BF222A6F83E00031F28 /* ptc_btc_address.h */; };
 		66C04BFF22A6F83E00031F28 /* ptc_btc.h in Headers */ = {isa = PBXBuildFile; fileRef = 66C04BF522A6F83E00031F28 /* ptc_btc.h */; };
 		66C04C0322A6F83E00031F28 /* ptc_btc_address.c in Sources */ = {isa = PBXBuildFile; fileRef = 66C04BFA22A6F83E00031F28 /* ptc_btc_address.c */; };
+		66CE309F231F01560098B1CD /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66CE309E231F01560098B1CD /* String+Extension.swift */; };
 		66D22BC72317D57300A88B3D /* Signature.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66D22BC62317D57300A88B3D /* Signature.swift */; };
 		66D22BC92317D61600A88B3D /* BlockInfoProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66D22BC82317D61600A88B3D /* BlockInfoProtocol.swift */; };
 		66D22BCB2317D6E200A88B3D /* Script.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66D22BCA2317D6E200A88B3D /* Script.swift */; };
@@ -79,6 +80,7 @@
 		66C04BF222A6F83E00031F28 /* ptc_btc_address.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ptc_btc_address.h; sourceTree = "<group>"; };
 		66C04BF522A6F83E00031F28 /* ptc_btc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ptc_btc.h; sourceTree = "<group>"; };
 		66C04BFA22A6F83E00031F28 /* ptc_btc_address.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = ptc_btc_address.c; sourceTree = "<group>"; };
+		66CE309E231F01560098B1CD /* String+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
 		66D22BC62317D57300A88B3D /* Signature.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Signature.swift; sourceTree = "<group>"; };
 		66D22BC82317D61600A88B3D /* BlockInfoProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlockInfoProtocol.swift; sourceTree = "<group>"; };
 		66D22BCA2317D6E200A88B3D /* Script.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Script.swift; sourceTree = "<group>"; };
@@ -183,6 +185,7 @@
 				66C04BBE22A6F0BA00031F28 /* BitcoinCore.swift */,
 				66D22BCE2318033200A88B3D /* Network.swift */,
 				6663C2072318260700EE0626 /* Bitcoin.swift */,
+				66CE309E231F01560098B1CD /* String+Extension.swift */,
 				66C04BCC22A6F0BA00031F28 /* libs */,
 				66C04BD422A6F0BA00031F28 /* module.modulemap */,
 			);
@@ -447,6 +450,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				66CE309F231F01560098B1CD /* String+Extension.swift in Sources */,
 				66D22BCF2318033200A88B3D /* Network.swift in Sources */,
 				66D22BC72317D57300A88B3D /* Signature.swift in Sources */,
 				66F4322A22E70D6B00092C23 /* BaseBitcoinPrivateKey.swift in Sources */,

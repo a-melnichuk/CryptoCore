@@ -10,7 +10,7 @@ import Foundation
 
 public struct Bitcoin: Network {
     // transaction size with 3 inputs and 2 outputs was used
-    static let averageTransactionSizeInBytes = 521
+    public static let averageTransactionSizeInBytes = 521
     
     public let coin: UInt = 0
     public let pubkeyhash: [UInt8] = [0x00]

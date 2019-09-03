@@ -9,7 +9,7 @@
 import Foundation
 import CryptoCore
 
-public class BaseBitcoinPrivateKey: BitcoinPrivateKeyProtocol {
+open class BaseBitcoinPrivateKey: BitcoinPrivateKeyProtocol {
     public let network: Network
     public var segwit: Bool
     public let key: BitcoinKeyKind
