@@ -15,6 +15,57 @@ class TestZencash: XCTestCase {
     
     let network = Zencash()
     
+    func testTransaction() {
+        let network = Zencash()
+        let mnemonic: Mnemonic = "company melt muscle vital emotion journey repeat chair elegant bench tiny crowd camera speed truth poet ability alone exact horse river test culture client"
+        let seed = Seed(mnemonic: mnemonic)!
+        
+        let changePath = BIP32Path(purpose: .m44, coin: network.coin, account: 0, change: .change, addressIndex: 0)
+        let rootPath = BIP32Path(purpose: .m44, coin: network.coin, account: 0, change: .external, addressIndex: 0)
+        guard let rootPrivateKey = BitcoinPrivateKey(seed: seed),
+            let privateKey = rootPrivateKey.derivedPrivateKey(path: changePath),
+            let publicKey = privateKey.anyPublicKey(),
+            let externalPrivateKey = rootPrivateKey.derivedPrivateKey(path: rootPath),
+            let externalPublicKey = externalPrivateKey.anyPublicKey() else {
+                XCTFail("\(#file).\(#function) transaction output generation failed")
+                return
+        }
+        
+        let utxo = UTXO(address: "znekWXBVxZXSNZ1jo6Y1SxGjmXUUYDxcE6c",
+                        txId: Hex.decode("e127f18dc4c0650b9f22739bdd7c574e812bfd6d90ebfc96e8703cde1fe2d1a7")!,
+                        value: 1000000,
+                        outputIndex: 0,
+                        subScript: Hex.decode("76a91495e644235fb94432ad42f4359dcab3e26b72e32388ac209632da3a85adfbe1f06d2675768c0750eb232b52bf7c93714cdc6409000000000325da08b4")!)
+        
+        let utxos: [UTXO] = [
+            utxo
+        ]
+        
+        let utxosKeyPairs: [UTXOKeyPair] = utxos.map {
+            UTXOKeyPair(utxo: $0, privateKey: externalPrivateKey.raw, publicKey: externalPublicKey.raw)
+        }
+        
+        let tx = BitcoinCore.Transaction.Transfer(network: network,
+                                                  senderPublicKey: publicKey.raw,
+                                                  recipientAddress: "znWHteo3Zzrc5EuP8STPXFYGVprJ7R69mCv",
+                                                  fee: 10000,
+                                                  amount: 2,
+                                                  version: network.transactionVersion,
+                                                  dust: 546,
+                                                  blockInfo: BlockInfo(blockIndex: 580178, blockHash: Hex.decode("000000000434c4d63cbeae4e06bb2eb9a84c6a3ce1997955612863e64440bb11")!))
+        do {
+            let serialized = try tx.sign(utxoKeyPairs: utxosKeyPairs)
+            
+            XCTAssertEqual(Hex.encode(privateKey.raw), "7444b22be52f723210dd6230bdda632523f27df74efd6dd5136a777546c63fbe")
+            XCTAssertEqual(Hex.encode(publicKey.raw), "024db2bd4ce399062da435a0fdad948c97b6254a5a57848a061b7c7436a38bcbfa")
+            XCTAssertEqual(mnemonic.description, "company melt muscle vital emotion journey repeat chair elegant bench tiny crowd camera speed truth poet ability alone exact horse river test culture client")
+            XCTAssertEqual(serialized.transactionHex, "0100000001a7d1e21fde3c70e896fceb906dfd2b814e577cdd9b73229f0b65c0c48df127e1000000006a47304402202981d5811adeda2b804ce2c9ab32bf98c458aefea7d8c5e9aa1364d21bb4ca5002206ab514a1b1c4eb7d2ca91a09d90fb9a5e311fe56b077aa221ab6735ebf808fbb0121024ee9aed673fd1141d83b524602a840b08317da7d5fbc8cc32303dfd7f4bcb959ffffffff0202000000000000003f76a914391c80cfa3f9864dd482592c1fe38f6ccf2b013688ac2011bb4044e6632861557999e13c6a4ca8b92ebb064eaebe3cd6c43404000000000352da08b42e1b0f00000000003f76a914578ac73cc42db1bac4372bb44a5ccd7524fe5fd588ac2011bb4044e6632861557999e13c6a4ca8b92ebb064eaebe3cd6c43404000000000352da08b400000000")
+        } catch let error {
+            XCTFail("\(#file).\(#function) transaction serialzation failed with error: \(error)")
+            return
+        }
+    }
+    
     func testP2PKH_2() {
         let address = "znnjppzJG7ajT7f6Vp1AD6SjgcXBVPA2E6c"
         guard let pubKeyHash = BitcoinCore.hash160(network: network, address: address) else {

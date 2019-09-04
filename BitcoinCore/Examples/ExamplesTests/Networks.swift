@@ -14,7 +14,6 @@ struct Zencash: Network {
     let privatekey: [UInt8] = [0x80]
     let pubkeyhash: [UInt8] = [32, 137]
     let scripthash: [UInt8] = [32, 150]
-    let transactionVersion: Int32 = 12
     let hasStaticFees: Bool = true
     
     init() {}
