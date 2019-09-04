@@ -150,6 +150,9 @@ public extension BitcoinCore.Transaction.Transfer {
     /// Signature struct with recalculated amount and transaction hex
     
     func sign(utxoKeyPairs: [UTXOKeyPair]) throws -> Signed {
+        guard !utxoKeyPairs.isEmpty else {
+            throw TransactionError.invalidUTXOs
+        }
         
         let totalInputAmount = utxoKeyPairs.map { $0.utxo.value }.reduce(0, +)
         var amount = self.amount
@@ -159,11 +162,6 @@ public extension BitcoinCore.Transaction.Transfer {
         guard amount > 0 else {
             throw TransactionError.invalidAmount
         }
-        
-        guard !utxoKeyPairs.isEmpty else {
-            throw TransactionError.invalidUTXOs
-        }
-        
         
         let recipientIsSegwit = BitcoinCore.isSegwitAddress(recipientAddress, network: network)
         

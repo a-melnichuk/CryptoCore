@@ -60,7 +60,7 @@ public extension Network {
     }
     
     var supportsSegwitAddresses: Bool {
-        return false
+        return true
     }
     
     var hasCompressedWIFKeys: Bool {
