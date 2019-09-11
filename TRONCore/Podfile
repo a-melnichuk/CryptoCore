@@ -1,0 +1,14 @@
+platform :ios, '9.0'
+use_frameworks!
+
+target 'TRONCore' do
+  pod 'keccak.c', '~> 0.1'
+  pod 'BigInt'
+  pod 'secp256k1-extended', :path => '../'
+  pod 'CryptoCore', :path => '../'
+  
+  target 'TRONCoreTests' do
+    inherit! :search_paths
+  end
+
+end

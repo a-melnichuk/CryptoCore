@@ -65,7 +65,7 @@ Pod::Spec.new do |s|
     ]
   }
   s.vendored_libraries = 'CryptoCore/Sources/libs/openssl/libcrypto.a'
-  s.dependency 'secp256k1.c', '~> 0.1'
+  s.dependency 'secp256k1-extended'
   s.preserve_paths = 'CryptoCore/Sources/module.modulemap', 
   s.exclude_files = 'Examples/*'
   s.frameworks = 'Foundation'

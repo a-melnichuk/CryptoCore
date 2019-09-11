@@ -1,0 +1,5 @@
+module paytomat_trx_core [system][extern_c] {
+    header "paytomat_trx_core/include/ptc_trx.h"
+    export *
+}
+
