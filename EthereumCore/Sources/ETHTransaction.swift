@@ -70,7 +70,7 @@ public extension EthereumCore.Transaction {
 
 public extension EthereumCore.Transaction.Transfer {
     func sign(privateKey: Data) throws -> Signed {
-        let recipient = EthereumAddress(token?.erc20TokenContractAddress ?? self.recipient)
+        let recipient = EthereumAddress(self.recipient)
         let sender = EthereumAddress(self.sender)
         guard recipient.isValid && sender.isValid else {
             throw EthereumCore.TransactionError.invalidAddress
