@@ -70,7 +70,7 @@ public extension EthereumCore.Transaction {
 
 public extension EthereumCore.Transaction.Transfer {
     func sign(privateKey: Data) throws -> Signed {
-        let recipient = EthereumAddress(self.recipient)
+        let recipient = EthereumAddress(self.token?.erc20TokenContractAddress ?? self.recipient)
         let sender = EthereumAddress(self.sender)
         guard recipient.isValid && sender.isValid else {
             throw EthereumCore.TransactionError.invalidAddress
@@ -92,7 +92,7 @@ public extension EthereumCore.Transaction.Transfer {
             let contract = ERC20TransferContract(networkId: chainId,
                                                  token: token,
                                                  sender: sender,
-                                                 recipient: recipient,
+                                                 recipient: EthereumAddress(self.recipient),
                                                  amount: amount)
             data = try contract.serialized()
         } else {
@@ -144,7 +144,7 @@ public extension EthereumCore.Transaction.Transfer {
         guard let txBytes = tx.encode(forSignature: false, chainId: chainId) else {
             throw EthereumCore.TransactionError.encodingFailed
         }
-        let txHex = Hex.encode(txBytes).lowercased().withEthereumPrefix
+        let txHex = Hex.encode(txBytes).lowercased().withEthereumPrefix   
         
         return Signed(from: sender,
                       to: recipient,
